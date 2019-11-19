@@ -1,0 +1,42 @@
+
+type Sensor implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+
+type Control implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+
+type Space {
+  SensorElements: [Sensor] @relation(name:"IS_IN_SPACE",direction:IN)
+  ControlElements: [Control] @relation(name:"IS_IN_SPACE",direction:IN)
+  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+}
+
+
+type Furniture {
+  Sensors: Sensor @relation(name:"SENSING",direction:OUT)
+  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+}
+
+
+type ElectricalLoad {
+  Sensors: Sensor @relation(name:"SENSING",direction:OUT)
+  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+}
+
+type Door {
+  Sensors: Sensor @relation(name:"SENSING",direction:OUT)
+  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+}
+

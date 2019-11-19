@@ -1,0 +1,102 @@
+
+
+type Duct implements AbstractElement {
+  Name: String
+  Id: ID!
+  LocationX (unit: LengthUnits = m): Meters
+  LocationY (unit: LengthUnits = m): Meters
+  LocationZ (unit: LengthUnits = m): Meters
+  Area (unit: AreaUnits = m2): SquareMeters
+  Width (unit: LengthUnits = m): Meters
+  Height (unit: LengthUnits = m): Meters
+  Flow (unit: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  FlowIn: AbstractElement @relation(name:"AIR_FLOW_TO",direction:IN)
+  FlowOut: AbstractElement @relation(name:"AIR_FLOW_TO",direction:OUT)
+
+}
+
+
+type DuctAccessory implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  FlowIn: AbstractElement @relation(name:"AIR_FLOW_TO",direction:IN)
+  FlowOut: AbstractElement @relation(name:"AIR_FLOW_TO",direction:OUT)
+}
+
+type DuctFitting implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  FlowIn: AbstractElement @relation(name:"AIR_FLOW_TO",direction:IN)
+  FlowOut: AbstractElement @relation(name:"AIR_FLOW_TO",direction:OUT)
+}
+
+type DuctTransition implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  FlowIn: AbstractElement @relation(name:"AIR_FLOW_TO",direction:IN)
+  FlowOut: AbstractElement @relation(name:"AIR_FLOW_TO",direction:OUT)
+}
+
+type Pipe implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  FlowIn: AbstractElement @relation(name:"AIR_FLOW_TO",direction:IN)
+  FlowOut: AbstractElement @relation(name:"AIR_FLOW_TO",direction:OUT)
+}
+
+type PipeAccessory implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type PipeFitting implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type PipeTransition implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+
+type CableTrayTransition implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type CableTray implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+

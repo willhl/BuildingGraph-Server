@@ -1,0 +1,676 @@
+
+
+"""
+A Space with parameters
+"""
+type Space {
+"Group: Project Information Units: N/A Notes: "
+Project_Name: String
+"Group: Project Information Units: N/A Notes: "
+Project_Number: String
+"Group: Project Information Units: N/A Notes: "
+Project_Address: String
+"Group: Project Information Units: N/A Notes: "
+Project_Sector: String
+"Group: General Units: N/A Notes: Inherited from architectural model"
+Space_Number: String
+"Group: General Units: N/A Notes: Inherited from architectural model"
+Space_Name: String
+"Group: General Units: N/A Notes: This will be used to assign room type parameters to individual spaces"
+Space_Category: String
+"Group: General Units: N/A Notes: "
+Uniclass_2015_Description_: String
+"Group: General Units: N/A Notes: "
+Uniclass_2015_Code: String
+"Group: General Units: N/A Notes: This is a parameter that is automatically populated to assign a population value to the space"
+Occupancy_Unit: String
+"Group: General Units: Persons/m² Notes: "
+Area_Per_Person: Float
+"Group: General Units: N/A Notes: "
+Number_of_People: Float
+"Group: General Units: hrs Notes: "
+Hours_of_Use: String
+"Group: General Units: N/A Notes: Select from a pre-defined list that relates to an hourly schedule"
+Occupancy_Schedule: String
+"Group: General Units: N/A Notes: Select from a pre-defined list that relates to an hourly schedule"
+Equipment_Heat_Gain_Schedule: String
+"Group: General Units: mm Notes: "
+Space_Required_Clear_Ceiling_Void: String
+"Group: General Units: mm Notes: "
+Space_Required_Clear_Floor_Void: String
+"Group: General Units: N/A Notes: "
+Space_Mechanical_Services_Zoning_Strategy: String
+"Group: Thermal Units: ᵒC Notes: Dry Bulb Air Temperature"
+Space_Cooling_Temperature: String
+"Group: Thermal Units: ᵒC Notes: Dry Bulb Air Temperature"
+Space_Heating_Temperature: String
+"Group: Thermal Units: N/A Notes: e.g. +/- 2ᵒC"
+Space_Cooling_Temperature_Tolerance: String
+"Group: Thermal Units: N/A Notes: e.g. +/- 2ᵒC"
+Space_Heating_Temperature_Tolerance: String
+"Group: Thermal Units: N/A Notes: "
+Space_Heating_and_Cooling_Strategy: String
+"Group: Thermal Units: N/A Notes: e.g. Underfloor Heating, Radiant Panels, etc."
+Space_Heating_Strategy: String
+"Group: Thermal Units: N/A Notes: e.g. Chilled Beams, FCU's, Passive, etc."
+Space_Cooling_Strategy: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Heating_Load_Density: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Cooling_Load_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Heating_Load: String
+"Group: Thermal Units: W Notes: "
+Space_Cooling_Load: String
+"Group: Thermal Units: W Notes: "
+Space_Sensible_Cooling_Load: String
+"Group: Thermal Units: W Notes: "
+Space_Latent_Cooling_Load: String
+"Group: Thermal Units: L/s Notes: For use in FCU or re-circulating systems"
+Space_Heating_Air_Flow_Rate: String
+"Group: Thermal Units: L/s Notes: For use in FCU or re-circulating systems"
+Space_Cooling_Air_Flow_Rate: String
+"Group: Thermal Units: ᵒC Notes: "
+Space_Hot_Surface_Maximum_Temperature: String
+"Group: Thermal Units: % Notes: "
+Space_Cooling_Relative_Humidity: String
+"Group: Thermal Units: % Notes: "
+Space_Heating_Relative_Humidity: String
+"Group: Thermal Units: % Notes: "
+Space_Relative_Humidity_Set_Point: String
+"Group: Thermal Units: N/A Notes: e.g. +/- 20%"
+Space_Relative_Humidity_Tolerance: String
+"Group: Thermal Units: % Notes: "
+Space_Relative_Humidity_Maximum: String
+"Group: Thermal Units: % Notes: "
+Space_Relative_Humidity_Minimum: String
+"Group: Thermal Units: W Notes: "
+Space_Equipment_Heat_Gain: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Equipment_Heat_Gain_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Occupancy_Heat_Gain: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Occupancy_Heat_Gain_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Lighting_Heat_Gain: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Lighting_Heat_Gain_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Solar_Heat_Gain: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Solar_Heat_Gain_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Infiltration_Heat_Gain: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Infiltration_Heat_Gain_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Infiltration_Heat_Loss: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Infiltration_Heat_Loss_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Fabric_Heat_Gain: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Fabric_Heat_Gain_Density: String
+"Group: Thermal Units: W Notes: "
+Space_Fabric_Heat_Loss: String
+"Group: Thermal Units: W/m² Notes: "
+Space_Fabric_Heat_Loss_Density: String
+"Group: Ventilation Units: N/A Notes: e.g. Natural Ventilation, Mixed Mode, Extract Only, etc."
+Space_Ventilation_Strategy: String
+"Group: Ventilation Units: N/A Notes: e.g. manual override, CO2 sensor in room, automatic window opening"
+Space_Ventilation_Control: String
+"Group: Ventilation Units: N/A Notes: "
+Air_Handling_Unit_Zone: String
+"Group: Ventilation Units: N/A Notes: Relative to adjoining space (positive, negativeve, neutral)"
+Space_Air_Pressurisation: String
+"Group: Ventilation Units: N/A Notes: "
+Space_Air_Cleanliness: String
+"Group: Ventilation Units: N/A Notes: e.g. F7, G4, etc."
+Space_Air_Filtration: String
+"Group: Ventilation Units: % Notes: "
+Space_Supply_Air_Recirculation_Proportion: Float
+"Group: Ventilation Units: N/A Notes: "
+Number_of_Local_Extract_Vent_Points: Int
+"Group: Ventilation Units: N/A Notes: e.g. Linear slot diffuser, Jet nozzle, swirl floor diffuser, etc."
+Space_Supply_Diffuser_Type: String
+"Group: Ventilation Units: N/A Notes: e.g. Bell mouth, square ceiling grille, egg-crate, etc."
+Space_Extract_Grille_Type: String
+"Group: Ventilation Units: N/A Notes: "
+Space_Fumigation: Boolean
+"Group: Ventilation Units: N/A Notes: "
+Space_Return_Air_Grille_Type: String
+"Group: Ventilation Units: ᵒC Notes: "
+Space_Supply_Air_Temperature: String
+"Group: Ventilation Units: ACH Notes: "
+Space_Supply_Air_Changes_per_Hour: String
+"Group: Ventilation Units: ACH Notes: "
+Space_General_Extract_Air_Changes_per_Hour: String
+"Group: Ventilation Units: ACH Notes: "
+Space_Dirty_Extract_Air_Changes_per_Hour: String
+"Group: Ventilation Units: ACH Notes: "
+Space_Kitchen_Extract_Air_Changes_per_Hour: String
+"Group: Ventilation Units: ACH Notes: "
+Space_Laboratory_Extract_Air_Changes_per_Hour: String
+"Group: Ventilation Units: ACH Notes: "
+Space_Fume_Cupboard_Extract_Air_Changes_per_Hour: String
+"Group: Ventilation Units: ACH Notes: "
+Space_Smoke_Extract_Air_Changes_per_Hour: String
+"Group: Ventilation Units: L/s/m² Notes: "
+Space_Supply_Air_Flow_Rate_per_Area: String
+"Group: Ventilation Units: L/s/m² Notes: "
+Space_General_Extract_Air_Flow_Rate_per_Area: String
+"Group: Ventilation Units: L/s/m² Notes: "
+Space_Dirty_Extract_Air_Flow_Rate_per_Area: String
+"Group: Ventilation Units: L/s/m² Notes: "
+Space_Laboratory_Extract_Air_Flow_Rate_per_Area: String
+"Group: Ventilation Units: L/s/person Notes: "
+Space_Supply_Air_Flow_Rate_per_Person: String
+"Group: Ventilation Units: L/s/person Notes: "
+Space_General_Extract_Air_Flow_Rate_per_Person: String
+"Group: Ventilation Units: N/A Notes: "
+Space_Supply_Air: String
+"Group: Ventilation Units: N/A Notes: "
+Space_Extract_Air: String
+"Group: Ventilation Units: L/s Notes: "
+Space_Supply_Air_Flow_Rate: String
+"Group: Ventilation Units: L/s Notes: "
+Space_General_Extract_Air_Flow_Rate_: String
+"Group: Ventilation Units: L/s Notes: "
+Space_Dirty_Extract_Air_Flow_Rate_: String
+"Group: Ventilation Units: L/s Notes: "
+Space_Kitchen_Extract_Air_Flow_Rate: String
+"Group: Ventilation Units: L/s Notes: "
+Space_Laboratory_Extract_Air_Flow_Rate_: String
+"Group: Ventilation Units: L/s Notes: "
+Space_Fume_Cupboard_Extract_Air_Flow_Rate_: String
+"Group: Domestic Water Units: N/A Notes: e.g. Cleaner's Sink, WHB, etc."
+Space_Domestic_Water_Outlets: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Domestic_Hot_Water_Service: Boolean
+"Group: Domestic Water Units: N/A Notes: "
+Space_Domestic_Hot_Water_Delivery_Method: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Domestic_Hot_Water_Generation_Location: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Domestic_Cold_Water_Service: Boolean
+"Group: Domestic Water Units: N/A Notes: "
+Space_Domestic_Cold_Water_Type: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Domestic_Cold_Water_Fluid_Category: String
+"Group: Domestic Water Units: bar Notes: "
+Space_Domestic_Cold_Water_Delivery_Pressure: String
+"Group: Domestic Water Units: N/A Notes: "
+Number_of_Fittings: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Non_Potable_Cold_Water: Boolean
+"Group: Domestic Water Units: N/A Notes: "
+Drinking_Fountain: Boolean
+"Group: Domestic Water Units: N/A Notes: "
+Drinking_Fountain_Description: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Purified_Drinking_Water: Boolean
+"Group: Domestic Water Units: N/A Notes: e.g. Piped or Bottled"
+Space_Purified_Drinking_Water_Type: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Chilled_Drinking_Water: Boolean
+"Group: Domestic Water Units: N/A Notes: e.g. Piped or Bottled"
+Space_Chilled_Drinking_Water_Type: String
+"Group: Domestic Water Units: N/A Notes: "
+Space_Laboratory_Cold_Water: Boolean
+"Group: Domestic Water Units: N/A Notes: "
+Space_Laboratory_Hot_Water: Boolean
+"Group: Domestic Water Units: N/A Notes: "
+Space_Laboratory_Cooling_Water: Boolean
+"Group: Domestic Water Units: N/A Notes: "
+Space_Softened_Cold_Water: Boolean
+"Group: Domestic Water Units: N/A Notes: e.g. RO, de-ionised etc."
+Space_Purified_Water_Type: String
+"Group: Domestic Water Units: ᵒC Notes: "
+Space_Domestic_Hot_Water_Maximum_Temperature: String
+"Group: Gas Units: N/A Notes: "
+Space_Piped_Gases_Strategy: String
+"Group: Gas Units: N/A Notes: "
+Anaesthetic_Gas_Scavenging_System: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_Laboratory_Air: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_Compressed_Air: Boolean
+"Group: Gas Units: N/A Notes: "
+Dental_Vacuum: Boolean
+"Group: Gas Units: N/A Notes: "
+Laboratory_Vacuum: Boolean
+"Group: Gas Units: N/A Notes: "
+Medical_Vacuum: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Steam_and_Condensate: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Clean_Steam_and_Condensate: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_Natural_Gas: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_Ar: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_CO2: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_5Pc_CO2_95Pc_O2: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_He: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_Heliox: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_H2: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Liquid_Nitrogen: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Liquid_CO2: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_N2: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_O2: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_N2O: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_Entonox: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_MA4: Boolean
+"Group: Gas Units: N/A Notes: "
+Piped_Gas_SA7: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_Laboratory_Air: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_Compressed_Air: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_Ar: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_CO2: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_5Pc_CO2_95Pc_O2: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_He: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_H2: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Liquid_Nitrogen: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Liquid_CO2: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_N2: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_O2: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_N2O: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_Entonox: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_MA4: Boolean
+"Group: Gas Units: N/A Notes: "
+Bottled_Gas_SA7: Boolean
+"Group: Small Power Units: N/A Notes: e.g. None, 0, 1, 2"
+Electrical_Zone: String
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Twin_Sockets_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Single_Sockets_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_Power_and_IT_Floor_Boxes_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Power_and_IT_Floor_Boxes_Essential_Contents: String
+"Group: Small Power Units: N/A Notes: "
+Number_of_Fused_Connection_Units_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_Cleaners_Sockets_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_400V_3_Phase_Single_Sockets_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Twin_Sockets_Non_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Twin_Sockets_Non_Essential_Clean: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Twin_Sockets_Non_Essential_USB: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Single_Sockets_Non_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Single_Sockets_Non_Essential_Clean: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Switch_Disconnector_Non_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_Power_and_IT_Floor_Boxes_Non_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Power_and_IT_Floor_Boxes_Non_Essential_Contents: String
+"Group: Small Power Units: N/A Notes: "
+Number_of_Fused_Connection_Units_Non_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_Fused_Connection_Units_Non_Essential_Clean: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_Cleaners_Sockets_Non_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_400V_3_Phase_Single_Sockets_Non_Essential: Int
+"Group: Small Power Units: N/A Notes: "
+b110V_Outlets_Description: String
+"Group: Small Power Units: N/A Notes: "
+c230V_Outlets_Description: String
+"Group: Small Power Units: N/A Notes: "
+e400V_Outlets_Description: String
+"Group: Small Power Units: N/A Notes: "
+Special_Electrical: String
+"Group: Small Power Units: W/m² Notes: "
+Space_Power_Load_Density: String
+"Group: Small Power Units: W Notes: "
+Space_Power_Load: String
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Twin_Sockets_UPS: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_230V_Single_Sockets_UPS: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_400V_3_Phase_Single_Sockets_UPS: Int
+"Group: Small Power Units: N/A Notes: "
+Number_of_400V_Switch_Disconnector_Non_Essential: Int
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Strategy: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Type: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Type_Reference: String
+"Group: Lighting Units: N/A Notes: e.g. Manual on/off, Scene selection, presence detection, etc."
+Space_Lighting_Control_Strategy: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Dimming_Strategy: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Dimming_Override: String
+"Group: Lighting Units: N/A Notes: e.g. Mains Dim Trainling Edge, Mains Dim Leading Edge, Switched, DALI, DMX"
+Space_Lighting_Control_Protocol: String
+"Group: Lighting Units: N/A Notes: Select from a pre-defined list that relates to an hourly schedule"
+Lighting_Schedule: String
+"Group: Lighting Units: Lux Notes: "
+Space_Lux_Level_Day: String
+"Group: Lighting Units: Lux Notes: "
+Space_Lux_Level_Night: String
+"Group: Lighting Units: Lux Notes: "
+Space_Lux_Level_Task: String
+"Group: Lighting Units: Lux Notes: "
+Space_Maximum_Lux_Level: String
+"Group: Lighting Units: Lux Notes: "
+Space_Minimum_Lux_Level: String
+"Group: Lighting Units: CRI Notes: "
+Space_Minimum_Colour_Rendering_Index: String
+"Group: Lighting Units: N/A Notes: "
+Space_Minimum_Colour_Rendering_Index_Description: String
+"Group: Lighting Units: K Notes: "
+Space_Lighting_Colour_Temperature_in_Kelvin: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Ballast_Type: String
+"Group: Lighting Units: N/A Notes: "
+Space_Task_Lighting: Boolean
+"Group: Lighting Units: N/A Notes: "
+Space_Task_Lighting_Calculation_Workplane_Description: String
+"Group: Lighting Units: Lumens/W Notes: "
+Space_Task_Lighting_Efficacy: String
+"Group: Lighting Units: N/A Notes: "
+Space_Task_Lighting_Control: String
+"Group: Lighting Units: N/A Notes: "
+Space_Emergency_Lighting: Boolean
+"Group: Lighting Units: N/A Notes: "
+Space_Emergency_Lighting_Strategy: String
+"Group: Lighting Units: N/A Notes: "
+Space_Emergency_Lighting_Description: String
+"Group: Lighting Units: Lux Notes: "
+Space_Emergency_Lighting_Lux_Level: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Calculation_Workplane_Description: String
+"Group: Lighting Units: N/A Notes: "
+Other_Space_Lighting: String
+"Group: Lighting Units: N/A Notes: "
+Other_Space_Lighting_Control: String
+"Group: Lighting Units: Lumens/W Notes: "
+Space_Minimum_Lighting_Efficacy: String
+"Group: Lighting Units: W/m²/100Lux Notes: "
+Space_Lighting_Power_Load_Density: String
+"Group: Lighting Units: W Notes: "
+Space_Lighting_Power_Load: String
+"Group: Lighting Units: W Notes: "
+Space_Task_Lighting_Power_Load: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Uniformity: String
+"Group: Lighting Units: N/A Notes: "
+Space_Lighting_Access: String
+"Group: Lighting Units: % Notes: Revit defaults"
+Floor_Reflectance: String
+"Group: Lighting Units: % Notes: Revit defaults"
+Ceiling_Reflectance: String
+"Group: Lighting Units: % Notes: Revit defaults"
+Wall_Reflectance: String
+"Group: Fused Connection Units Units: N/A Notes: "
+Total_Fused_Connection_Unit_Points: Int
+"Group: Fused Connection Units Units: N/A Notes: "
+Fused_Connection_Units_Description: String
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Quad_RJ45_Data_Outlets: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Twin_RJ45_Data_Outlets: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Single_RJ45_Data_Outlets: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Twin_RJ45_Data_Outlets_Access_Control: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Single_RJ45_Data_Outlets_Access_Control: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Twin_RJ45_Data_Outlets_Surveillance_Cameras: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Single_RJ45_Data_Outlets_Surveillance_Cameras: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Twin_RJ45_Data_Outlets_VOIP: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_Single_RJ45_Data_Outlets_VOIP: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+Data_Sockets_Description: String
+"Group: Telecoms / Data Units: N/A Notes: "
+Network: String
+"Group: Telecoms / Data Units: N/A Notes: "
+Wireless_Provision_Description: String
+"Group: Telecoms / Data Units: N/A Notes: "
+Telephone_Provision_Description: String
+"Group: Telecoms / Data Units: N/A Notes: "
+Number_of_TV_Outlets: Int
+"Group: Telecoms / Data Units: N/A Notes: "
+TV_Outlets_Description: String
+"Group: Call Systems Units: N/A Notes: "
+Nurse_Call_Staff_to_Staff: Boolean
+"Group: Call Systems Units: N/A Notes: "
+Nurse_Call_Patient_to_Staff: Boolean
+"Group: Call Systems Units: N/A Notes: "
+WC_Alarm: Boolean
+"Group: AV Equipment Units: N/A Notes: "
+Audio_Visual_Provision: String
+"Group: AV Equipment Units: N/A Notes: "
+TV_Screen: Boolean
+"Group: AV Equipment Units: N/A Notes: "
+Projector: Boolean
+"Group: AV Equipment Units: N/A Notes: "
+Audio_System: Boolean
+"Group: AV Equipment Units: N/A Notes: "
+Hearing_Loop: Boolean
+"Group: AV Equipment Units: N/A Notes: "
+Audio_Visual_Space_Type: String
+"Group: AV Equipment Units: N/A Notes: "
+Number_of_Ceiling_Speakers: Int
+"Group: AV Equipment Units: N/A Notes: "
+Number_of_Wall_Speakers: Int
+"Group: AV Equipment Units: N/A Notes: "
+Number_of_Speaker_Outlets: Int
+"Group: AV Equipment Units: N/A Notes: "
+Number_of_Subwoofer_Outlets: Int
+"Group: Public Address Units: N/A Notes: "
+Public_Address: Boolean
+"Group: Public Address Units: N/A Notes: "
+Public_Address_Description: String
+"Group: Public Address Units: N/A Notes: "
+Voice_Alarm: Boolean
+"Group: Public Address Units: N/A Notes: "
+PAVA_Paging_Zone: String
+"Group: Public Address Units: N/A Notes: "
+PAVA_Paging_Zone_Type: String
+"Group: Public Address Units: N/A Notes: "
+Public_Address_Speaker_Type: String
+"Group: Public Address Units: N/A Notes: "
+Audio_Visual_Volume_Control_Interface: Boolean
+"Group: Security Units: N/A Notes: E.g. Public, Semi-public, Semi-private – circulation, Semi-private – facilities, Private – resident, Private – staff, Private – facilities, Private - BOH facilities, Private - BOH general, Restricted"
+Space_Security_Strategy: String
+"Group: Security Units: N/A Notes: "
+Intercom: Boolean
+"Group: Security Units: N/A Notes: "
+Intercom_Description: String
+"Group: Security Units: N/A Notes: "
+Space_Surveillance_Camera_Strategy: String
+"Group: Security Units: N/A Notes: "
+Surveillance_Monitors: Boolean
+"Group: Security Units: N/A Notes: "
+Intruder_Detection: Boolean
+"Group: Security Units: N/A Notes: "
+Intruder_Detection_Description: String
+"Group: Security Units: N/A Notes: "
+Intruder_Detection_Control_Device_Type: String
+"Group: Security Units: N/A Notes: "
+Access_Control: Boolean
+"Group: Security Units: N/A Notes: E.g. touch reader both sides of the door, push to exit button on one side and reader on the other side, etc."
+Access_Control_Description: String
+"Group: Security Units: N/A Notes: "
+Panic_Attack_Alarm: Boolean
+"Group: Security Units: N/A Notes: "
+Panic_Attack_Alarm_Description: String
+"Group: Security Units: N/A Notes: "
+Special_Alarms: String
+"Group: Security Units: N/A Notes: "
+Door_Entry_Alarm_Points: Boolean
+"Group: Security Units: N/A Notes: e.g. External Doors, Ground Floor, etc."
+Door_Entry_Alarm_Points_Description: String
+"Group: Security Units: N/A Notes: "
+Surveillance_System_Audio_Visual_Interface: Boolean
+"Group: Security Units: N/A Notes: "
+Surveillance_System_Intercom_Interface: Boolean
+"Group: Fire Units: N/A Notes: "
+Space_Fire_Suppression: Boolean
+"Group: Fire Units: N/A Notes: "
+Fire_Protection_Zone: String
+"Group: Fire Units: N/A Notes: Type of extinguisher"
+Fire_Extinguishers: String
+"Group: Fire Units: N/A Notes: e.g. Smoke Detector / Heat Detector / etc."
+Fire_Detection_Device: String
+"Group: Fire Units: N/A Notes: "
+Fire_Suppression_Method: String
+"Group: Fire Units: N/A Notes: "
+Sprinkler_Head_Type: String
+"Group: Fire Units: N/A Notes: "
+Rising_Main_Type: String
+"Group: Fire Units: N/A Notes: "
+Sprinkler_Protection: Boolean
+"Group: Fire Units: N/A Notes: "
+Gas_Suppression: Boolean
+"Group: Fire Units: N/A Notes: "
+Fire_Alarm_Visual_Alert_Device: Boolean
+"Group: Fire Units: N/A Notes: "
+Fire_Alarm_Sounder: Boolean
+"Group: Fire Units: N/A Notes: "
+Fire_Alarm_Interfaces: String
+"Group: Fire Units: N/A Notes: "
+Disabled_Refuge_Alarm: Boolean
+"Group: Fire Units: N/A Notes: "
+Disabled_Refuge_Alarm_Description: String
+"Group: Drainage Units: N/A Notes: "
+Space_Drainage_Strategy: String
+"Group: Drainage Units: N/A Notes: "
+Number_of_WCs: Int
+"Group: Drainage Units: N/A Notes: "
+Number_of_WHBs: Int
+"Group: Drainage Units: N/A Notes: "
+Number_of_Sinks: Int
+"Group: Drainage Units: N/A Notes: "
+Space_Domestic_Drainage: Boolean
+"Group: Drainage Units: N/A Notes: "
+Space_Domestic_Drainage_Description: String
+"Group: Drainage Units: N/A Notes: "
+Space_Drinking_Point_Drainage_Type: String
+"Group: Drainage Units: N/A Notes: "
+Space_Condensate_Drainage: Boolean
+"Group: Drainage Units: N/A Notes: "
+Space_Solvent_Drainage: Boolean
+"Group: Drainage Units: N/A Notes: "
+Space_Solvent_Drainage_Description: String
+"Group: Drainage Units: N/A Notes: "
+Space_Chemical_Drainage: Boolean
+"Group: Drainage Units: N/A Notes: "
+Space_Chemical_Drainage_Description: String
+"Group: Drainage Units: N/A Notes: "
+Space_Biological_Drainage: Boolean
+"Group: Drainage Units: N/A Notes: "
+Space_Biological_Drainage_Description: String
+"Group: Drainage Units: N/A Notes: "
+Space_Radioactive_Drainage: Boolean
+"Group: Drainage Units: N/A Notes: "
+Space_Radioactive_Drainage_Description: String
+"Group: Controls Units: N/A Notes: "
+Space_Temperature_Sensor: Boolean
+"Group: Controls Units: N/A Notes: "
+Space_Air_Quality_Sensor: Boolean
+"Group: Controls Units: N/A Notes: "
+Space_Relative_Humidity_Sensor: Boolean
+"Group: Controls Units: N/A Notes: "
+Space_Sensor_Location: String
+"Group: Controls Units: N/A Notes: "
+Space_Control_Method: String
+"Group: Controls Units: N/A Notes: "
+Number_of_Control_Zones: String
+"Group: Controls Units: N/A Notes: "
+Space_HVAC_Control_from_Local_AV_Interface: Boolean
+"Group: Controls Units: N/A Notes: "
+Local_Extended_Hours_Override_Controller: Boolean
+"Group: Controls Units: N/A Notes: "
+Extended_Hours_Service_Provision: String
+"Group: Controls Units: N/A Notes: "
+BMS_to_Lighting_Control_Interface: String
+"Group: Controls Units: N/A Notes: "
+Space_CO2_Sensor: Boolean
+"Group: Acoustics Units: N/A Notes: "
+Space_Acoustic_Strategy: String
+"Group: Acoustics Units: LAeq,T Notes: "
+Intrusive_Noise_Limit_in_LAeq_t: String
+"Group: Acoustics Units: Seconds Notes: "
+Reverberation_Time_in_Seconds: String
+"Group: Acoustics Units: NR Notes: "
+Engineering_Systems_Noise_Limit_in_NR: String
+"Group: Safety Units: N/A Notes: "
+Eyewash_Bottle: Boolean
+"Group: Safety Units: N/A Notes: "
+Eyewash_Plumbed: Boolean
+"Group: Safety Units: N/A Notes: "
+Safety_Shower: Boolean
+"Group: Safety Units: N/A Notes: "
+Drench_Hose: Boolean
+"Group: Safety Units: N/A Notes: "
+Safety_Station: Boolean
+"Group: Safety Units: N/A Notes: "
+Space_Carbon_Monoxide_Sensor: Boolean
+"Group: Safety Units: N/A Notes: "
+Space_Refrigerant_Detection: Boolean
+"Group: Safety Units: N/A Notes: "
+Space_Oxygen_Depletion_Sensor: Boolean
+"Group: Safety Units: N/A Notes: "
+Gas_Suppression_Knock_off: Boolean
+"Group: Hazards in Room Units: N/A Notes: "
+Biological_Hazards: String
+"Group: Hazards in Room Units: N/A Notes: "
+Toxic_Hazards: String
+"Group: Hazards in Room Units: N/A Notes: "
+Radioactive_Hazards: String
+"Group: Hazards in Room Units: N/A Notes: "
+Explosive_Hazards: String
+"Group: Hazards in Room Units: N/A Notes: "
+Acid_Hazards: String
+"Group: Hazards in Room Units: N/A Notes: "
+Chemical_Hazards: String
+"Group: Hazards in Room Units: N/A Notes: "
+Other_Hazards: String
+"Group: Other Units: N/A Notes: "
+Space_Engineering_Notes: String
+
+}

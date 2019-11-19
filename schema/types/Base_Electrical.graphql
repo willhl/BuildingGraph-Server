@@ -1,0 +1,120 @@
+
+ 
+
+interface ElectricalLoadElement {
+  Id: ID!
+  Name: String
+  Apparent_Load (units: ApparentPowerUnits = VA ): VoltAmperes
+  Diversity: Float
+  Circuit: Circuit
+  ElementType: ElementType
+  ModelElements: [ModelElement]
+  Space: Space
+  Level: Level
+}
+
+type Circuit implements AbstractElement {
+  Name: String
+  Id: ID!
+  Number: String
+  Voltage (units: VoltageUnits = V): Volts
+  Apparent_Load (units: ApparentPowerUnits = VA ): VoltAmperes
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  SourcePanel: DBPanel @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+  Loads: [ElectricalLoadElement] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
+  Panels: [DBPanel] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
+}
+
+ type DBPanel implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]) {
+  Name: String
+  Id: ID!
+  Diversity: Float
+  Apparent_Load (units: ApparentPowerUnits = VA): VoltAmperes
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Level: Level @relation(name:"IS_ON",direction:OUT)
+  OutgoingCircuits: [Circuit] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
+  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+}
+
+
+type ElectricalLoad implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]) {
+  Name: String
+  Id: ID!
+  Diversity: Float
+  Apparent_Load (units: ApparentPowerUnits = VA ): VoltAmperes
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  DBID: String @cypher(statement:"MATCH (this) RETURN id(this)")
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Level: Level @relation(name:"IS_ON",direction:OUT)
+  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+}
+
+type Lighting implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type FireAlarm implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type Security implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type Safety implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type Data implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+
+type Communications implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type Space {
+  ElectricalLoadElements: [ElectricalLoadElement] @relation(name:"IS_IN_SPACE",direction:IN)
+  LightingElements: [Lighting] @relation(name:"IS_IN_SPACE",direction:IN)
+  FireAlarmElements: [FireAlarm] @relation(name:"IS_IN_SPACE",direction:IN)
+  SecurityElements: [Security] @relation(name:"IS_IN_SPACE",direction:IN)
+  SafetyElements: [Safety] @relation(name:"IS_IN_SPACE",direction:IN)
+  DataElements: [Data] @relation(name:"IS_IN_SPACE",direction:IN)
+  DBPanelElements: [DBPanel] @relation(name:"IS_IN_SPACE",direction:IN)
+}
+
+
+type Mutation {
+    Add_Circuit_ELECTRICAL_FLOW_TO_ElectricalLoadElement(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:Circuit {Id: $fromId}),(ton:ElectricalLoadElement {Id: $toId}) MERGE (frn)-[r:ELECTRICAL_FLOW_TO]->(ton)")   
+    Add_ElectricalLoadElement_ELECTRICAL_FLOW_TO_Circuit(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:ElectricalLoadElement {Id: $fromId}),(ton:Circuit {Id: $toId}) MERGE (frn)-[r:ELECTRICAL_FLOW_TO]->(ton)")   
+
+}

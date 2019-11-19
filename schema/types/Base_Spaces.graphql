@@ -1,0 +1,34 @@
+
+
+
+"""
+A Space
+"""
+type Space implements AbstractElement @additionalLabels(labels: ["AbstractElement"]) {
+  Id: ID!
+  IsExternal: Boolean
+  "Space Number"
+  Number: String!
+  "Space Name"
+  Name: String!
+  Area (unit: AreaUnits = m2): SquareMeters
+  Volume (unit: VolumeUnits = m3): CubicMeters
+  Height (unit: LengthUnits = m): Meters
+  CenterX (unit: LengthUnits = m): Meters
+  CenterY (unit: LengthUnits = m): Meters
+  CenterZ (unit: LengthUnits = m): Meters
+  AllElements: [AbstractElement] @relation(name:"IS_IN_SPACE",direction:IN)
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+}
+
+##mutations to merge spaces and elements
+type Mutation {
+    Add_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId}),(ton:Space {Id: $toId}) MERGE (frn)-[r:IS_IN_SPACE]->(ton) with frn,ton OPTIONAL MATCH (frn)-[rs:IS_IN_SPACE]->(ton2) where Id(ton) <> Id(ton2) delete rs")   
+    Remove_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId})-[r:IS_IN_SPACE]->(ton {Id: $toId}) DELETE r")
+  
+}
+
+
+
+

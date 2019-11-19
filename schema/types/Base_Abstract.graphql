@@ -1,0 +1,61 @@
+
+ interface BaseElement{
+  Id: ID!
+ }
+  
+interface AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+} 
+
+type Model implements BaseElement {
+  Id: ID!
+  Project_Name: String
+  NativeApplication: String
+  URI: String
+  Identity: String
+  ModelElements: [ModelElement] @relation(name:"IS_IN",direction:IN)
+}
+
+
+type ModelElement implements BaseElement {
+  Id: ID!
+  ExternalID: String
+  UniqueId: String
+  Model: Model @relation(name:"IS_IN",direction:OUT)
+  AbstractElement: AbstractElement @relation(name:"REALIZED_BY",direction:IN)
+}
+
+type ElementType implements AbstractElement {
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Name: String
+  ClassificationCode: String
+  Category: String
+  Type_Name: String
+  Family_Name: String
+  Description: String
+  AbstractElements: [AbstractElement] @relation(name:"IS_OF",direction:IN)
+}
+
+##mutations
+
+type Mutation {
+
+    
+    Add_AbstractElement_IS_OF_ElementType(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId}),(ton:ElementType {Id: $toId}) MERGE (frn)-[r:IS_OF]->(ton) with frn,ton OPTIONAL MATCH (frn)-[rs:IS_OF]->(ton2) where Id(ton) <> Id(ton2) delete rs")   
+    Remove_AbstractElement_IS_OF_ElementType(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId})-[r:IS_OF]->(ton:ElementType {Id: $toId}) DELETE r")
+
+
+    AddElementTypeToElement(spaceId:ID! abstractId:ID!) : String @cypher(statement:"MATCH (sp:Space {Id: $spaceId}), (ae {Id: $abstractId}) MERGE (ae)-[r:IS_IN_SPACE]->(sp)")
+    RemoveElementTypeFromElement(spaceId:ID! abstractId:ID!) : String @cypher(statement:"MATCH (sp:Space {id: $spaceId})<-[r:IS_IN_SPACE]-(ae {id: $abstractId}) DELETE r")
+    Add_AbstractElement_REALIZED_BY_ModelElement(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn {Id: $fromId}),(ton:ModelElement {Id: $toId}) MERGE (frn)-[r:REALIZED_BY]->(ton)")   
+    Add_ModelElement_IS_IN_Model(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:ModelElement {Id: $fromId}),(ton:Model {Id: $toId}) MERGE (frn)-[r:IS_IN]->(ton) with frn,ton OPTIONAL MATCH (frn)-[rs:IS_IN]->(ton2) where Id(ton) <> Id(ton2) delete rs")  
+}
+
+
+

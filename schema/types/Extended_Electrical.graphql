@@ -1,0 +1,143 @@
+
+ type DBPanel {
+  "Group: DB Panel, Units: N/A, Notes: "
+  Phase_Configuration: String
+  "Group: DB Panel, Units: N/A, Notes: "
+  Number_of_Ways: Int
+  Number_of_Phases: Int
+  "Group: DB Panel, Units: N/A, Notes: "
+  Panel_Name: String
+  "Group: DB Panel, Units: N/A, Notes: "
+  Distribution_System: String
+  "Group: DB Panel, Units: N/A, Notes: "
+  Location: String
+  "Group: DB Panel, Units: A, Notes: "
+  Maximum_Continuous_Current_Rating (units: CurrentUnits = A ): Amperes
+  "Group: DB Panel, Units: A, Notes: "
+  Isolator_Rating (units: CurrentUnits = A ): Amperes
+  "Group: DB Panel, Units: N/A, Notes: "
+  Number_of_Poles: Float
+  "Group: DB Panel, Units: kA, Notes: "
+  Isolator_ICS (units: CurrentUnits = kA ): Kiloamperes
+}
+
+type Circuit {
+  Apparent_Current (units: CurrentUnits = A ): Amperes
+  Apparent_Current_Phase_A (units: CurrentUnits = A ): Amperes 
+  Apparent_Current_Phase_B (units: CurrentUnits = A ): Amperes 
+  Apparent_Current_Phase_C (units: CurrentUnits = A ): Amperes 
+  Apparent_Load (units: ApparentPowerUnits = VA ): VoltAmperes
+  Apparent_Load_Phase_A (units: ApparentPowerUnits = VA ): VoltAmperes
+  Apparent_Load_Phase_B (units: ApparentPowerUnits = VA ): VoltAmperes
+  Apparent_Load_Phase_C (units: ApparentPowerUnits = VA ): VoltAmperes
+  Length (units: LengthUnits = m ): Meters
+  True_Current (units: CurrentUnits = A ): Amperes 
+  True_Current_Phase_A (units: CurrentUnits = A ): Amperes 
+  True_Current_Phase_B (units: CurrentUnits = A ): Amperes 
+  True_Current_Phase_C (units: CurrentUnits = A ): Amperes  
+  True_Load (units: PowerUnits = W ): Watts
+  True_Load_Phase_A (units: PowerUnits = W ): Watts
+  True_Load_Phase_B (units: PowerUnits = W ): Watts 
+  True_Load_Phase_C (units: PowerUnits = W ): Watts
+  "Group: Circuit Protective Device, Units: Int, Notes: "
+  Circuit_Way: Int
+  "Group: Circuit Protective Device, Units: N/A, Notes: "
+  Circuit_Phase: String
+  "Group: Circuit Protective Device, Units: N/A, Notes: "
+  Circuit_Protective_Device_Type: String
+  "Group: Circuit Protective Device, Units: N/A, Notes: "
+  Time_Current_Curve_Characteristic: String
+  "Group: Circuit Protective Device, Units: A, Notes: "
+  Circuit_Protective_Device_Rating (units: CurrentUnits = A ): Amperes 
+  "Group: Circuit Protective Device, Units: mA, Notes: "
+  RCD_Trip_Current (units: CurrentUnits = mA ): Milliamperes 
+  "Group: Circuit Protective Device, Units: N/A, Notes: "
+  Circuit_Protective_Device_Fault_Current_Breaking_Capacity: String
+  "Group: Circuit Protective Device, Units: INt, Notes: "
+  Circuit_Protective_Device_Switched_Poles: Int
+  "Group: Load, Units: N/A, Notes: "
+  Load_Classification: String
+  "Group: Load, Units: yes/No, Notes: "
+  Ring_or_Radial: Int
+  "Group: Phase Conductors, Units: mm2, Notes: "
+  Cable_Size (unit: AreaUnits = mm2): SquareMilliMeters
+  "Group: Phase Conductors, Units: Int, Notes: "
+  Phase_Conductor_Per_Phase: Int
+  "Group: Phase Conductors, Units: Int, Notes: "
+  Phase_Conductor_Neutral: Int
+  "Group: Phase Conductors, Units: N/A, Notes: "
+  Installation_Method: String
+  "Group: Phase Conductors, Units: N/A, Notes: "
+  Cable_Formation_Flat: String
+  "Group: Phase Conductors, Units: N/A, Notes: "
+  Cable_Formation_Trefoil: String
+  "Group: Phase Conductors, Units: N/A, Notes: "
+  Cable_Formation_Quadfoil: String
+  "Group: Phase Conductors, Units: N/A, Notes: "
+  Cable_Diameter_Overall_Spacing: String
+  "Group: Phase Conductors, Units: N/A, Notes: "
+  Circuit_Description: String
+  "Group: CPC, Units: N/A, Notes: "
+  CPC_Armour: String
+  "Group: CPC, Units: N/A, Notes: "
+  CPC_Integral_Separate_or_Supplementary: String
+  "Group: CPC, Units: mm2, Notes: "
+  CPC_Size (unit: AreaUnits = mm2): SquareMilliMeters
+}
+
+type ElectricalLoad {
+  Area: Float
+  Circuit_Number: String
+  Current (units: CurrentUnits = A ): Amperes
+  Design_Option: Int
+  Edited_by: String
+  Electrical_Data: String
+  Elevation: Float
+  Family: String
+  Family_and_Type: String
+  HasSensors: Boolean
+  Host: String
+  Host_Id: Int
+  Image: String
+  Label_Visible: Boolean
+  Lateral_Offset: Float
+  Lateral_Offset_Formula: Float
+  LocationX: Float
+  LocationY: Float
+  LocationZ: Float
+  Mark: String
+  Phase_Created: String
+  Phase_Demolished: String
+  Power_Factor: Float
+  RCD_Trip_Current: Float
+  RLX_RlxInstId: Int
+  Type: String
+  Type_Id: Int
+  Vertical_Offset: Float
+  Volume: Float
+}
+
+type ElectricalOutlet implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]) {
+  Name: String
+  Id: ID!
+  Is_Essential: Boolean
+  Is_Cleaners: Boolean
+  Number_Of_Outlets: Int
+  Apparent_Load (units: ApparentPowerUnits = VA): VoltAmperes
+  Diversity: Float
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Level: Level @relation(name:"IS_ON",direction:OUT)
+  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+}
+
+type Circuit {
+  ElectricalOutlets: [ElectricalOutlet] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
+}
+
+type Space {
+  ElectricalOutlets: [ElectricalOutlet] @relation(name:"IS_IN_SPACE",direction:IN)
+}
+
+

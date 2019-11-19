@@ -1,3 +1,7 @@
+## Ignore Node.js temporary files, build results
+##
+## Get latest from https://github.com/github/gitignore
+
 # Logs
 logs
 *.log
@@ -20,7 +24,7 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -57,5 +61,35 @@ typings/
 # dotenv environment variables file
 .env
 
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
 # next.js build output
 .next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+.vscode
+.vs
+
+.env
+
+TMP/
+
+dist/
+
+bin/server
+
+reference
+
+api/build
+BuilderingGraphServer/neo4j/data
+BuilderingGraphServer/neo4j/conf
+

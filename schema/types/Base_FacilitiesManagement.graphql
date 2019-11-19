@@ -1,0 +1,36 @@
+
+type Asset implements BaseElement {
+  Name: String
+  Id: ID!
+  Replaces: [Asset] @relation(name:"REPLACES",direction:OUT)
+  FaultEvents: [FaultEvent] @relation(name:"EVENT",direction:OUT)
+  MaintenanceEvents: [MaintenanceEvent] @relation(name:"EVENT",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+}
+
+type MaintenanceEvent implements BaseElement{
+  Name: String
+  Id: ID!
+  Description: String
+  Asset: [Asset] @relation(name:"EVENT",direction:IN)
+}
+
+type FaultEvent implements BaseElement {
+  Name: String
+  Id: ID!
+  FaultLevel: FaultLevel
+  IsResolved: Boolean
+  Asset: [Asset] @relation(name:"EVENT",direction:IN)
+}
+
+type Space {
+  Assets: [Asset] @relation(name:"IS_IN_SPACE",direction:IN)
+}
+
+enum FaultLevel {
+    Information
+    Warning
+    Critical
+}
+
+

@@ -1,0 +1,38 @@
+
+
+type Section implements AbstractElement {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+}
+
+type SurfaceBoundary @relation(name: "BOUNDED_BY") {
+  from: Space
+  to: Surface
+  SectionFacingVectorX: Float
+  SectionFacingVectorY: Float
+  SectionFacingVectorZ: Float
+  SectionArea: Float
+}
+
+type Surface implements BaseElement {
+  Id: ID!
+  Name: String
+  Spaces: [Space] @relation(name:"BOUNDED_BY",direction:IN)
+  Host: AbstractElement @relation(name:"IS_ON",direction:IN)
+}
+
+type Space {
+  BoundingSurfaces: [Surface] @relation(name:"BOUNDED_BY",direction:OUT)
+}
+
+
+type Section implements BaseElement {
+  Id: ID!
+  Name: String
+  Spaces: [Space] @relation(name:"BOUNDED_BY",direction:IN)
+  Host: AbstractElement @relation(name:"IS_ON",direction:IN)
+}
+
+
