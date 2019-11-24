@@ -79,7 +79,7 @@ typings/
 .vscode
 .vs
 
-.env
+#.env
 
 TMP/
 
@@ -90,6 +90,6 @@ bin/server
 reference
 
 api/build
-BuilderingGraphServer/neo4j/data
-BuilderingGraphServer/neo4j/conf
+Dependents/neo4j/data
+Dependents/neo4j/conf
 

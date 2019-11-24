@@ -37,7 +37,12 @@ services:
       - GRAPHQL_URI=http://api:4002/graphql
     ports:
       - 4002:4002
+    volumes:
+      - ./schema:/schema
     links:
     - neo4j
     depends_on:
     - neo4j
+
+volumes:
+  schema:

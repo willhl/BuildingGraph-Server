@@ -3,7 +3,8 @@ var ncp = require('ncp').ncp;
 ncp.limit = 1;
 
 doCopy(".env", "build/.env")
-doCopy("../schema/types", "build/typesEnabled/")
+//This is no longer required
+//doCopy("../schema/types", "schema/types")
 
 function doCopy(src, dest){
 

@@ -10,8 +10,9 @@ import path from "path";
 
 //var tdesf1 = fs.readFileSync(process.env.GRAPHQL_SCHEMA || path.join(__dirname, "schema.graphql")).toString("utf-8");
 
+console.log(path.join(__dirname, '../../schema/types'))
 
-const typesArray = fileLoader(path.join(__dirname, './typesEnabled'));
+const typesArray = fileLoader(path.join(__dirname, '../../schema/types'));
 console.log(typesArray);
 //const typeDefs = mergeTypes(typesArray, { all: true });
 //console.log(mergedTypes)
