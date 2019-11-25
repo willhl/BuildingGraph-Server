@@ -5,7 +5,6 @@
 A Space
 """
 type Space implements AbstractElement @additionalLabels(labels: ["AbstractElement"]) {
-  wibble: String
   Id: ID!
   IsExternal: Boolean
   "Space Number"
