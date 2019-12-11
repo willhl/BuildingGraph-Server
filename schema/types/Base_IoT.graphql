@@ -5,6 +5,7 @@ type Sensor implements AbstractElement {
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Sensing: [AbstractElement] @relation(name:"SENSING",direction:OUT)
 }
 
 
@@ -14,29 +15,35 @@ type Control implements AbstractElement {
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Controlling: [AbstractElement] @relation(name:"CONTROLS",direction:OUT)
 }
 
 
 type Space {
   SensorElements: [Sensor] @relation(name:"IS_IN_SPACE",direction:IN)
+  Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
   ControlElements: [Control] @relation(name:"IS_IN_SPACE",direction:IN)
-  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+  Controls: [Control] @relation(name:"CONTROLS",direction:IN)
 }
 
 
 type Furniture {
-  Sensors: Sensor @relation(name:"SENSING",direction:OUT)
-  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+  Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
+  Controls: [Control] @relation(name:"CONTROLS",direction:IN)
 }
 
+type Lighting {
+  Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
+  Controls: [Control] @relation(name:"CONTROLS",direction:IN)
+}
 
 type ElectricalLoad {
-  Sensors: Sensor @relation(name:"SENSING",direction:OUT)
-  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+  Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
+  Controls: [Control] @relation(name:"CONTROLS",direction:IN)
 }
 
 type Door {
-  Sensors: Sensor @relation(name:"SENSING",direction:OUT)
-  Controls: Control @relation(name:"CONTROLS",direction:OUT)
+  Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
+  Controls: [Control] @relation(name:"CONTROLS",direction:IN)
 }
 

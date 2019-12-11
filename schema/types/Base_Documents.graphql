@@ -1,0 +1,64 @@
+
+
+type Container implements BaseElement {
+   Id: ID!
+   Name: String
+   Description: String
+   Issues: [ContainerIssue] @relation(name:"ISSUES",direction:IN)
+   Content: [ContainerContent] @relation(name:"CONTAINS",direction:OUT)
+   Project: Project
+}
+
+interface ContainerContent {
+  Id: ID!
+  Name: String 
+  Version: String
+  URI: String
+  NativeApplication: String
+  Identity: String
+  Containers: [Container]
+}
+
+type Model implements BaseElement & ContainerContent @additionalLabels(labels: ["ContainerContent"]) {
+  Id: ID!
+  Name: String
+  Version: String
+  URI: String
+  NativeApplication: String
+  Identity: String
+  ModelElements: [ModelElement] @relation(name:"IS_IN",direction:IN)
+  Containers: [Container] @relation(name:"CONTAINS",direction:IN)
+}
+
+
+type Document implements BaseElement & ContainerContent @additionalLabels(labels: ["ContainerContent"]) {
+  Id: ID!
+  Name: String
+  Version: String
+  URI: String
+  NativeApplication: String
+  Identity: String
+  Containers: [Container] @relation(name:"CONTAINS",direction:IN)
+}
+
+
+type ContainerIssue implements BaseElement {
+    Id: ID!
+    IssueDate: DateTime
+    Containers: [Container] @relation(name:"ISSUES",direction:OUT)
+}
+
+type User {
+    ContainerIssueBy: [ContainerIssue] @relation(name:"ISSUED",direction:OUT)
+    ContainerIssueTo: [ContainerIssue] @relation(name:"ISSUED",direction:IN)
+}
+
+type Group {
+    ContainerIssueBy: [ContainerIssue] @relation(name:"ISSUED",direction:OUT)
+    ContainerIssueTo: [ContainerIssue] @relation(name:"ISSUED",direction:IN)
+}
+
+type Organization {
+    ContainerIssueBy: [ContainerIssue] @relation(name:"ISSUED",direction:OUT)
+    ContainerIssueTo: [ContainerIssue] @relation(name:"ISSUED",direction:IN)
+}

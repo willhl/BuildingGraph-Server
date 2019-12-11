@@ -1,0 +1,41 @@
+
+
+interface Resource {
+    Id: ID!
+    Name: String
+    SubResources: [Resource]
+    SuperResources: [Resource]
+}
+
+
+
+type Organization implements Resource @additionalLabels(labels: ["Resource"]) {
+    Id: ID!
+    Name: String
+    Groups: [Group] @relation(name:"IS_IN",direction:IN)
+    Users: [Resource] @relation(name:"IS_IN",direction:IN)
+    SubResources: [Resource] @relation(name:"IS_IN",direction:IN)
+    SuperResources: [Resource] @relation(name:"IS_IN",direction:OUT)
+}
+
+type User implements Resource @additionalLabels(labels: ["Resource"]) {
+    Id: ID!
+    Name: String
+    Groups: [Group] @relation(name:"IS_IN",direction:OUT)
+    Organizations: [Organization] @relation(name:"IS_IN",direction:OUT)
+    SubResources: [Resource] @relation(name:"IS_IN",direction:IN)
+    SuperResources: [Resource] @relation(name:"IS_IN",direction:OUT)
+}
+
+type Group implements Resource @additionalLabels(labels: ["Resource"]) {
+    Id: ID!
+    Name: String
+    Resources: [Resource] @relation(name:"IS_IN",direction:IN)
+    SubResources: [Resource] @relation(name:"IS_IN",direction:IN)
+    SuperResources: [Resource] @relation(name:"IS_IN",direction:OUT)
+}
+
+type ContainerIssue {
+    IssueTo: [Resource] @relation(name:"ISSUED",direction:OUT)
+    IssueFrom: [Resource] @relation(name:"ISSUED",direction:IN)
+}

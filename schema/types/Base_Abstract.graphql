@@ -10,15 +10,6 @@ interface AbstractElement {
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
 } 
 
-type Model implements BaseElement {
-  Id: ID!
-  Project_Name: String
-  NativeApplication: String
-  URI: String
-  Identity: String
-  ModelElements: [ModelElement] @relation(name:"IS_IN",direction:IN)
-}
-
 
 type ModelElement implements BaseElement {
   Id: ID!

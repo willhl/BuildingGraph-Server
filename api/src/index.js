@@ -36,7 +36,7 @@ const resolvers = {
   Milliamperes : new UnitFloatScalarType("Milliamperes", "mA"),
   Watts : new UnitFloatScalarType("Watts", "W"),
   VoltAmperes : new UnitFloatScalarType("VoltAmperes", "VA"),
-  LitersPerSecond: new UnitFloatScalarType("LitersPerSecond", "l_per_s"),
+  LitersPerSecond: new UnitFloatScalarType("LitersPerSecond", "l_per_s")
 }
 
 

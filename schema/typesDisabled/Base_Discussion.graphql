@@ -1,0 +1,16 @@
+
+
+type Thread {
+  StartedBy: [Resource]
+  IsOpen: Boolean
+  
+}
+
+type Message {
+  From: [Resource]
+  Mentions: [Resouce]
+  InReplyTo: [Message]
+  Replies: [Message]
+  Body: String
+}
+

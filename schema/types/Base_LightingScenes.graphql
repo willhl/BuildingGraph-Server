@@ -1,0 +1,44 @@
+
+
+type SceneController implements BaseElement {
+  Name: String
+  Id: ID!
+  ActiveScene: Scene @relation(name:"IS_ACTIVE",direction:OUT)
+  Scenes: [Scene] @relation(name:"CONTROLS",direction:OUT)
+}
+
+type Scene implements BaseElement {
+  Name: String
+  Id: ID!
+  Presets: [SceneLighting]
+  Controllers: [SceneController] @relation(name:"CONTROLS",direction:IN)
+}
+
+type Lighting {
+  ScenePresets: [SceneLighting]
+  LightingZones: [LightingZone]
+}
+
+type LightingZone {
+  Id: ID!
+  Name: String
+  Spaces: [Space]
+}
+
+type SceneLighting @relation(name: "CONTROLS") {
+  from: Scene
+  to: Lighting
+  DefautLevel: Float
+  DefautColorR: Float
+  DefautColorG: Float
+  DefautColorB: Float
+  ActiveLevel: Float
+  ActiveColorR: Float
+  ActiveColorG: Float
+  ActiveColorB: Float
+}
+
+type Mutation {
+  Activate_Scene(controlerId:ID! sceneId:ID!) : String @cypher(statement:"MATCH (frn:SceneController {Id: $controlerId})-[:CONTROLS]->(ton:Scene {Id: $sceneId}) MERGE (frn)-[r:IS_ACTIVE]->(ton) with frn,ton OPTIONAL MATCH (frn)-[rs:IS_ACTIVE]->(ton2) where Id(ton) <> Id(ton2) delete rs")  
+}
+

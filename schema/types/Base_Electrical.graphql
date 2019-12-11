@@ -53,9 +53,13 @@ type ElectricalLoad implements AbstractElement & ElectricalLoadElement @addition
   Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
 }
 
-type Lighting implements AbstractElement {
+type Lighting implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]){
   Name: String
   Id: ID!
+  Diversity: Float
+  Apparent_Load (units: ApparentPowerUnits = VA ): VoltAmperes
+  Level: Level @relation(name:"IS_ON",direction:OUT)
+  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
