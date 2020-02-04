@@ -1,5 +1,4 @@
 
-
 type Section implements AbstractElement {
   Name: String
   Id: ID!
@@ -27,12 +26,9 @@ type Space {
   BoundingSurfaces: [Surface] @relation(name:"BOUNDED_BY",direction:OUT)
 }
 
-
 type Section implements BaseElement {
   Id: ID!
   Name: String
   Spaces: [Space] @relation(name:"BOUNDED_BY",direction:IN)
   Host: AbstractElement @relation(name:"IS_ON",direction:IN)
 }
-
-

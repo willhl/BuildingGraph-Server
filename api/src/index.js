@@ -35,7 +35,7 @@ const resolvers = {
   Watts : new UnitFloatScalarType("Watts", "W"),
   VoltAmperes : new UnitFloatScalarType("VoltAmperes", "VA"),
   LitersPerSecond: new UnitFloatScalarType("LitersPerSecond", "l_per_s")
-}
+};
 
 
 const schema = makeAugmentedSchema({typeDefs, resolvers, config: {

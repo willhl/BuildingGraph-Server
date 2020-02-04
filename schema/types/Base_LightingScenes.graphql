@@ -1,5 +1,4 @@
 
-
 type SceneController implements BaseElement {
   Name: String
   Id: ID!
@@ -38,7 +37,7 @@ type SceneLighting @relation(name: "CONTROLS") {
   ActiveColorB: Float
 }
 
+
 type Mutation {
   Activate_Scene(controlerId:ID! sceneId:ID!) : String @cypher(statement:"MATCH (frn:SceneController {Id: $controlerId})-[:CONTROLS]->(ton:Scene {Id: $sceneId}) MERGE (frn)-[r:IS_ACTIVE]->(ton) with frn,ton OPTIONAL MATCH (frn)-[rs:IS_ACTIVE]->(ton2) where Id(ton) <> Id(ton2) delete rs")  
 }
-

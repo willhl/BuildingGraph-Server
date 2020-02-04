@@ -7,8 +7,6 @@ type Terminal implements AbstractElement {
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
 }
 
-
-
 type Equipment implements AbstractElement {
   Name: String
   Id: ID!
@@ -16,7 +14,3 @@ type Equipment implements AbstractElement {
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
 }
-
-
-
-

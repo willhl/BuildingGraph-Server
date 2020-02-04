@@ -12,12 +12,10 @@ type Zone implements AbstractElement @additionalLabels(labels: ["AbstractElement
 type Space {
   Zone: Zone @relation(name:"IS_IN_ZONE",direction:OUT)
 }
- 
 
 
- ##mutations to merge spaces and elements
+##mutations to merge spaces and elements
 type Mutation {
     Add_Space_IS_IN_ZONE_Zone(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:Space {Id: $fromId}),(ton:Space {Id: $toId}) MERGE (frn)-[r:IS_IN_ZONE]->(ton)")   
     Remove_Space_IS_IN_Zone_Zone(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:Space {Id: $fromId})-[r:IS_IN_ZONE]->(ton {Id: $toId}) DELETE r")
-  
 }

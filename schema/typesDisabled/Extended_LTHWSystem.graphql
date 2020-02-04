@@ -1,12 +1,11 @@
 
-
 type HeatingCoolingSystem implements BaseElement {
-    Name: string
-    Id: ID!
-    IsPrimary: boolean
-    HeatedElements: [AbstractElement] @relation(name:"ENERGY",direction:OUT)
-    CooledElements: [AbstractElement] @relation(name:"ENERGY",direction:IN)
-    EnergySources: [AbstractElement] @relation(name:"ENERGY",direction:IN)
+  Name: string
+  Id: ID!
+  IsPrimary: boolean
+  HeatedElements: [AbstractElement] @relation(name:"ENERGY",direction:OUT)
+  CooledElements: [AbstractElement] @relation(name:"ENERGY",direction:IN)
+  EnergySources: [AbstractElement] @relation(name:"ENERGY",direction:IN)
 }
 
 type Boiler implements AbstractElement {
@@ -18,15 +17,10 @@ type Boiler implements AbstractElement {
 }
 
 type Space{
-    HeatsSpace: [HeatingCoolingSystem] @relation(name:"ENERGY",direction:IN)
-    CoolsSpace: [HeatingCoolingSystem] @relation(name:"ENERGY",direction:OUT)
+  HeatsSpace: [HeatingCoolingSystem] @relation(name:"ENERGY",direction:IN)
+  CoolsSpace: [HeatingCoolingSystem] @relation(name:"ENERGY",direction:OUT)
 }
-
 
 type Pump {
-
     
 }
-
-
-

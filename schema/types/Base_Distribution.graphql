@@ -1,5 +1,4 @@
 
-
 type Duct implements AbstractElement {
   Name: String
   Id: ID!
@@ -15,9 +14,7 @@ type Duct implements AbstractElement {
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
   FlowIn: AbstractElement @relation(name:"AIR_FLOW_TO",direction:IN)
   FlowOut: AbstractElement @relation(name:"AIR_FLOW_TO",direction:OUT)
-
 }
-
 
 type DuctAccessory implements AbstractElement {
   Name: String
@@ -83,7 +80,6 @@ type PipeTransition implements AbstractElement {
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
 }
 
-
 type CableTrayTransition implements AbstractElement {
   Name: String
   Id: ID!
@@ -99,4 +95,3 @@ type CableTray implements AbstractElement {
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
 }
-
