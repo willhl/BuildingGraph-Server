@@ -1,0 +1,9 @@
+
+
+enum Role {
+  reader
+  user
+  admin
+  Writer
+}
+

@@ -7,13 +7,12 @@ import { makeAugmentedSchema } from "neo4j-graphql-js";
 import dotenv from "dotenv";
 
 import UnitFloatScalarType from "./units/UnitFloatScalarType"
-import ScalarUnitResolvers from "./units/ScalarUnitResolvers"
-var convert = require('convert-units')
 
 // set environment variables from ../.env
 dotenv.config();
 
 const app = express();
+
 
 /*
  * Create an executable GraphQL schema object from GraphQL type definitions
@@ -25,7 +24,6 @@ const app = express();
 //console.log(typeDefs)
 
 const resolvers = {
-  
   UnitFloat : new UnitFloatScalarType("UnitFloat"),
   Meters: new UnitFloatScalarType("Meters", "m"),
   SquareMeters : new UnitFloatScalarType("SquareMeters", "m2"),
@@ -40,7 +38,12 @@ const resolvers = {
 }
 
 
-const schema = makeAugmentedSchema({typeDefs, resolvers});
+const schema = makeAugmentedSchema({typeDefs, resolvers, config: {
+  auth: {
+    isAuthenticated: true,
+    hasRole: true
+  }}
+});
 
 /*
  * Create a Neo4j driver instance to connect to the database
@@ -56,13 +59,38 @@ const driver = neo4j.driver(
 );
 
 /*
+// Custom middleware to add a user object to the server requests
+const injectUser = async req => {
+  try {
+    var token = req.headers.authorization;
+    var stToken = token.substring(7, token.length);
+    var nv = await jwt.verify(stToken, JWT_SECRET);
+    req.user = { name:nv.preferred_username, id:nv.oid};
+    req.groups = nv.groups;
+    console.log(req.user);
+  } catch (error) {
+    console.error(error);
+  }
+  req.next();
+};
+
+app.use(injectUser);
+*/
+
+/*
  * Create a new ApolloServer instance, serving the GraphQL schema
  * created using makeAugmentedSchema above and injecting the Neo4j driver
  * instance into the context object so it is available in the
  * generated resolvers to connect to the database.
  */
 const server = new ApolloServer({
-  context: { driver },
+  context: ({ req }) => {
+    return {
+      driver,
+      req,
+      headers:req.headers
+    };
+  },
   schema: schema,
   introspection: true,
   playground: true
