@@ -6,10 +6,7 @@ type Zone implements AbstractElement @additionalLabels(labels: ["AbstractElement
   AllElements: [AbstractElement] @relation(name:"IS_IN_SPACE",direction:IN)
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
-
   Spaces: [Space] @relation(name:"IS_IN_ZONE",direction:IN)
-  Zo
-
 }
 
 type Space {
