@@ -10,12 +10,11 @@ services:
       - 7473:${NEO4j_HTTPS}
       - 7687:${NEO4j_BOLT}
     environment:
-      NEO4J_AUTH: neo4j/wibble
+      NEO4J_AUTH: ${NEO4J_USER}/${NEO4J_PASSWORD}
       NEO4J_dbms_unmanaged__extension__classes: org.neo4j.graphql=/graphql
       NEO4J_dbms_memory_heap_max__size: 8G
-      NEO4J_dbms_security_procedures_unrestricted: "apoc.*"
-      #NEO4J_kafka_zookeeper_connect: zookeeper:2181
-      #NEO4J_kafka_bootstrap_servers: broker:9093
+      # NEO4J_kafka_zookeeper_connect: zookeeper:2181
+      # NEO4J_kafka_bootstrap_servers: broker:9093
       NEO4J_dbms_logs_query_threshold: 0s
       NEO4J_dbms_logs_query_enabled: "true"
       NEO4J_cypher_lenient__create__relationship: "true"
@@ -33,8 +32,8 @@ services:
     container_name: ${GQL_NAME}
     environment:
       - NEO4J_URI=bolt://${NEO4j_NAME}:7687
-      - NEO4J_USER=neo4j
-      - NEO4J_PASSWORD=wibble
+      - NEO4J_USER=${NEO4J_USER}
+      - NEO4J_PASSWORD=${NEO4J_PASSWORD}
       - GRAPHQL_LISTEN_PORT=4002
       - GRAPHQL_URI=http://${GQL_NAME}:4002/graphql
       - 4002:${GQL_PORT}
