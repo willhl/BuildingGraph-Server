@@ -1,5 +1,4 @@
 
-
 ##add for auth: @isAuthenticated @hasRole(roles:[Writer])
 """
 A Space
@@ -23,11 +22,9 @@ type Space implements AbstractElement @additionalLabels(labels: ["AbstractElemen
 
 }
 
+
 ##mutations to merge spaces and elements
 type Mutation {
-    Add_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId}),(ton:Space {Id: $toId}) MERGE (frn)-[r:IS_IN_SPACE]->(ton)")   
-    Remove_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId})-[r:IS_IN_SPACE]->(ton {Id: $toId}) DELETE r")
-  
+  Add_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId}),(ton:Space {Id: $toId}) MERGE (frn)-[r:IS_IN_SPACE]->(ton)")   
+  Remove_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId})-[r:IS_IN_SPACE]->(ton {Id: $toId}) DELETE r")
 }
-
-

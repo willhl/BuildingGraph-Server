@@ -1,6 +1,7 @@
+
 type CalculationService implements BaseElement {
-    Id: ID!
-    Name: String
+  Id: ID!
+  Name: String
 }
 
 type ServiceInstance @relation(name: "SERIVCES") {
@@ -11,6 +12,5 @@ type ServiceInstance @relation(name: "SERIVCES") {
 }
 
 type Mutation {
-    Add_CalculationService_SERVICES_Project(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:CalculationService {Id: $fromId}),(ton:Project {Id: $toId}) MERGE (frn)-[r:SERIVCES]->(ton)")
+  Add_CalculationService_SERVICES_Project(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:CalculationService {Id: $fromId}),(ton:Project {Id: $toId}) MERGE (frn)-[r:SERIVCES]->(ton)")
 }
-

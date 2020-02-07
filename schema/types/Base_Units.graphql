@@ -7,243 +7,238 @@ scalar UnitFloat
 
 scalar Meters
 enum LengthUnits{
-mm
-cm
-m
-in
-ft_us
-ft
-mi
+  mm
+  cm
+  m
+  in
+  ft_us
+  ft
+  mi
 }
-
 
 scalar SquareMeters
 scalar SquareMilliMeters
 enum AreaUnits{
-mm2
-cm2
-m2
-ha
-km2
-in2
-ft2
-ac
-mi2
+  mm2
+  cm2
+  m2
+  ha
+  km2
+  in2
+  ft2
+  ac
+  mi2
 }
-
 
 enum MassUnits{
-mcg
-mg
-g
-kg
-oz
-lb
-mt
-t
+  mcg
+  mg
+  g
+  kg
+  oz
+  lb
+  mt
+  t
 }
-
 
 scalar CubicMeters
 scalar CubicMilliMeters
 enum VolumeUnits{
-mm3
-cm3
-ml
-l
-kl
-m3
-km3
-tsp
-Tbs
-in3
-fl_oz
-cup
-pnt
-qt
-gal
-ft3
-yd3
+  mm3
+  cm3
+  ml
+  l
+  kl
+  m3
+  km3
+  tsp
+  Tbs
+  in3
+  fl_oz
+  cup
+  pnt
+  qt
+  gal
+  ft3
+  yd3
 }
 
 scalar LitersPerSecond
 enum VolumeFlowRateUnits{
-mm3_per_s
-cm3_per_s
-ml_per_s
-cl_per_s
-dl_per_s
-l_per_s
-l_per_min
-l_per_h
-kl_per_s
-kl_per_min
-kl_per_h
-m3_per_s
-m3_per_min
-m3_per_h
-km3_per_s
-tsp_per_s
-Tbs_per_s
-in3_per_s
-in3_per_min
-in3_per_h
-fl_oz_per_s
-fl_oz_per_min
-fl_oz_per_h
-cup_per_s
-pnt_per_s
-pnt_per_min
-pnt_per_h
-qt_per_s
-gal_per_s
-gal_per_min
-gal_per_h
-ft3_per_s
-ft3_per_min
-ft3_per_h
-yd3_per_s
-yd3_per_min
-yd3_per_h
+  mm3_per_s
+  cm3_per_s
+  ml_per_s
+  cl_per_s
+  dl_per_s
+  l_per_s
+  l_per_min
+  l_per_h
+  kl_per_s
+  kl_per_min
+  kl_per_h
+  m3_per_s
+  m3_per_min
+  m3_per_h
+  km3_per_s
+  tsp_per_s
+  Tbs_per_s
+  in3_per_s
+  in3_per_min
+  in3_per_h
+  fl_oz_per_s
+  fl_oz_per_min
+  fl_oz_per_h
+  cup_per_s
+  pnt_per_s
+  pnt_per_min
+  pnt_per_h
+  qt_per_s
+  gal_per_s
+  gal_per_min
+  gal_per_h
+  ft3_per_s
+  ft3_per_min
+  ft3_per_h
+  yd3_per_s
+  yd3_per_min
+  yd3_per_h
 }
 
-
 enum TemperatureUnits{
-C
-F
-K
-R
+  C
+  F
+  K
+  R
 }
 
 enum TimeUnits{
-ns
-mu
-ms
-s
-min
-h
-d
-week
-month
-year
+  ns
+  mu
+  ms
+  s
+  min
+  h
+  d
+  week
+  month
+  year
 }
 
-
 enum FrequencyUnits{
-Hz
-mHz
-kHz
-MHz
-GHz
-THz
-rpm
-deg_per_s
-rad_per_s
+  Hz
+  mHz
+  kHz
+  MHz
+  GHz
+  THz
+  rpm
+  deg_per_s
+  rad_per_s
 }
 
 enum SpeedUnits{
-m_per_s
-km_per_h
-m_per_h
-knot
-ft_per_s
+  m_per_s
+  km_per_h
+  m_per_h
+  knot
+  ft_per_s
 }
 
 
 enum PaceUnits{
-s_per_m
-min_per_km
-s_per_ft
-min_per_ft
+  s_per_m
+  min_per_km
+  s_per_ft
+  min_per_ft
 }
 
 enum PressureUnits{
-Pa
-hPa
-kPa
-MPa
-bar
-torr
-psi
-ksi
+  Pa
+  hPa
+  kPa
+  MPa
+  bar
+  torr
+  psi
+  ksi
 }
 
 enum IlluminanceUnits{
-lx
-ft_cd
+  lx
+  ft_cd
 }
 
 enum PartsPerUnits{
-ppm
-ppb
-ppt
-ppq
+  ppm
+  ppb
+  ppt
+  ppq
 }
 
 scalar Volts
 enum VoltageUnits{
-V
-mV
-kV
+  V
+  mV
+  kV
 }
 
 scalar Amperes
 scalar Kiloamperes
 scalar Milliamperes
 enum CurrentUnits{
-A
-mA
-kA  
+  A
+  mA
+  kA  
 }
 
 scalar Watts
 enum PowerUnits{
-W
-mW
-kW
-MW
-GW
+  W
+  mW
+  kW
+  MW
+  GW
 }
 
 scalar VoltAmperes
 enum ApparentPowerUnits{
-VA
-mVA
-kVA
-MVA
-GVA
+  VA
+  mVA
+  kVA
+  MVA
+  GVA
 }
 
 enum ReactivePowerUnits{
-VAR
-mVAR
-kVAR
-MVAR
-GVAR
+  VAR
+  mVAR
+  kVAR
+  MVAR
+  GVAR
 }
 
 enum EnergyUnits{
-Wh
-mWh
-kWh
-MWh
-GWh
-J
-kJ
+  Wh
+  mWh
+  kWh
+  MWh
+  GWh
+  J
+  kJ
 }
 
 enum ReactiveEnergyUnits{
-VARh
-mVARh
-kVARh
-MVARh
-GVARh
+  VARh
+  mVARh
+  kVARh
+  MVARh
+  GVARh
 }
 
 enum AngleUnits{
-deg
-rad
-grad
-arcmin
-arcsec
+  deg
+  rad
+  grad
+  arcmin
+  arcsec
 }

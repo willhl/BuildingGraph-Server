@@ -1,5 +1,4 @@
 
-
 type Thread {
   StartedBy: [Resource]
   IsOpen: Boolean
@@ -13,4 +12,3 @@ type Message {
   Replies: [Message]
   Body: String
 }
-
