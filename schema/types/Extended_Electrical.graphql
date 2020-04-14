@@ -139,5 +139,3 @@ type Circuit {
 type Space {
   ElectricalOutlets: [ElectricalOutlet] @relation(name:"IS_IN_SPACE",direction:IN)
 }
-
-

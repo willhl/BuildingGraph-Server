@@ -11,7 +11,6 @@ type Sensor implements AbstractElement {
   Sensing: [AbstractElement] @relation(name:"SENSING",direction:OUT)
 }
 
-
 type Control implements AbstractElement {
   Name: String
   Id: ID!
@@ -21,14 +20,12 @@ type Control implements AbstractElement {
   Controlling: [AbstractElement] @relation(name:"CONTROLS",direction:OUT)
 }
 
-
 type Space {
   SensorElements: [Sensor] @relation(name:"IS_IN_SPACE",direction:IN)
   Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
   ControlElements: [Control] @relation(name:"IS_IN_SPACE",direction:IN)
   Controls: [Control] @relation(name:"CONTROLS",direction:IN)
 }
-
 
 type Furniture {
   Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
@@ -49,4 +46,3 @@ type Door {
   Sensors: [Sensor] @relation(name:"SENSING",direction:IN)
   Controls: [Control] @relation(name:"CONTROLS",direction:IN)
 }
-

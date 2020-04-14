@@ -1,5 +1,4 @@
 
-
 type Door implements AbstractElement {
   Name: String
   Id: ID!

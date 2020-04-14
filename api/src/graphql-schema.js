@@ -1,19 +1,11 @@
-import { neo4jgraphql } from "neo4j-graphql-js";
 import { fileLoader, mergeTypes } from 'merge-graphql-schemas';
-import fs from "fs";
 import path from "path";
 
-/*
- * Check for GRAPHQL_SCHEMA environment variable to specify schema file
- * fallback to schema.graphql if GRAPHQL_SCHEMA environment variable is not set
+/**
+ * Load graphql schemas form schema/types directory
  */
-
-//var tdesf1 = fs.readFileSync(process.env.GRAPHQL_SCHEMA || path.join(__dirname, "schema.graphql")).toString("utf-8");
-
-console.log(path.join(__dirname, '../../schema/types'))
-
-const typesArray = fileLoader(path.join(__dirname, '../../schema/types'));
-console.log(typesArray);
-//const typeDefs = mergeTypes(typesArray, { all: true });
-//console.log(mergedTypes)
+const schemaDir = path.join(__dirname, '../../schema/types');
+// console.log(schemaDir)
+const typesArray = fileLoader(schemaDir);
+// console.log(typesArray);
 export const typeDefs = mergeTypes(typesArray, { all: true }).toString("utf-8");

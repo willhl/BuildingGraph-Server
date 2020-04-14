@@ -7,9 +7,6 @@ type Furniture implements AbstractElement {
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
 }
 
-
-
-
 type Fixture implements AbstractElement {
   Name: String
   Id: ID!
@@ -17,7 +14,6 @@ type Fixture implements AbstractElement {
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
 }
-
 
 type Space {
   FurnitureElements: [Furniture] @relation(name:"IS_IN_SPACE",direction:IN)

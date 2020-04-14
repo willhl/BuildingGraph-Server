@@ -27,10 +27,9 @@ type Space {
   Assets: [Asset] @relation(name:"IS_IN_SPACE",direction:IN)
 }
 
+
 enum FaultLevel {
-    Information
-    Warning
-    Critical
+  Information
+  Warning
+  Critical
 }
-
-
