@@ -10,9 +10,8 @@ type Section implements AbstractElement {
 type SurfaceBoundary @relation(name: "BOUNDED_BY") {
   from: Space
   to: Surface
-  SectionFacingVectorX: Float
-  SectionFacingVectorY: Float
-  SectionFacingVectorZ: Float
+  facingVector: Point
+  Center: Point
   SectionArea: Float
 }
 
@@ -21,10 +20,12 @@ type Surface implements BaseElement {
   Name: String
   Spaces: [Space] @relation(name:"BOUNDED_BY",direction:IN)
   Host: AbstractElement @relation(name:"IS_ON",direction:IN)
+  Boundaries: [SurfaceBoundary]
 }
 
 type Space {
   BoundingSurfaces: [Surface] @relation(name:"BOUNDED_BY",direction:OUT)
+  Boundaries: [SurfaceBoundary]
 }
 
 
