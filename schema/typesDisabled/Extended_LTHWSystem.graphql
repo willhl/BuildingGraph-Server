@@ -1,4 +1,14 @@
 
+#######
+##
+##     -- LTHW System Types --
+##     
+##     Example low level LTHW types for conceptual design 
+##
+#######
+
+### Types ###
+
 type HeatingCoolingSystem implements BaseElement {
   Name: string
   Id: ID!
@@ -16,11 +26,15 @@ type Boiler implements AbstractElement {
   HeatingSystem: [HeatingCoolingSystem] @relation(name:"ENERGY",direction:OUT)
 }
 
+type Pump {
+    
+}
+
+
+### Augmented Types ### 
+
 type Space{
   HeatsSpace: [HeatingCoolingSystem] @relation(name:"ENERGY",direction:IN)
   CoolsSpace: [HeatingCoolingSystem] @relation(name:"ENERGY",direction:OUT)
 }
 
-type Pump {
-    
-}

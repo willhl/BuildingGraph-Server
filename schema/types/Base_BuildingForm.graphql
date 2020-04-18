@@ -1,4 +1,15 @@
 
+#######
+##
+##     -- Building Form Types --
+##
+##     Common architectural elements which make up the basic 
+##     form of any building or space bounding
+##
+#######
+
+### Types ###
+
 type Door implements AbstractElement {
   Name: String
   Id: ID!

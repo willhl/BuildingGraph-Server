@@ -1,10 +1,20 @@
 
+#######
+##
+##     -- Distribution Types --
+##
+##     All Elements (MEP) involoved in the conveyance of energy or mass
+##     throughout a building
+##
+#######
+
+
+### Types ###
+
 type Duct implements AbstractElement {
   Name: String
   Id: ID!
-  LocationX (unit: LengthUnits = m): Meters
-  LocationY (unit: LengthUnits = m): Meters
-  LocationZ (unit: LengthUnits = m): Meters
+  Location: Point
   Area (unit: AreaUnits = m2): SquareMeters
   Width (unit: LengthUnits = m): Meters
   Height (unit: LengthUnits = m): Meters

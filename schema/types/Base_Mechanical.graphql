@@ -1,4 +1,17 @@
 
+#######
+##
+##     -- Mechanical Types --
+##
+##     Base types for mechanical (MEP) elements
+##     Additional types to be added by further types
+##     and type augmentation in other .graphql files
+##
+#######
+
+
+### Types ###
+
 type Terminal implements AbstractElement {
   Name: String
   Id: ID!

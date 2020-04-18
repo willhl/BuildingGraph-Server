@@ -1,5 +1,39 @@
 
- type DBPanel {
+
+#######
+##
+##     -- Extended Electrical Types --
+##     
+##     Provides more detailed types and fields for electrical systems.
+##
+#######
+
+
+### Types ###
+
+type ElectricalOutlet implements AbstractElement & ElectricalLoadElement {
+  Id: ID!
+  Name: String
+  Is_Essential: Boolean
+  Is_Cleaners: Boolean
+  Number_Of_Outlets: Int
+  Apparent_Load (units: ApparentPowerUnits = VA): VoltAmperes
+  Diversity: Float
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Level: Level @relation(name:"IS_ON",direction:OUT)
+  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+}
+
+
+### Augmented Types ###
+
+type Space {
+  ElectricalOutlets: [ElectricalOutlet] @relation(name:"IS_IN_SPACE",direction:IN)
+}
+
+type DBPanel {
   "Group: DB Panel, Units: N/A, Notes: "
   Phase_Configuration: String
   "Group: DB Panel, Units: N/A, Notes: "
@@ -22,6 +56,7 @@
 }
 
 type Circuit {
+  ElectricalOutlets: [ElectricalOutlet] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
   Apparent_Current (units: CurrentUnits = A ): Amperes
   Apparent_Current_Phase_A (units: CurrentUnits = A ): Amperes 
   Apparent_Current_Phase_B (units: CurrentUnits = A ): Amperes 
@@ -83,6 +118,7 @@ type Circuit {
   CPC_Integral_Separate_or_Supplementary: String
   "Group: CPC, Units: mm2, Notes: "
   CPC_Size (unit: AreaUnits = mm2): SquareMilliMeters
+
 }
 
 type ElectricalLoad {
@@ -102,9 +138,7 @@ type ElectricalLoad {
   Label_Visible: Boolean
   Lateral_Offset: Float
   Lateral_Offset_Formula: Float
-  LocationX: Float
-  LocationY: Float
-  LocationZ: Float
+  Location: Point
   Mark: String
   Phase_Created: String
   Phase_Demolished: String
@@ -117,25 +151,5 @@ type ElectricalLoad {
   Volume: Float
 }
 
-type ElectricalOutlet implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]) {
-  Name: String
-  Id: ID!
-  Is_Essential: Boolean
-  Is_Cleaners: Boolean
-  Number_Of_Outlets: Int
-  Apparent_Load (units: ApparentPowerUnits = VA): VoltAmperes
-  Diversity: Float
-  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
-  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
-  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
-  Level: Level @relation(name:"IS_ON",direction:OUT)
-  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
-}
 
-type Circuit {
-  ElectricalOutlets: [ElectricalOutlet] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
-}
 
-type Space {
-  ElectricalOutlets: [ElectricalOutlet] @relation(name:"IS_IN_SPACE",direction:IN)
-}

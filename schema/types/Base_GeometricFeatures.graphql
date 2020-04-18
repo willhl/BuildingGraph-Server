@@ -1,35 +1,51 @@
 
-type Section implements AbstractElement {
+
+#######
+##
+##     -- Geometric Feature Types --
+##
+##     Types defining surface bounding adjacencies, areas and facing vectors 
+##     which are are pre-calculated from the actual geometry (feature extraction).
+##
+#######
+
+
+### Types ###
+
+type Section implements AbstractElement & BaseElement {
   Name: String
   Id: ID!
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Spaces: [Space] @relation(name:"BOUNDED_BY",direction:IN)
+  Host: AbstractElement @relation(name:"IS_ON",direction:IN)
 }
 
 type SurfaceBoundary @relation(name: "BOUNDED_BY") {
   from: Space
   to: Surface
-  facingVector: Point
-  Center: Point
-  SectionArea: Float
+  Direction: Point
+  Facing: String
+  SubFaceType: String
+  Area: Float
 }
 
 type Surface implements BaseElement {
   Id: ID!
   Name: String
+  Area: Float
+  Center: Point
+  Size: Point
   Spaces: [Space] @relation(name:"BOUNDED_BY",direction:IN)
   Host: AbstractElement @relation(name:"IS_ON",direction:IN)
   Boundaries: [SurfaceBoundary]
 }
+
+
+### Augmented Types ###
 
 type Space {
   BoundingSurfaces: [Surface] @relation(name:"BOUNDED_BY",direction:OUT)
   Boundaries: [SurfaceBoundary]
 }
 
-type Section implements BaseElement {
-  Id: ID!
-  Name: String
-  Spaces: [Space] @relation(name:"BOUNDED_BY",direction:IN)
-  Host: AbstractElement @relation(name:"IS_ON",direction:IN)
-}

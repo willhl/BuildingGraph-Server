@@ -1,7 +1,15 @@
-#based on https://www.npmjs.com/package/convert-units
 
-#universal unit type, supports dynamic query conversion but not in mutations
-#because it has no default unit type avalaible to mutations
+#######
+##
+##     -- Units --
+##
+##     Universal unit types, supports dynamic query conversion but not in mutations
+##     because there're no default unit types available to mutations.
+##     Uses https://www.npmjs.com/package/convert-units
+##
+#######
+
+
 scalar UnitFloat
 
 

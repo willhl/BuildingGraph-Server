@@ -1,7 +1,9 @@
 
+### Enums ###
+
 enum Role {
-  reader
-  user
-  admin
+  Admin
+  Reader
+  Contributor
   Writer
 }

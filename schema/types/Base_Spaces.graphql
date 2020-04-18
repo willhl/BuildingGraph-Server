@@ -1,9 +1,20 @@
 
-##add for auth: @isAuthenticated @hasRole(roles:[Writer])
+#######
+##
+##     -- Space Types --
+##
+##     Defines a base MEP space type.
+##     Further fields added by augmented 
+##     types in other .graphQL files.
+##
+#######
+
+### Types ###
+
 """
-A Space
+MEP Space base type
 """
-type Space implements AbstractElement @additionalLabels(labels: ["AbstractElement"]) {
+type Space implements AbstractElement {
   Id: ID!
   IsExternal: Boolean
   "Space Number"
@@ -13,9 +24,7 @@ type Space implements AbstractElement @additionalLabels(labels: ["AbstractElemen
   Area (unit: AreaUnits = m2): SquareMeters
   Volume (unit: VolumeUnits = m3): CubicMeters
   Height (unit: LengthUnits = m): Meters
-  CenterX (unit: LengthUnits = m): Meters
-  CenterY (unit: LengthUnits = m): Meters
-  CenterZ (unit: LengthUnits = m): Meters
+  Center: Point
   AllElements: [AbstractElement] @relation(name:"IS_IN_SPACE",direction:IN)
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
@@ -23,7 +32,8 @@ type Space implements AbstractElement @additionalLabels(labels: ["AbstractElemen
 }
 
 
-##mutations to merge spaces and elements
+### Mutations ###
+
 type Mutation {
   Add_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId}),(ton:Space {Id: $toId}) MERGE (frn)-[r:IS_IN_SPACE]->(ton)")   
   Remove_AbstractElement_IS_IN_SPACE_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AbstractElement {Id: $fromId})-[r:IS_IN_SPACE]->(ton {Id: $toId}) DELETE r")

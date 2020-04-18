@@ -2,7 +2,7 @@ import { typeDefs } from "./graphql-schema";
 import { ApolloServer } from "apollo-server-express";
 
 import express from "express";
-import { v1 as neo4j } from "neo4j-driver";
+import neo4j from 'neo4j-driver';
 import { makeAugmentedSchema } from "neo4j-graphql-js";
 import dotenv from "dotenv";
 
@@ -10,6 +10,13 @@ import UnitFloatScalarType from "./units/UnitFloatScalarType"
 
 // set environment variables from ../.env
 dotenv.config();
+
+//sometimes getting line breaks into env vars can be tricky... this helps:
+//replaces literal \n with actual line breaks
+if (process.env.JWT_SECRET)
+{
+  process.env.JWT_SECRET = process.env.JWT_SECRET.replace(/\\n/g, '\n');
+}
 
 const app = express();
 
@@ -21,8 +28,9 @@ const app = express();
  * in generated queries and/or mutations. Read more in the docs:
  * https://grandstack.io/docs/neo4j-graphql-js-api.html#makeaugmentedschemaoptions-graphqlschema
  */
-//console.log(typeDefs)
 
+//Resolvers for the Unit conversion feature
+//This is not yet an exhaustive list yet as there're still many additional units to add
 const resolvers = {
   UnitFloat : new UnitFloatScalarType("UnitFloat"),
   Meters: new UnitFloatScalarType("Meters", "m"),
@@ -59,25 +67,6 @@ const driver = neo4j.driver(
 );
 
 /*
-// Custom middleware to add a user object to the server requests
-const injectUser = async req => {
-  try {
-    var token = req.headers.authorization;
-    var stToken = token.substring(7, token.length);
-    var nv = await jwt.verify(stToken, JWT_SECRET);
-    req.user = { name:nv.preferred_username, id:nv.oid};
-    req.groups = nv.groups;
-    console.log(req.user);
-  } catch (error) {
-    console.error(error);
-  }
-  req.next();
-};
-
-app.use(injectUser);
-*/
-
-/*
  * Create a new ApolloServer instance, serving the GraphQL schema
  * created using makeAugmentedSchema above and injecting the Neo4j driver
  * instance into the context object so it is available in the
@@ -88,12 +77,13 @@ const server = new ApolloServer({
     return {
       driver,
       req,
-      headers:req.headers
+      headers:req.headers,
+      neo4jDatabase: req.header["x-database"]
     };
   },
   schema: schema,
   introspection: true,
-  playground: true
+  playground: false
 });
 
 // Specify port and path for GraphQL endpoint

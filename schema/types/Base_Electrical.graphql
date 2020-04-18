@@ -1,4 +1,15 @@
 
+#######
+##
+##     -- Electrical Types --
+##
+##     Types which define electrical, security and data elements and systems
+##
+##
+#######
+
+### Types ###
+
 interface ElectricalLoadElement {
   Id: ID!
   Name: String
@@ -25,7 +36,7 @@ type Circuit implements AbstractElement {
   Panels: [DBPanel] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
 }
 
-type DBPanel implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]) {
+type DBPanel implements AbstractElement & ElectricalLoadElement {
   Name: String
   Id: ID!
   Diversity: Float
@@ -38,7 +49,7 @@ type DBPanel implements AbstractElement & ElectricalLoadElement @additionalLabel
   Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
 }
 
-type ElectricalLoad implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]) {
+type ElectricalLoad implements AbstractElement & ElectricalLoadElement {
   Name: String
   Id: ID!
   Diversity: Float
@@ -51,7 +62,7 @@ type ElectricalLoad implements AbstractElement & ElectricalLoadElement @addition
   Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
 }
 
-type Lighting implements AbstractElement & ElectricalLoadElement @additionalLabels(labels: ["AbstractElement", "ElectricalLoadElement"]){
+type Lighting implements AbstractElement & ElectricalLoadElement {
   Name: String
   Id: ID!
   Diversity: Float
@@ -103,6 +114,9 @@ type Communications implements AbstractElement {
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
 }
 
+
+### Augmented Types ###
+
 type Space {
   ElectricalLoadElements: [ElectricalLoadElement] @relation(name:"IS_IN_SPACE",direction:IN)
   LightingElements: [Lighting] @relation(name:"IS_IN_SPACE",direction:IN)
@@ -113,6 +127,8 @@ type Space {
   DBPanelElements: [DBPanel] @relation(name:"IS_IN_SPACE",direction:IN)
 }
 
+
+### Mutations ###
 
 type Mutation {
     Add_Circuit_ELECTRICAL_FLOW_TO_ElectricalLoadElement(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:Circuit {Id: $fromId}),(ton:ElectricalLoadElement {Id: $toId}) MERGE (frn)-[r:ELECTRICAL_FLOW_TO]->(ton)")   

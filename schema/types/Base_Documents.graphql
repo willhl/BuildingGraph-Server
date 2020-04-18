@@ -1,4 +1,18 @@
 
+
+#######
+##
+##     -- Document Types --
+##
+##     Types which organise models and documents into containers
+##     for the purpose of controlled issue. 
+##     Part of a trial to meet on ISO19650.
+##
+##
+#######
+
+### Interfaces ####
+
 interface ContainerContent {
   Id: ID!
   Name: String 
@@ -10,16 +24,9 @@ interface ContainerContent {
 }
 
 
-type Container implements BaseElement {
-  Id: ID!
-  Name: String
-  Description: String
-  Issues: [ContainerIssue] @relation(name:"ISSUES",direction:IN)
-  Content: [ContainerContent] @relation(name:"CONTAINS",direction:OUT)
-  Project: Project
-}
+### Types ###
 
-type Model implements BaseElement & ContainerContent @additionalLabels(labels: ["ContainerContent"]) {
+type Model implements BaseElement & ContainerContent {
   Id: ID!
   Name: String
   Version: String
@@ -30,7 +37,7 @@ type Model implements BaseElement & ContainerContent @additionalLabels(labels: [
   Containers: [Container] @relation(name:"CONTAINS",direction:IN)
 }
 
-type Document implements BaseElement & ContainerContent @additionalLabels(labels: ["ContainerContent"]) {
+type Document implements BaseElement & ContainerContent {
   Id: ID!
   Name: String
   Version: String
@@ -40,11 +47,24 @@ type Document implements BaseElement & ContainerContent @additionalLabels(labels
   Containers: [Container] @relation(name:"CONTAINS",direction:IN)
 }
 
+type Container implements BaseElement {
+  Id: ID!
+  Name: String
+  Description: String
+  Issues: [ContainerIssue] @relation(name:"ISSUES",direction:IN)
+  Content: [ContainerContent] @relation(name:"CONTAINS",direction:OUT)
+  Project: Project
+}
+
+
 type ContainerIssue implements BaseElement {
   Id: ID!
   IssueDate: DateTime
   Containers: [Container] @relation(name:"ISSUES",direction:OUT)
 }
+
+
+### Augmented Types ###
 
 type User {
   ContainerIssueBy: [ContainerIssue] @relation(name:"ISSUED",direction:OUT)

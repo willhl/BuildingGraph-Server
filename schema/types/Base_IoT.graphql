@@ -1,9 +1,21 @@
 
+#######
+##
+##     -- IoT Types --
+##
+##     Types defining sensors and controls
+##     and the relationships to the things they act on
+##
+#######
+
+
+### Types ###
+
 type Sensor implements AbstractElement {
   Name: String
   Id: ID!
   Data_URI: String
-  Data_Metirc_Name: String
+  Data_Metric_Name: String
   Data_Request_Body: String
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
@@ -19,6 +31,9 @@ type Control implements AbstractElement {
   Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
   Controlling: [AbstractElement] @relation(name:"CONTROLS",direction:OUT)
 }
+
+
+### Augmented Types ###
 
 type Space {
   SensorElements: [Sensor] @relation(name:"IS_IN_SPACE",direction:IN)

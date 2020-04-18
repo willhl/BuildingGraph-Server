@@ -1,4 +1,16 @@
 
+#######
+##
+##     -- System Types --
+##
+##     Defines a base MEP System type.
+##     Further fields added by augmented 
+##     types in other .graphQL files.
+##
+#######
+
+### Types ###
+
 type System implements AbstractElement {
   Name: String
   Id: ID!

@@ -1,4 +1,16 @@
 
+
+#######
+##
+##     -- Extended Space Type --
+##     
+##     Provides more detailed types and fields for MEP Spaces.
+##
+#######
+
+
+### Augmented Types ###
+
 """
 A Space with parameters
 """

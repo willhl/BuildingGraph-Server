@@ -2,7 +2,7 @@ version: '3'
 
 services:
   neo4j:
-    image: neo4j:3.5
+    image: neo4j:4.0.3
     hostname: ${NEO4j_NAME}
     container_name: ${NEO4j_NAME}
     ports:
@@ -16,19 +16,24 @@ services:
       # NEO4J_kafka_zookeeper_connect: zookeeper:2181
       # NEO4J_kafka_bootstrap_servers: broker:9093
       NEO4J_dbms_logs_query_threshold: 0s
-      NEO4J_dbms_logs_query_enabled: "true"
+      NEO4J_dbms.logs.query.enabled: "INFO"
       NEO4J_cypher_lenient__create__relationship: "true"
       NEO4J_apoc_trigger_enabled: "true"
       NEO4J_dbms_security_procedures_unrestricted: "apoc.*,algo.*"
+      NEO4J_apoc_import_file_enabled: "true"
+      NEO4J_apoc_export_file_enabled: "true"
       NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+      NEO4J_dbms_shell_enabled: "true"
     volumes:
-      - ./Dependents/${NEO4j_NAME}/plugins:/plugins
+      - ./Dependents/neo4j/plugins:/plugins
       - ./Dependents/${NEO4j_NAME}/data:/data
       - ./Dependents/${NEO4j_NAME}/conf:/config
 
   api:
     build: ./api
     hostname: ${GQL_NAME}
+    ports:
+      - 4002:${GQL_PORT}
     container_name: ${GQL_NAME}
     environment:
       - NEO4J_URI=bolt://${NEO4j_NAME}:7687
@@ -36,13 +41,14 @@ services:
       - NEO4J_PASSWORD=${NEO4J_PASSWORD}
       - GRAPHQL_LISTEN_PORT=4002
       - GRAPHQL_URI=http://${GQL_NAME}:4002/graphql
-      - 4002:${GQL_PORT}
+      - JWT_SECRET=${GQL_JWT_SECRET}
+      - AUTH_DIRECTIVES_ROLE_KEY=${GQL_AUTH_DIRECTIVES_ROLE_KEY}
     volumes:
       - ./schema:/schema
     links:
-    - ${NEO4j_NAME}
+    - neo4j
     depends_on:
-    - ${NEO4j_NAME}
+    - neo4j
 
 volumes:
   schema:

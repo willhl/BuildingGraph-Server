@@ -90,6 +90,10 @@ bin/server
 reference
 
 api/build
-Dependents/neo4j/data
-Dependents/neo4j/conf
+
+Dependents/**/*
+!Dependents/*
+!Dependents/neo4j/*
+!Dependents/**/plugins/*
+
 

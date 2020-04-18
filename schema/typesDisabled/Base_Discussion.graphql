@@ -1,4 +1,15 @@
 
+
+#######
+##
+##     -- Discussion Type --
+##     
+##     Example of a message/thread implementation
+##
+#######
+
+### Types ###
+
 type Thread {
   StartedBy: [Resource]
   IsOpen: Boolean
@@ -7,7 +18,7 @@ type Thread {
 
 type Message {
   From: [Resource]
-  Mentions: [Resouce]
+  Mentions: [Resource]
   InReplyTo: [Message]
   Replies: [Message]
   Body: String
