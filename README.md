@@ -10,7 +10,7 @@ It comprises of a Neo4j Graph database with a GraphQL layer provided by a Node.j
 Additionally to this API and in separate repositories there are integrations and examples of using it with Autodesk Revit, Dynamo, and Rhino Grasshopper. 
 
  - Revit integration : [https://github.com/willhl/BuildingGraph-Client-Revit](https://github.com/willhl/BuildingGraph-Client-Revit)
- - Rhino intergratoin : [https://github.com/willhl/BuildingGraph-Integration-RhinoGrasshopper](https://github.com/willhl/BuildingGraph-Integration-RhinoGrasshopper)
+ - Rhino integration : [https://github.com/willhl/BuildingGraph-Integration-RhinoGrasshopper](https://github.com/willhl/BuildingGraph-Integration-RhinoGrasshopper)
  - Example Dynamo and Grasshopper scripts : [https://github.com/willhl/BuildingGraph-Client-Examples](https://github.com/willhl/BuildingGraph-Client-Examples)
 
 
