@@ -3,7 +3,7 @@
 
 Much of the data used in the Architectural, Engineering and Construction (AEC) industry is siloed in propriety formats and scattered over many different locations. This API seeks to unify all the data requirements to a single API and a common language (the GraphQL Schema). Included in this repository is a schema for Mechanical, Electrical and Plumbing (MEP) building services.
 
-The vision is for this API to form the fundamental source from which all AEC applications, and any associated services, to read and write the data they need, as mentioned in [this class at Autodesk University Las Vegas 2019](https://www.autodesk.com/autodesk-university/class/Unlock-Full-Potential-Your-MEP-Data-Case-Unified-Data-Model-2019).
+The vision is for this API to form the fundamental source from which all AEC applications, and any associated services, can read and write the data they need, as mentioned in [this class at Autodesk University Las Vegas 2019](https://www.autodesk.com/autodesk-university/class/Unlock-Full-Potential-Your-MEP-Data-Case-Unified-Data-Model-2019).
 
 It comprises of a Neo4j Graph database with a GraphQL layer provided by a Node.js server running Apollo with Neo4j specific libraries, aka, [GRANDstack](https://grandstack.io).
 
