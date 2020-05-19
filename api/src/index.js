@@ -34,15 +34,21 @@ const app = express();
 const resolvers = {
   UnitFloat : new UnitFloatScalarType("UnitFloat"),
   Meters: new UnitFloatScalarType("Meters", "m"),
+  MilliMeters: new UnitFloatScalarType("MilliMeters", "mm"),
   SquareMeters : new UnitFloatScalarType("SquareMeters", "m2"),
+  SquareMilliMeters : new UnitFloatScalarType("SquareMilliMeters", "mm2"),
   CubicMilliMeters : new UnitFloatScalarType("CubicMilliMeters", "mm3"),
   CubicMeters : new UnitFloatScalarType("CubicMeters", "m3"),
+  Liters : new UnitFloatScalarType("Liters", "l"),
   Amperes : new UnitFloatScalarType("Amperes", "A"),
   Kiloamperes : new UnitFloatScalarType("Kiloamperes", "kA"),
   Milliamperes : new UnitFloatScalarType("Milliamperes", "mA"),
   Watts : new UnitFloatScalarType("Watts", "W"),
   VoltAmperes : new UnitFloatScalarType("VoltAmperes", "VA"),
-  LitersPerSecond: new UnitFloatScalarType("LitersPerSecond", "l_per_s")
+  LitersPerSecond: new UnitFloatScalarType("LitersPerSecond", "l_per_s"),
+  DegreeCelsius: new UnitFloatScalarType("DegreeCelsius", "C"),
+  KiloPascals: new UnitFloatScalarType("KiloPascals", "kPa"),
+  KiloGrams: new UnitFloatScalarType("KiloGrams", "kg")
 };
 
 

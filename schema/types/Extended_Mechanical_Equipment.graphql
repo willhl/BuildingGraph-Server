@@ -1,0 +1,138 @@
+
+
+#######
+##
+##     -- Extended Electrical Types --
+##     
+##     Provides more detailed types and fields for mechanical systems.
+##
+#######
+
+
+### Augmented Types ###
+
+type Space {
+    FanCoilUnits: [FanCoilUnit] @relation(name:"IS_IN_SPACE",direction:IN)
+    Space_Sensible_Cooling_Load_per_Terminal: String
+    Space_Total_Cooling_Load_per_Terminal: String
+    Space_Heating_Load_per_Terminal: String
+}
+
+type Circuit {
+    FanCoilUnits: [FanCoilUnit] @relation(name:"ELECTRICAL_FLOW_TO",direction:OUT)
+}
+
+
+
+### Types ###
+
+type ExtendedTypes{
+
+    FanCoilUnits: [FanCoilUnit] @cypher(statement: "match (e:ElementType {ClassificationCode:'[Uniclass 2015 - Product] Pr_70_65_03_29 : Fan coil units'})<-[:IS_OF]-(me:Equipment) return me")
+}
+
+
+
+"""
+Fan Coil Unit
+[Uniclass 2015 - Product]:Pr_70_65_03_29
+"""
+type FanCoilUnit implements AbstractElement & ElectricalLoadElement {
+    Id: ID!
+    Name: String
+    
+  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+
+    ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+    ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+    Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+
+    Apparent_Load (units: ApparentPowerUnits = VA ): VoltAmperes
+    Diversity: Float
+    ConnectedTo: ElectricalLoadElement @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+    Level: Level @relation(name:"IS_ON",direction:OUT)
+
+    ExtendedType: FanCoilUnitType  @cypher(statement: "MATCH (this)-[:IS_OF]->(et:ElementType) RETURN et")
+
+    HydronicFlowsIn: [AbstractElement] @relation(name:"HYDRONIC_FLOW_TO",direction:IN)
+    HydronicFlowsOut: [AbstractElement] @relation(name:"HYDRONIC_FLOW_TO",direction:OUT)
+
+    AirFlowsIn: [AbstractElement] @relation(name:"AIR_FLOW_TO",direction:IN)
+    AirFlowsOut: [AbstractElement] @relation(name:"AIR_FLOW_TO",direction:OUT)
+
+    Comments: String
+    Mark: String
+    Air_Flow_Rate (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    Air_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+    Area (unit: AreaUnits = m2): SquareMeters
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_1000Hz: Float
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_125Hz: Float
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_2000Hz: Float
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_250Hz: Float
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_4000Hz: Float
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_500Hz: Float
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_63Hz: Float
+    Casing_and_Inlet_Sound_Power_Level_in_dB_at_8000Hz: Float
+    CHW_Coil_Volume (unit: VolumeUnits = l): Liters
+    CHW_Density: Float
+    CHW_Flow_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+    CHW_Flow_Rate (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    CHW_Flow_Temperature (units: TemperatureUnits = C): DegreeCelsius
+    CHW_Glycol_Percentage: Float
+    CHW_Pipe_Connection_Size (unit: LengthUnits = mm): MilliMeters
+    CHW_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+    CHW_Return_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+    CHW_Return_Temperature (units: TemperatureUnits = C): DegreeCelsius
+    CHW_Specific_Heat_Capacity: Float
+    Condensate_Discharge_Units: Float
+    Condensate_Pipe_Connection_Size (unit: LengthUnits = mm): MilliMeters
+    Cooling_Duty (unit: PowerUnits =  W): Watts
+    Critical_Path: Boolean
+    Discharge_Sound_Power_Level_in_dB_at_1000Hz: Float
+    Discharge_Sound_Power_Level_in_dB_at_125Hz: Float
+    Discharge_Sound_Power_Level_in_dB_at_2000Hz: Float
+    Discharge_Sound_Power_Level_in_dB_at_250Hz: Float
+    Discharge_Sound_Power_Level_in_dB_at_4000Hz: Float
+    Discharge_Sound_Power_Level_in_dB_at_500Hz: Float
+    Discharge_Sound_Power_Level_in_dB_at_63Hz: Float
+    Discharge_Sound_Power_Level_in_dB_at_8000Hz: Float
+    Heating_Duty (unit: PowerUnits =  W): Watts
+    In_Duct_or_Radiated_Discharge_Sound_Power_Level: String
+    Latent_Cooling_Duty (unit: PowerUnits =  W): Watts
+    LTHW_Coil_Volume (unit: VolumeUnits = l): Liters
+    LTHW_Density: Float
+    LTHW_Flow_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+    LTHW_Flow_Rate (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    LTHW_Flow_Temperature (units: TemperatureUnits = C): DegreeCelsius
+    LTHW_Pipe_Connection_Size (unit: LengthUnits = mm): MilliMeters
+    LTHW_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+    LTHW_Return_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+    LTHW_Return_Temperature (units: TemperatureUnits = C): DegreeCelsius
+    LTHW_Specific_Heat_Capacity: Float
+    Maximum_Pump_Speed_at_Capability_Duty_in_RPM: Float
+    Noise_Rating_in_NR: Int
+    Off_Coil_Air_Temperature_Delta_T (units: TemperatureUnits = C): DegreeCelsius
+    Offset (unit: LengthUnits = mm): MilliMeters
+    Power (unit: PowerUnits =  W): Watts
+    Power_Factor: Float
+    Sensible_Cooling_Duty (unit: PowerUnits =  W): Watts
+    Specific_Fan_Power_in_Watts_per_Litres_per_Second: Float
+    Supply_Air_Cooling_Contribution (unit: PowerUnits =  W): Watts
+    Supply_Air_Flow_Rate (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+}
+
+type FanCoilUnitType
+{
+    Name: String
+    Description: String
+    Attenuator: Boolean
+    Attenuator_Length (unit: LengthUnits = mm): MilliMeters
+    Temperature_Sensor_Location: String
+    Unit_Height (unit: LengthUnits = mm): MilliMeters
+    Unit_Width (unit: LengthUnits = mm): MilliMeters
+    Unit_Length (unit: LengthUnits = ft): MilliMeters
+    Operating_Weight (unit: MassUnits=Kg): KiloGrams
+    Fan_Speed_Mode: String
+
+    FanCoilUnits: [FanCoilUnitType] @relation(name:"IS_OF",direction:IN)
+}

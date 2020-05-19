@@ -27,8 +27,8 @@ interface BaseElement {
 Abstract Element - Elements which exist in analytical space
 """
 interface AbstractElement {
-  Name: String
   Id: ID!
+  Name: String
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
 } 

@@ -14,6 +14,7 @@ scalar UnitFloat
 
 
 scalar Meters
+scalar MilliMeters
 enum LengthUnits{
   mm
   cm
@@ -38,6 +39,7 @@ enum AreaUnits{
   mi2
 }
 
+scalar KiloGrams
 enum MassUnits{
   mcg
   mg
@@ -51,6 +53,7 @@ enum MassUnits{
 
 scalar CubicMeters
 scalar CubicMilliMeters
+scalar Liters
 enum VolumeUnits{
   mm3
   cm3
@@ -112,6 +115,7 @@ enum VolumeFlowRateUnits{
   yd3_per_h
 }
 
+scalar DegreeCelsius
 enum TemperatureUnits{
   C
   F
@@ -160,6 +164,7 @@ enum PaceUnits{
   min_per_ft
 }
 
+scalar KiloPascals
 enum PressureUnits{
   Pa
   hPa
