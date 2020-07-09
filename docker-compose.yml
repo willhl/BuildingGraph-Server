@@ -43,6 +43,7 @@ services:
       - GRAPHQL_URI=http://${GQL_NAME}:4002/graphql
       - JWT_SECRET=${GQL_JWT_SECRET}
       - AUTH_DIRECTIVES_ROLE_KEY=${GQL_AUTH_DIRECTIVES_ROLE_KEY}
+      - NEO4J_ENCRYPTED=true
     volumes:
       - ./schema:/schema
     links:

@@ -31,7 +31,7 @@ type FaultEvent implements BaseElement {
   Name: String
   Id: ID!
   FaultLevel: FaultLevel
-  IsResolved:   
+  IsResolved: Boolean
   Asset: [Asset] @relation(name:"EVENT",direction:IN)
 }
 
