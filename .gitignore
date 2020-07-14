@@ -96,4 +96,5 @@ Dependents/**/*
 !Dependents/neo4j/*
 !Dependents/**/plugins/*
 !/.env
+!api/.env
 
