@@ -1,7 +1,7 @@
 {
-  "name": "grand-stack-starter-api",
+  "name": "buildinggraph-server",
   "version": "0.0.1",
-  "description": "API app for GRANDstack",
+  "description": "API for Building Graph based on GRANDstack",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "start": "npm run build && node build/index.js",
     "seedDb": "./node_modules/.bin/babel-node src/seed/seed-db.js"
   },
-  "author": "William Lyon",
+  "author": "Will Reynolds",
   "license": "MIT",
   "dependencies": {
     "apollo-boost": "^0.4.9",

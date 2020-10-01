@@ -14,7 +14,20 @@ type Project implements BaseElement {
   Name: String
   Id: ID!
   Buildings: [Building] @relation(name:"INCLUDES",direction:OUT)
+  Sites: [Building] @relation(name:"INCLUDES",direction:OUT)
 }
+
+type Site implements BaseElement {
+  Name: String
+  Id: ID!
+  Projects: [Project] @relation(name:"INCLUDES",direction:IN)
+  Buildings: [Building] @relation(name:"INCLUDES",direction:OUT)
+  Street: String
+  City: String
+  PostalCode: String
+  CountryCode: Int
+}
+
  
 type Building implements BaseElement  {
   Name: String
