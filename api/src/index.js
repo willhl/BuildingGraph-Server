@@ -107,7 +107,7 @@ const server = new ApolloServer({
       driver,
       req,
       headers:req.headers,
-      neo4jDatabase: req.header["x-database"]
+      neo4jDatabase: req.header["x-database"] || process.env.NEO4J_DATABASE 
     };
   },
   schema: schema,
