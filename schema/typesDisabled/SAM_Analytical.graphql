@@ -1,0 +1,85 @@
+
+#include SAM.Core.Graphql
+
+interface ISAMPlanar {
+  PlanarBoundary: PlanarBoundary3D
+}
+
+
+type AnalyticalModel {
+    Id: ID!
+    _type: String
+    Location: Point
+    Spaces: [Space] @relation(name:"ANALYSIS",direction:IN)
+    Panels: [Panel] @relation(name:"BOUNDED_BY",direction:IN)
+    Model: [Model] @relation(name:"ANALYSIS",direction:OUT)
+}
+
+type Panel implements BaseElement & SAM_Object & ISAMPlanar {
+   Id: ID!
+   _type: String
+   SAMType: [SAM_Type] @relation(name:"IS_OF",direction:OUT)
+   PanelType: String
+   Guid: String
+   Model: AnalyticalModel @relation(name:"BOUNDED_BY",direction:OUT)
+   PlanarBoundary: PlanarBoundary3D @relation(name:"FORMS",direction:IN)
+   Apertures: [Aperture] @relation(name:"CUTS",direction:IN)
+   Area: SquareMeter
+   AsJSON: String
+}
+
+type Aperture implements BaseElement & SAM_Object & ISAMPlanar {
+   Id: ID!
+   _type: String
+   SAMType: [SAM_Type] @relation(name:"IS_OF",direction:OUT)
+   PlanarBoundary: PlanarBoundary3D @relation(name:"FORMS",direction:IN)
+   Panel: Panel @relation(name:"CUTS",direction:OUT)
+}
+
+type PlanarBoundary3D implements BaseElement & SAM_Object {
+   Id: ID!
+   _type: String
+   Guid: String
+   Plane_Origin: Point
+   Plane_Normal: Point
+   Plane_AxisY: Point
+   Edges: [EdgeCurve2d] @relation(name:"FORMS",direction:IN)
+   SAMPlane: [ISAMPlanar3d] @relation(name:"FORMS",direction:OUT)
+}
+
+type EdgeCurve2d implements BaseElement & SAM_Object {
+  Id: ID!
+  _type: String
+  Guid: String
+  Next: [EdgeCurve2d] @relation(name:"THEN",direction:IN)
+  Origin2D: Point
+  Vector2D: Point
+  PlanarBoundary: PlanarBoundary3D @relation(name:"FORMS",direction:OUT)
+}
+
+
+### Extended Types
+type SAM_Type {
+  ApertureType: String
+  SAMObjects: [SAM_Object] @relation(name:"IS_OF",direction:IN)
+}
+
+
+type Space {
+  AnalyticalModels: [AnalyticalModel]  @relation(name:"ANALYSIS",direction:OUT)
+  Panels: [Panel]  @relation(name:"BOUNDED_BY",direction:OUT)
+  SAM_Area: SquareMeter
+}
+
+type Model {
+  AnalyticalModels: [AnalyticalModel] @relation(name:"ANALYSIS",direction:IN)
+}
+
+
+#change Plane to extension of Surface?
+type Surface {
+  ToPlane3D: PlanarBoundary3D @relation(name:"REALIZED_BY",direction:OUT)
+
+}
+
+

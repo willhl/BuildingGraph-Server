@@ -1,0 +1,92 @@
+
+
+
+interface SAM_Object {
+    Name: String
+    Guid: String
+}
+
+type AnalyticalModel implements BaseElement & SAM_Object {
+    Id: ID!
+    Name: String
+    Guid: String
+    Description: String
+    Spaces: [Space] @relation(name:"ANALYSIS_OF",direction:IN)
+    Panels: [Panel] @relation(name:"BOUNDED_BY",direction:IN)
+    Model: [Model] @relation(name:"ANALYSIS_OF",direction:OUT)
+
+    #Constuctions
+    #Profiles
+}
+
+
+type Panel implements BaseElement & SAM_Object {
+   Id: ID!
+   Name: String
+   Guid: String
+   PanelType: String
+   Model: AnalyticalModel @relation(name:"ANALYSIS_OF",direction:IN)
+   Area: SquareMeters
+   AsJSON: String
+   Adjacencies: [Space] @relation(name:"BOUNDED_BY",direction:IN)
+   IsExteral: Boolean
+   IsInternal: Boolean
+   IsExposedToSun: Boolean
+
+   #Apertures
+   #Construction
+}
+
+
+type ICProfile  implements BaseElement & SAM_Object {
+   Id: ID!
+   Name: String
+   Guid: String
+   
+
+}
+
+
+type ICProfile  implements BaseElement & SAM_Object {
+   Id: ID!
+   Name: String
+   Guid: String
+   Gain: Float
+   Values: String
+
+   ProfileSettings: [ICProflileSetting]  
+}
+
+
+type ICProflileSetting @relation(name: "PROFILED_BY") {
+  from: Space
+  to: ICProfile
+  ProfileType: String
+  
+}
+
+
+
+### Extended Types
+
+type Space {
+  AnalyticalModels: [AnalyticalModel]  @relation(name:"ANALYSIS_OF",direction:OUT)
+  Panels: [Panel]  @relation(name:"BOUNDED_BY",direction:OUT)
+  SAM_Area: SquareMeters
+  SAMGuid: String
+  ProfileSettings: [ICProflileSetting]
+}
+
+type Model {
+  AnalyticalModels: [AnalyticalModel] @relation(name:"ANALYSIS_OF",direction:IN)
+}
+
+
+
+
+type Mutation {
+  Add_AnalyticalModel_BOUNDED_BY_Panel(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AnalyticalModel {Id: $fromId}),(ton:Panel {Id: $toId}) MERGE (frn)-[r:BOUNDED_BY]->(ton)")   
+  Add_AnalyticalModel_ANALYSIS_OF_Space(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AnalyticalModel {Id: $fromId}),(ton:Space {Id: $toId}) MERGE (frn)-[r:ANALYSIS_OF]->(ton)")   
+  Add_AnalyticalModel_ANALYSIS_OF_Model(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:AnalyticalModel {Id: $fromId}),(ton:Model {Id: $toId}) MERGE (frn)-[r:ANALYSIS_OF]->(ton)")
+  Add_Space_BOUNDED_BY_Panel(fromId:ID! toId:ID!) : String @cypher(statement:"MATCH (frn:Space {Id: $fromId}),(ton:Panel {Id: $toId}) MERGE (frn)-[r:BOUNDED_BY]->(ton)")   
+}

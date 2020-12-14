@@ -1,0 +1,24 @@
+
+#######
+##
+##     -- Acoutcis Analytical Types --
+##     
+##     Acoustics specific data
+##
+#######
+
+
+##extneded types
+type Space {
+    NR_Rating: String
+}
+
+type Panel {
+
+    OcBand1: Float
+    OcBand2: Float
+    OcBand3: Float
+    OcBand4: Float
+    OcBand5: Float
+
+}
