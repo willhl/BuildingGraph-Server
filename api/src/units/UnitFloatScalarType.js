@@ -18,11 +18,16 @@ function serialize(value, fieldNodes, info) {
     );
   }
 
+  //info parameter was a hack... it may not be present so fallback to unconverted number
+  if (!info) return num;
+
   let fromUnits = this.defaultUnits;
   if (!fromUnits || fromUnits === "")
   {
     fromUnits = info.parentType._fields[fieldNodes[0].name.value].args[0].defaultValue;
   }
+
+
 
   if (fromUnits && fieldNodes && fieldNodes[0] && fieldNodes[0].arguments && fieldNodes[0].arguments[0] && fieldNodes[0].arguments[0].value && fieldNodes[0].arguments[0].value.value)
   {

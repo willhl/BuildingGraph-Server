@@ -16,4 +16,5 @@ type System implements AbstractElement {
   Id: ID!
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  AllElements: [AbstractElement] @relation(name:"ABSTRACTED_BY",direction:OUT)
 }

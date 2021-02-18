@@ -29,8 +29,23 @@ type Circuit {
 type ExtendedTypes{
 
     FanCoilUnits: [FanCoilUnit] @cypher(statement: "match (e:ElementType {ClassificationCode:'[Uniclass 2015 - Product] Pr_70_65_03_29 : Fan coil units'})<-[:IS_OF]-(me:Equipment) return me")
+    SupplyAirSystems: [SupplyAirSystem] @cypher(statement: "match (me:System {Type:'Ss_65_40_33_51 - Supply'}) return me")
 }
 
+
+"""
+Supply Systems
+[Uniclass 2015 - System]:Ss_65_40_33_51
+"""
+type SupplyAirSystem implements AbstractElement {
+    Id: ID!
+    Name: String
+    ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+    ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+
+    Flow (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    Static_Pressure (units: PressureUnits = kPa): KiloPascals
+}
 
 
 """
@@ -41,7 +56,7 @@ type FanCoilUnit implements AbstractElement & ElectricalLoadElement {
     Id: ID!
     Name: String
     
-  Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
+    Circuit: Circuit @relation(name:"ELECTRICAL_FLOW_TO",direction:IN)
 
     ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
     ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
@@ -135,4 +150,20 @@ type FanCoilUnitType
     Fan_Speed_Mode: String
 
     FanCoilUnits: [FanCoilUnitType] @relation(name:"IS_OF",direction:IN)
+}
+
+type Terminal {
+    AirFlowsIn: [AbstractElement] @relation(name:"AIR_FLOW_TO",direction:IN)
+    AirFlowsOut: [AbstractElement] @relation(name:"AIR_FLOW_TO",direction:OUT)
+    AirFlowToSpace: Space @relation(name:"FLOWS_TO_SPACE",direction:IN)
+    AirFlowFromSpace: Space @relation(name:"FLOWS_TO_SPACE",direction:OUT)
+
+    Air_Flow_Rate (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    Air_Velocity (units: SpeedUnits = m_per_s): MetersPerSecond
+    Air_Pressure_Drop (units: PressureUnits = kPa): KiloPascals
+
+    Active_Face_Length (unit: LengthUnits = mm): MilliMeters
+    Active_Face_Width (unit: LengthUnits = mm): MilliMeters
+
+    SupplyAirSystems: [SupplyAirSystem] @relation(name:"ABSTRACTED_BY",direction:IN)
 }

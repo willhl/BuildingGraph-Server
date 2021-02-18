@@ -11,7 +11,7 @@ type AnalyticalModel implements BaseElement & SAM_Object {
     Name: String
     Guid: String
     Description: String
-    Spaces: [Space] @relation(name:"ANALYSIS_OF",direction:IN)
+    Spaces: [Space] @relation(name:"ANALYSIS_OF",direction:OUT)
     Panels: [Panel] @relation(name:"BOUNDED_BY",direction:IN)
     Model: [Model] @relation(name:"ANALYSIS_OF",direction:OUT)
 
@@ -25,7 +25,7 @@ type Panel implements BaseElement & SAM_Object {
    Name: String
    Guid: String
    PanelType: String
-   Model: AnalyticalModel @relation(name:"ANALYSIS_OF",direction:IN)
+   Model: AnalyticalModel @relation(name:"ANALYSIS_OF",direction:OUT)
    Area: SquareMeters
    AsJSON: String
    Adjacencies: [Space] @relation(name:"BOUNDED_BY",direction:IN)

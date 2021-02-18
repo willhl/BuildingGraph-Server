@@ -148,6 +148,7 @@ enum FrequencyUnits{
   rad_per_s
 }
 
+scalar MetersPerSecond
 enum SpeedUnits{
   m_per_s
   km_per_h

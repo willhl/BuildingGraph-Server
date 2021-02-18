@@ -47,7 +47,8 @@ const resolvers = {
   LitersPerSecond: new UnitFloatScalarType("LitersPerSecond", "l_per_s"),
   DegreeCelsius: new UnitFloatScalarType("DegreeCelsius", "C"),
   KiloPascals: new UnitFloatScalarType("KiloPascals", "kPa"),
-  KiloGrams: new UnitFloatScalarType("KiloGrams", "kg")
+  KiloGrams: new UnitFloatScalarType("KiloGrams", "kg"),
+  MetersPerSecond : new UnitFloatScalarType("MetersPerSecond", "m_per_s")
 };
 
 const schema = makeAugmentedSchema({typeDefs, resolvers, config: {
