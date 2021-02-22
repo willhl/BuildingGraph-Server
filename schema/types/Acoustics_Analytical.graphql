@@ -13,34 +13,35 @@ type Space {
   "Group: Acoustics Units: NR Notes:"
   NR_Rating: String
 
-  RT_Sound_Power_at_1000Hz: Float
-  RT_Sound_Power_at_125Hz: Float
-  RT_Sound_Power_at_2000Hz: Float
-  RT_Sound_Power_at_250Hz: Float
-  RT_Sound_Power_at_4000Hz: Float
-  RT_Sound_Power_at_500Hz: Float
-  RT_Sound_Power_at_63Hz: Float
-  RT_Sound_Power_at_8000Hz: Float
+  RT_at_63Hz : Float
+  RT_at_125Hz : Float
+  RT_at_250Hz : Float
+  RT_at_500Hz : Float
+  RT_at_1000Hz : Float
+  RT_at_2000Hz : Float
+  RT_at_4000Hz : Float
+  RT_at_8000Hz : Float
 
   "Group: Acoustics Units: N/A Notes:"
   Space_Acoustic_Strategy: String
   "Group: Acoustics Units: LAeq,T Notes:"
   Intrusive_Noise_Limit_in_LAeq_t: String
   "Group: Acoustics Units: Seconds Notes:"
-  Reverberation_Time_in_Seconds: String
+  Reverberation_Time_in_Seconds: Float
   "Group: Acoustics Units: NR Notes:"
   Engineering_Systems_Noise_Limit_in_NR: String
 }
 
 type Panel {
     
-  RT_Sound_Power_at_1000Hz: Float
-  RT_Sound_Power_at_125Hz: Float
-  RT_Sound_Power_at_2000Hz: Float
-  RT_Sound_Power_at_250Hz: Float
-  RT_Sound_Power_at_4000Hz: Float
-  RT_Sound_Power_at_500Hz: Float
-  RT_Sound_Power_at_63Hz: Float
-  RT_Sound_Power_at_8000Hz: Float
+  Acoustic_Absorption_at_63Hz : Float
+  Acoustic_Absorption_at_125Hz : Float
+  Acoustic_Absorption_at_250Hz : Float
+  Acoustic_Absorption_at_500Hz : Float
+  Acoustic_Absorption_at_1000Hz : Float
+  Acoustic_Absorption_at_2000Hz : Float
+  Acoustic_Absorption_at_4000Hz : Float
+  Acoustic_Absorption_at_8000Hz : Float
+
 
 }
