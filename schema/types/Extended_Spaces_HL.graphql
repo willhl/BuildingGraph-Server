@@ -15,7 +15,7 @@
 A Space with parameters
 """
 type Space {
-  "Group: Project Information Units: N/A Notes:"
+  "Discipline: Group: Project Information Units: N/A Notes:"
   Project_Name: String
   "Group: Project Information Units: N/A Notes:"
   Project_Number: String
@@ -641,14 +641,6 @@ type Space {
   BMS_to_Lighting_Control_Interface: String
   "Group: Controls Units: N/A Notes:"
   Space_CO2_Sensor: Boolean
-  "Group: Acoustics Units: N/A Notes:"
-  Space_Acoustic_Strategy: String
-  "Group: Acoustics Units: LAeq,T Notes:"
-  Intrusive_Noise_Limit_in_LAeq_t: String
-  "Group: Acoustics Units: Seconds Notes:"
-  Reverberation_Time_in_Seconds: String
-  "Group: Acoustics Units: NR Notes:"
-  Engineering_Systems_Noise_Limit_in_NR: String
   "Group: Safety Units: N/A Notes:"
   Eyewash_Bottle: Boolean
   "Group: Safety Units: N/A Notes:"

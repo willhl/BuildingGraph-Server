@@ -167,3 +167,9 @@ type Terminal {
 
     SupplyAirSystems: [SupplyAirSystem] @relation(name:"ABSTRACTED_BY",direction:IN)
 }
+
+type Space {
+    Total_Air_FlowIn: Float  @cypher(statement:"MATCH (this)<-[:FLOWS_TO_SPACE]-(t:Terminal) RETURN sum(t.Flow)")
+    Total_Air_FlowOut: Float  @cypher(statement:"MATCH (this)-[:FLOWS_TO_SPACE]->(t:Terminal) RETURN sum(t.Flow)")
+    Number_of_AirTerminals: Int @cypher(statement:"MATCH (this)<-[:IS_IN_SPACE]-(t:Terminal) RETURN count(t)")
+}

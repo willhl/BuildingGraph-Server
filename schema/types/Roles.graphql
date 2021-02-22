@@ -6,4 +6,6 @@ enum Role {
   Reader
   Contributor
   Writer
+  Space_Writer
+  Space_Reader
 }
