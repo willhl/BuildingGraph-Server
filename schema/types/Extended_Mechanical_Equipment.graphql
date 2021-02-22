@@ -169,7 +169,7 @@ type Terminal {
 }
 
 type Space {
-    Total_Air_FlowIn: Float  @cypher(statement:"MATCH (this)<-[:FLOWS_TO_SPACE]-(t:Terminal) RETURN sum(t.Flow)")
-    Total_Air_FlowOut: Float  @cypher(statement:"MATCH (this)-[:FLOWS_TO_SPACE]->(t:Terminal) RETURN sum(t.Flow)")
+    Total_Air_FlowIn: Float  @cypher(statement:"MATCH (this)<-[:FLOWS_TO_SPACE]-(t:Terminal) RETURN sum(t.Air_Flow_Rate)")
+    Total_Air_FlowOut: Float  @cypher(statement:"MATCH (this)-[:FLOWS_TO_SPACE]->(t:Terminal) RETURN sum(t.Air_Flow_Rate)")
     Number_of_AirTerminals: Int @cypher(statement:"MATCH (this)<-[:IS_IN_SPACE]-(t:Terminal) RETURN count(t)")
 }
