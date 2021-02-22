@@ -174,3 +174,11 @@ type ElectricalLoad {
   Volume: Float
 }
 
+
+type Space {
+
+    Number_of_Outlets:Int @cypher(statement:"MATCH (this)<-[:IS_IN_SPACE]-(t:Outlet) RETURN count(t)")
+
+}
+
+
