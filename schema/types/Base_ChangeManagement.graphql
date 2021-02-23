@@ -3,12 +3,15 @@ type ParameterChange {
     ParameterName: String
     IsClosed: Boolean
     AbstractElement: AbstractElement @relation(name:"CHANGES",direction:OUT)
-    ModelElement: AbstractElement @relation(name:"CHANGES",direction:OUT)
+    ModelElement: ModelElement @relation(name:"CHANGES",direction:OUT)
+    NewValue: String
+    OldValue: String
 }
 
 type Mutation {
 
-     UpdateChangeRequests(abId:ID!) : String @cypher(statement:"MATCH (a:AbstractElement {Id:$abId})-[:REALIZED_BY]->(b:ModelElement) UNWIND keys(a) AS pn WITH pn,a,b WHERE pn <> 'Id' and (b[pn] <> a[pn] or (b[pn] <> a[pn]) is null) MERGE (a)<-[:CHANGES]-(pc:ParameterChange {ParameterName:pn, IsClosed:false})-[:CHANGES]->(b)")   
+     UpdateChangeRequests(abId:ID!) : String @cypher(statement:"MATCH (a:AbstractElement {Id:$abId})-[:REALIZED_BY]->(b:ModelElement) UNWIND keys(a) AS pn WITH pn,a,b WHERE pn <> 'Id' and (b[pn] <> a[pn] or (b[pn] <> a[pn]) is null) MERGE (a)<-[:CHANGES]-(pc:ParameterChange {ParameterName:pn, IsClosed:false, NewValue:a[pn], OldValue:b[pn]})-[:CHANGES]->(b)")   
   
 
 }
+
