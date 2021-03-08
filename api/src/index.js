@@ -8,7 +8,7 @@ import { initializeDatabase } from './initialize'
 
 import UnitFloatScalarType from "./units/UnitFloatScalarType"
 import JsonScalarType from "./units/JsonScalarType"
-import JStringScalarType from "./units/JStringScalarType"
+import JObjectScalarType from "./units/JObjectScalarType"
 
 // set environment variables from .env
 dotenv.config()
@@ -52,7 +52,7 @@ const resolvers = {
   KiloGrams: new UnitFloatScalarType("KiloGrams", "kg"),
   MetersPerSecond : new UnitFloatScalarType("MetersPerSecond", "m_per_s"),
   JsonParam : new JsonScalarType("JsonParam"),
-  JString : new JStringScalarType("JString")
+  JObject : new JObjectScalarType("JObject")
 };
 
 const schema = makeAugmentedSchema({typeDefs, resolvers, config: {

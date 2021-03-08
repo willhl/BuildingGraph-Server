@@ -40,11 +40,11 @@ function parseLiteral(ast) {
 }
 
   
-export default class JStringScalarType extends GraphQLScalarType{
+export default class JObjectScalarType extends GraphQLScalarType{
   constructor(name) {
     super({
       name: name,
-      description: 'JSON Value',
+      description: 'JSON Object',
       serialize:serialize,
       parseValue:parseValue,
       parseLiteral:parseLiteral});

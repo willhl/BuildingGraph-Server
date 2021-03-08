@@ -1,3 +1,6 @@
 #Placeholder for BHoM sample intergration
 
+type  BHoMObjet {
+    Id: ID!
 
+}
