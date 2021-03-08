@@ -127,7 +127,7 @@ type Space {
   Space_Fabric_Heat_Loss: String
   "Group: Thermal Units: W/m² Notes:"
   Space_Fabric_Heat_Loss_Density: String
-  "Group: Ventilation Units: N/A Notes: e.g. Natural Ventilation, Mixed Mode, Extract Only, etc."
+  "Group: Ventilation Secto: Healthcare Units: N/A Notes: e.g. Natural Ventilation, Mixed Mode, Extract Only, etc."
   Space_Ventilation_Strategy: String
   "Group: Ventilation Units: N/A Notes: e.g. manual override, CO2 sensor in room, automatic window opening"
   Space_Ventilation_Control: String

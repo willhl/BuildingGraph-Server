@@ -13,6 +13,7 @@ type Space {
   "Group: Acoustics Units: NR Notes:"
   NR_Rating: String
 
+  "Group: Acoustics Units: NR Notes:"
   RT_at_63Hz : Float
   RT_at_125Hz : Float
   RT_at_250Hz : Float
