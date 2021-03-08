@@ -9,7 +9,7 @@
 
 
 #interface JParameterised {
-#  ParameterSets: [JParameterSet] @relation(name:"JPARAMSET_OF",direction:IN)
+#  ParameterSets: [JParameterSet] @relationship(type:"JPARAMSET_OF",direction:"IN")
 #} 
 
 
@@ -23,8 +23,8 @@ type JParameterSet implements BaseElement {
   ExternalID: String
   Name: String
   Heading: String
-  BaseElement: BaseElement @relation(name:"JPARAMSET_OF",direction:OUT)
-  Parameters: [JParameter] @relation(name:"JPARAM_OF",direction:IN)
+  BaseElement: BaseElement @relationship(type:"JPARAMSET_OF",direction:"OUT")
+  Parameters: [JParameter] @relationship(type:"JPARAM_OF",direction:"IN")
 }
 
 
@@ -34,7 +34,7 @@ type JParameter implements BaseElement {
   Name: String
   JSONType: String
   JSONValue: String
-  ParameterSet: JParameterSet @relation(name:"JPARAM_OF",direction:OUT)
+  ParameterSet: JParameterSet @relationship(type:"JPARAM_OF",direction:"OUT")
 }
 
 

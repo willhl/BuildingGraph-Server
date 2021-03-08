@@ -14,7 +14,7 @@
 """
 MEP Space base type
 """
-type Space implements AbstractElement {
+type Space  {
   Id: ID!
   IsExternal: Boolean
   "Space Number"
@@ -25,9 +25,9 @@ type Space implements AbstractElement {
   Volume (unit: VolumeUnits = m3): CubicMeters
   Height (unit: LengthUnits = m): Meters
   Center: Point
-  AllElements: [AbstractElement] @relation(name:"IS_IN_SPACE",direction:IN)
-  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
-  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  AllElements: [AbstractElement] @relationship(type:"IS_IN_SPACE",direction:"IN")
+  ElementType: ElementType @relationship(type:"IS_OF",direction:"OUT")
+  ModelElements: [ModelElement] @relationship(type:"REALIZED_BY",direction:"OUT")
 
 }
 

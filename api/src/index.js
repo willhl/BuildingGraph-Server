@@ -2,7 +2,10 @@ import { typeDefs } from './graphql-schema'
 import { ApolloServer } from 'apollo-server-express'
 import express from 'express'
 import neo4j from 'neo4j-driver'
-import { makeAugmentedSchema } from 'neo4j-graphql-js'
+
+//old: import { makeAugmentedSchema } from 'neo4j-graphql-js'
+const { Neo4jGraphQL } = require("@neo4j/graphql");
+
 import dotenv from 'dotenv'
 import { initializeDatabase } from './initialize'
 
@@ -55,11 +58,21 @@ const resolvers = {
   JObject : new JObjectScalarType("JObject")
 };
 
+/* old
 const schema = makeAugmentedSchema({typeDefs, resolvers, config: {
   auth: {
     isAuthenticated: true,
     hasRole: true
   }}
+});
+*/
+
+// Create executable GraphQL schema from GraphQL type definitions,
+// using @neo4j/graphql to autogenerate resolvers
+const schema = new Neo4jGraphQL({
+  typeDefs, 
+  resolvers,
+  debug: true
 });
 
 

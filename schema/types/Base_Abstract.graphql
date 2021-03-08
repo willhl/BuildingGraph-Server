@@ -29,8 +29,8 @@ Abstract Element - Elements which exist in analytical space
 interface AbstractElement {
   Id: ID!
   Name: String
-  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
-  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  ElementType: ElementType @relationship(type:"IS_OF",direction:"OUT")
+  ModelElements: [ModelElement] @relationship(type:"REALIZED_BY",direction:"OUT")
 } 
 
 ### Types ###
@@ -42,8 +42,8 @@ type ModelElement implements BaseElement {
   Id: ID!
   ExternalID: String
   UniqueId: String
-  Model: Model @relation(name:"IS_IN",direction:OUT)
-  AbstractElement: AbstractElement @relation(name:"REALIZED_BY",direction:IN)
+  Model: Model @relationship(type:"IS_IN",direction:"OUT")
+  AbstractElement: AbstractElement @relationship(type:"REALIZED_BY",direction:"IN")
 }
 
 """
@@ -52,15 +52,15 @@ Element Type - The type of an abstract element
 type ElementType implements AbstractElement {
   Name: String
   Id: ID!
-  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
-  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  ModelElements: [ModelElement] @relationship(type:"REALIZED_BY",direction:"OUT")
+  Space: Space @relationship(type:"IS_IN_SPACE",direction:"OUT")
   ClassificationCode: String
   Category: String
   Type_Name: String
   Family_Name: String
   Description: String
-  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
-  AbstractElements: [AbstractElement] @relation(name:"IS_OF",direction:IN)
+  ElementType: ElementType @relationship(type:"IS_OF",direction:"OUT")
+  AbstractElements: [AbstractElement] @relationship(type:"IS_OF",direction:"IN")
 }
 
 ### Mutations ###
