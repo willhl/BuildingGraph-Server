@@ -1,0 +1,10 @@
+
+scalar JsonParam
+
+
+type ScalarTest {
+    Id: ID!
+    Name: String
+    JsonParam1: JsonParam
+    JString1: JString
+}

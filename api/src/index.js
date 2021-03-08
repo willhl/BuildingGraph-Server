@@ -7,6 +7,8 @@ import dotenv from 'dotenv'
 import { initializeDatabase } from './initialize'
 
 import UnitFloatScalarType from "./units/UnitFloatScalarType"
+import JsonScalarType from "./units/JsonScalarType"
+import JStringScalarType from "./units/JStringScalarType"
 
 // set environment variables from .env
 dotenv.config()
@@ -48,7 +50,9 @@ const resolvers = {
   DegreeCelsius: new UnitFloatScalarType("DegreeCelsius", "C"),
   KiloPascals: new UnitFloatScalarType("KiloPascals", "kPa"),
   KiloGrams: new UnitFloatScalarType("KiloGrams", "kg"),
-  MetersPerSecond : new UnitFloatScalarType("MetersPerSecond", "m_per_s")
+  MetersPerSecond : new UnitFloatScalarType("MetersPerSecond", "m_per_s"),
+  JsonParam : new JsonScalarType("JsonParam"),
+  JString : new JStringScalarType("JString")
 };
 
 const schema = makeAugmentedSchema({typeDefs, resolvers, config: {

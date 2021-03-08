@@ -1,12 +1,35 @@
 
 type ParameterChange {
+    Id: ID!
+    DateClosed: DateTime
+
+    ClosedBy: [User] @relation(name:"CLOSED",direction:IN)
+    ReviewedBy: [User] @relation(name:"REVIEWED",direction:IN)
+    OpenedBy: [User] @relation(name:"OPENED",direction:IN)
+
     ParameterName: String
     IsClosed: Boolean
     AbstractElement: AbstractElement @relation(name:"CHANGES",direction:OUT)
     ModelElement: ModelElement @relation(name:"CHANGES",direction:OUT)
     NewValue: String
     OldValue: String
+
+    ParameterChangeSet: ParameterChangeSet @relation(name:"CHANGES",direction:IN)
 }
+
+type ParameterChangeSet {
+    Id: ID!
+    DateClosed: DateTime
+
+    ClosedBy: [User] @relation(name:"CLOSED",direction:IN)
+    ReviewedBy: [User] @relation(name:"REVIEWED",direction:IN)
+    OpenedBy: [User] @relation(name:"OPENED",direction:IN)
+
+    Description: String
+
+    Changes: [ParameterChange] @relation(name:"CHANGES",direction:OUT)
+}
+
 
 type Mutation {
 
