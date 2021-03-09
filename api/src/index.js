@@ -59,7 +59,8 @@ const schema = makeAugmentedSchema({typeDefs, resolvers, config: {
   auth: {
     isAuthenticated: true,
     hasRole: true
-  }}
+  },
+  experimental: true}
 });
 
 

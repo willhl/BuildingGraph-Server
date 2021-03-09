@@ -26,10 +26,10 @@ type Circuit {
 
 ### Types ###
 
-type ExtendedTypes{
+type Query {
 
-    FanCoilUnits: [FanCoilUnit] @cypher(statement: "match (e:ElementType {ClassificationCode:'[Uniclass 2015 - Product] Pr_70_65_03_29 : Fan coil units'})<-[:IS_OF]-(me:Equipment) return me")
-    SupplyAirSystems: [SupplyAirSystem] @cypher(statement: "match (me:System {Type:'Ss_65_40_33_51 - Supply'}) return me")
+    getFanCoilUnits: [FanCoilUnit] @cypher(statement: "match (e:ElementType {ClassificationCode:'[Uniclass 2015 - Product] Pr_70_65_03_29 : Fan coil units'})<-[:IS_OF]-(me:Equipment) return me")
+    getSupplyAirSystems: [SupplyAirSystem] @cypher(statement: "match (me:System {Type:'Ss_65_40_33_51 - Supply'}) return me")
 }
 
 
