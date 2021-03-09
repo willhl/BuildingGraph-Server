@@ -4,26 +4,17 @@ import {GraphQLScalarType} from "graphql";
 function serialize(value, fieldNodes) {
 
   if (typeof value === 'string') {    
-    //let asjson = JSON.parse(value)
-    return value;
+    let asjson = JSON.parse(value)
+    return asjson;
   }
 
-  let jsvalue = JSON.stringify(value);
-
-
-  return jsvalue;
+  return value;
 }
 
 
 function parseValue(value) {
 
-  if (typeof value === 'string') {    
-    //let asjson = JSON.parse(value)
-    return value;
-  }
-
   let jsvalue = JSON.stringify(value);
-
 
   return jsvalue;
 }
@@ -35,7 +26,7 @@ function parseLiteral(ast) {
     return ast;
   }
 
-  let jsvalue = JSON.stringify(ast);
+  let jsvalue = JSON.stringify(ast.value);
   return jsvalue;
 }
 

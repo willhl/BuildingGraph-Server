@@ -7,4 +7,5 @@ type ScalarTest {
     Name: String
     JsonParam1: JsonParam
     JObject1: JObject
+    Searchable: String @search
 }

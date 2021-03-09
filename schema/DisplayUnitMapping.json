@@ -1,0 +1,132 @@
+{
+    "LengthUnits": {
+        "mm": "mm",
+        "cm": "cm",
+        "m": "m",
+        "in": "'",
+        "ft_us": "\"",
+        "ft": "\"",
+        "mi": "M"
+    },
+    "AreaUnits": {
+        "mm2": "mm&sup2;",
+        "cm2": "cm&sup2;",
+        "m2": "m&sup2;",
+        "ha": "H",
+        "km2": "km&sup2;",
+        "in2": "in&sup2;",
+        "ft2": "ft&sup2;",
+        "ac": "Achre",
+        "mi2": "M&sup2;"
+    },
+    "VolumeUnits": {
+        "mm3": "mm&sup3;",
+        "cm3": "cm&sup3;",
+        "ml": "ml",
+        "l": "l",
+        "kl": "kl",
+        "m3": "m&sup3;",
+        "km3": "km&sup3;",
+        "tsp": "tsp",
+        "Tbs": "Tbs",
+        "in3": "in&sup3;",
+        "fl_oz": "fl_oz",
+        "cup": "cup",
+        "pnt": "pnt",
+        "qt": "qt",
+        "gal": "gal",
+        "ft3": "ft&sup3;",
+        "yd3": "yd&sup3;"
+    },
+    "CurrentUnits": {
+        "A": "A",
+        "mA": "mA",
+        "kA": "kA"
+    },
+    "PowerUnits": {
+        "W": "W",
+        "mW": "mW",
+        "kW": "kW",
+        "MW": "MW",
+        "GW": "GW"
+    },
+    "ApparentPowerUnits": {
+        "VA": "VA",
+        "mVA": "mVA",
+        "kVA": "kVA",
+        "MVA": "MVA",
+        "GVA": "GVA"
+    },
+    "VolumeFlowRateUnits": {
+        "mm3_per_s": "mm³/s",
+        "cm3_per_s": "cm³/s",
+        "ml_per_s": "ml/s",
+        "cl_per_s": "cl/s",
+        "dl_per_s": "dl/s",
+        "l_per_s": "l/s",
+        "l_per_min": "l/m",
+        "l_per_h": "l/h",
+        "kl_per_s": "kl/s",
+        "kl_per_min": "kl/m",
+        "kl_per_h": "kl/h",
+        "m3_per_s": "m³/s",
+        "m3_per_min": "m³/m",
+        "m3_per_h": "m³/h",
+        "km3_per_s": "km³/s",
+        "tsp_per_s": "tsp/s",
+        "Tbs_per_s": "Tbs/s",
+        "in3_per_s": "in³/s",
+        "in3_per_min": "in³/m",
+        "in3_per_h": "in³/h",
+        "fl_oz_per_s": "fl_oz/s",
+        "fl_oz_per_min": "fl_oz/min",
+        "fl_oz_per_h": "fl_oz/h",
+        "cup_per_s": "cup/s",
+        "pnt_per_s": "pnt/s",
+        "pnt_per_min": "pnt/min",
+        "pnt_per_h": "pnt/h",
+        "qt_per_s": "qt/s",
+        "gal_per_s": "gal/s",
+        "gal_per_min": "gal/min",
+        "gal_per_h": "gal/h",
+        "ft3_per_s": "ft&sup3;/s",
+        "ft3_per_min": "ft&sup3;/min",
+        "ft3_per_h": "ft&sup3;/h",
+        "yd3_per_s": "yd&sup3;/s",
+        "yd3_per_min": "yd&sup3;/min",
+        "yd3_per_h": "yd&sup3;/h"
+    },
+    "TemperatureUnits": {
+        "C": "°C",
+        "F": "°F",
+        "K": "K",
+        "R": "°Re"
+    },
+    "PressureUnits": {
+        "_Pa": "Pa",
+        "hPa": "hPa",
+        "kPa": "kPa",
+        "MPa": "MPa",
+        "bar": "bar",
+        "torr": "torr",
+        "psi": "psi",
+        "ksi": "ksi"
+    },
+    "MassUnits": {
+        "mcg": "mcg",
+        "mg": "mg",
+        "g": "g",
+        "kg": "kg",
+        "oz": "oz",
+        "lb": "lb",
+        "mt": "mt",
+        "t": "t"
+    },
+    "SpeedUnits": {
+        "_m_per_s": "m/s",
+        "km_per_h": "km/s",
+        "m_per_h": "M/h",
+        "knot": "Knots",
+        "ft_per_s": "ft/s"
+    }
+}

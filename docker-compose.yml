@@ -27,6 +27,10 @@ services:
       - ./Dependents/neo4j/plugins:/plugins
       - ./Dependents/${NEO4j_NAME}/data:/data
     # - ./Dependents/${NEO4j_NAME}/conf:/config
+    ulimits:
+      nofile:
+        soft: "40000"
+        hard: "40000"
 
   api:
     build: ./api
