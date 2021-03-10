@@ -8,4 +8,7 @@ type ScalarTest {
     JsonParam1: JsonParam
     JObject1: JObject
     Searchable: String @search
+    Area_mm (units: AreaUnits=mm2): Float
+    Area_m (units: AreaUnits=m2): Float
+    LoadDensity (units: LoadDensityUnits=W_per_m2): Float
 }

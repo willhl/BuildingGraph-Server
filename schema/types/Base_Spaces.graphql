@@ -16,14 +16,19 @@ MEP Space base type
 """
 type Space implements AbstractElement {
   Id: ID!
+  "Group: Hidden Units: N/A Notes:"
   IsExternal: Boolean
-  "Space Number"
+  "Group: General Units: N/A Notes:"
   Number: String!
-  "Space Name"
+  "Group: General Units: N/A Notes:"
   Name: String!
-  Area (unit: AreaUnits = m2): SquareMeters
-  Volume (unit: VolumeUnits = m3): CubicMeters
-  Height (unit: LengthUnits = m): Meters
+  "Group: General Units: N/A Notes:"
+  Area (units: AreaUnits = m2): SquareMeters
+  "Group: General Units: N/A Notes:"
+  Volume (units: VolumeUnits = m3): CubicMeters
+  "Group: General Units: N/A Notes:"
+  Height (units: LengthUnits = m): Meters
+  "Group: General Units: N/A Notes:"
   Center: Point
   AllElements: [AbstractElement] @relation(name:"IS_IN_SPACE",direction:IN)
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)

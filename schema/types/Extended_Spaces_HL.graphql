@@ -30,7 +30,7 @@ type Space {
   "Group: General Units: N/A Notes: This will be used to assign room type parameters to individual spaces"
   Space_Category: String
   "Group: General Units: N/A Notes:"
-  Uniclass_2015_Description_: String
+  Uniclass_2015_Description: String
   "Group: General Units: N/A Notes:"
   Uniclass_2015_Code: String
   "Group: General Units: N/A Notes: This is a parameter that is automatically populated to assign a population value to the space"
@@ -40,25 +40,29 @@ type Space {
   "Group: General Units: N/A Notes:"
   Number_of_People: Float
   "Group: General Units: hrs Notes:"
-  Hours_of_Use: String
+  Hours_of_Use: Float
   "Group: General Units: N/A Notes: Select from a pre-defined list that relates to an hourly schedule"
   Occupancy_Schedule: String
   "Group: General Units: N/A Notes: Select from a pre-defined list that relates to an hourly schedule"
   Equipment_Heat_Gain_Schedule: String
   "Group: General Units: mm Notes:"
-  Space_Required_Clear_Ceiling_Void: String
+  Space_Required_Clear_Ceiling_Void (units: LengthUnits = mm): MilliMeters
   "Group: General Units: mm Notes:"
-  Space_Required_Clear_Floor_Void: String
+  Space_Required_Clear_Floor_Void (units: LengthUnits = mm): MilliMeters
   "Group: General Units: N/A Notes:"
   Space_Mechanical_Services_Zoning_Strategy: String
+}
+
+
+type Space {
   "Group: Thermal Units: ᵒC Notes: Dry Bulb Air Temperature"
-  Space_Cooling_Temperature: String
+  Space_Cooling_Temperature  (units: TemperatureUnits=C): DegreeCelsius
   "Group: Thermal Units: ᵒC Notes: Dry Bulb Air Temperature"
-  Space_Heating_Temperature: String
+  Space_Heating_Temperature  (units: TemperatureUnits=C): DegreeCelsius
   "Group: Thermal Units: N/A Notes: e.g. +/- 2ᵒC"
-  Space_Cooling_Temperature_Tolerance: String
+  Space_Cooling_Temperature_Tolerance  (units: TemperatureUnits=C): DegreeCelsius
   "Group: Thermal Units: N/A Notes: e.g. +/- 2ᵒC"
-  Space_Heating_Temperature_Tolerance: String
+  Space_Heating_Temperature_Tolerance  (units: TemperatureUnits=C): DegreeCelsius
   "Group: Thermal Units: N/A Notes:"
   Space_Heating_and_Cooling_Strategy: String
   "Group: Thermal Units: N/A Notes: e.g. Underfloor Heating, Radiant Panels, etc."
@@ -66,9 +70,9 @@ type Space {
   "Group: Thermal Units: N/A Notes: e.g. Chilled Beams, FCU's, Passive, etc."
   Space_Cooling_Strategy: String
   "Group: Thermal Units: W/m² Notes:"
-  Space_Heating_Load_Density: String
+  Space_Heating_Load_Density (units: LoadDensityUnits=W_per_m2): Float
   "Group: Thermal Units: W/m² Notes:"
-  Space_Cooling_Load_Density: String
+  Space_Cooling_Load_Density (units: LoadDensityUnits=W_per_m2): Float
   "Group: Thermal Units: W Notes:"
   Space_Heating_Load: String
   "Group: Thermal Units: W Notes:"
@@ -125,6 +129,11 @@ type Space {
   Space_Fabric_Heat_Gain_Density: String
   "Group: Thermal Units: W Notes:"
   Space_Fabric_Heat_Loss: String
+}
+
+
+
+type Space {
   "Group: Thermal Units: W/m² Notes:"
   Space_Fabric_Heat_Loss_Density: String
   "Group: Ventilation Secto: Healthcare Units: N/A Notes: e.g. Natural Ventilation, Mixed Mode, Extract Only, etc."

@@ -15,12 +15,19 @@ type Space {
 
   "Group: Acoustics Units: NR Notes:"
   RT_at_63Hz : Float
+  "Group: Acoustics Units: NR Notes:"
   RT_at_125Hz : Float
+  "Group: Acoustics Units: NR Notes:"
   RT_at_250Hz : Float
+  "Group: Acoustics Units: NR Notes:"
   RT_at_500Hz : Float
+  "Group: Acoustics Units: NR Notes:"
   RT_at_1000Hz : Float
+  "Group: Acoustics Units: NR Notes:"
   RT_at_2000Hz : Float
+  "Group: Acoustics Units: NR Notes:"
   RT_at_4000Hz : Float
+  "Group: Acoustics Units: NR Notes:"
   RT_at_8000Hz : Float
 
   "Group: Acoustics Units: N/A Notes:"

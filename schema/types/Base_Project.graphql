@@ -43,7 +43,7 @@ type Level implements AbstractElement {
   Name: String
   Id: ID!
   Abbreviation: String
-  Elevation (unit: LengthUnits = m): Meters
+  Elevation (units: LengthUnits = m): Meters
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
   AbstractElements: [AbstractElement] @relation(name:"IS_ON",direction:IN)

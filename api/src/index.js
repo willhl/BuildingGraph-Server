@@ -51,6 +51,7 @@ const resolvers = {
   KiloPascals: new UnitFloatScalarType("KiloPascals", "kPa"),
   KiloGrams: new UnitFloatScalarType("KiloGrams", "kg"),
   MetersPerSecond : new UnitFloatScalarType("MetersPerSecond", "m_per_s"),
+  WattsPerSquareMeter : new UnitFloatScalarType("WattsPerSquareMeter", "W_per_m2"),
   JsonParam : new JsonScalarType("JsonParam"),
   JObject : new JObjectScalarType("JObject")
 };

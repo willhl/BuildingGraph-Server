@@ -259,3 +259,9 @@ enum AngleUnits{
   arcmin
   arcsec
 }
+
+
+scalar WattsPerSquareMeter
+enum LoadDensityUnits{
+  W_per_m2
+}

@@ -103,7 +103,7 @@
         "R": "°Re"
     },
     "PressureUnits": {
-        "_Pa": "Pa",
+        "Pa": "Pa",
         "hPa": "hPa",
         "kPa": "kPa",
         "MPa": "MPa",
@@ -123,10 +123,13 @@
         "t": "t"
     },
     "SpeedUnits": {
-        "_m_per_s": "m/s",
+        "m_per_s": "m/s",
         "km_per_h": "km/s",
         "m_per_h": "M/h",
         "knot": "Knots",
         "ft_per_s": "ft/s"
+    },
+    "LoadDensityUnits": {
+        "W_per_m2": "W/m²;"
     }
 }

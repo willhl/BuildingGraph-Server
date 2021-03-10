@@ -118,7 +118,7 @@ type Circuit {
   "Group: Load, Units: yes/No, Notes: "
   Ring_or_Radial: Int
   "Group: Phase Conductors, Units: mm2, Notes: "
-  Cable_Size (unit: AreaUnits = mm2): SquareMilliMeters
+  Cable_Size (units: AreaUnits = mm2): SquareMilliMeters
   "Group: Phase Conductors, Units: Int, Notes: "
   Phase_Conductor_Per_Phase: Int
   "Group: Phase Conductors, Units: Int, Notes: "
@@ -140,7 +140,7 @@ type Circuit {
   "Group: CPC, Units: N/A, Notes: "
   CPC_Integral_Separate_or_Supplementary: String
   "Group: CPC, Units: mm2, Notes: "
-  CPC_Size (unit: AreaUnits = mm2): SquareMilliMeters
+  CPC_Size (units: AreaUnits = mm2): SquareMilliMeters
 
 }
 

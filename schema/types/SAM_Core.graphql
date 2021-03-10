@@ -72,7 +72,9 @@ type ICProflileSetting @relation(name: "PROFILED_BY") {
 type Space {
   AnalyticalModels: [AnalyticalModel]  @relation(name:"ANALYSIS_OF",direction:OUT)
   Panels: [Panel]  @relation(name:"BOUNDED_BY",direction:OUT)
+  "Group: SAM Units: Notes:"
   SAM_Area: SquareMeters
+  "Group: SAM Units: Notes:"
   SAMGuid: String
   ProfileSettings: [ICProflileSetting]
 }
