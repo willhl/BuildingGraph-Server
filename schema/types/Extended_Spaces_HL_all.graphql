@@ -1,680 +1,680 @@
 
 type Space {
-"{'Group':'Project Information','Discipline':'All','SPID':'', 'DisplayName':'Project Name','Notes':''}"
+"{\"Group\":\"Project Information\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Project Name\",\"Notes\":\"\"}"
 Project_Name: String
-"{'Group':'Project Information','Discipline':'All','SPID':'', 'DisplayName':'Project Number','Notes':''}"
+"{\"Group\":\"Project Information\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Project Number\",\"Notes\":\"\"}"
 Project_Number: String
-"{'Group':'Project Information','Discipline':'All','SPID':'', 'DisplayName':'Project Address','Notes':''}"
+"{\"Group\":\"Project Information\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Project Address\",\"Notes\":\"\"}"
 Project_Address: String
-"{'Group':'Project Information','Discipline':'All','SPID':'', 'DisplayName':'Project Sector','Notes':''}"
+"{\"Group\":\"Project Information\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Project Sector\",\"Notes\":\"\"}"
 Project_Sector: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Space Number','Notes':'Inherited from architectural model'}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Number\",\"Notes\":\"Inherited from architectural model\"}"
 Space_Number: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Space Name','Notes':'Inherited from architectural model'}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Name\",\"Notes\":\"Inherited from architectural model\"}"
 Space_Name: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Space Category','Notes':'This will be used to assign room type parameters to individual spaces'}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Category\",\"Notes\":\"This will be used to assign room type parameters to individual spaces\"}"
 Space_Category: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Uniclass 2015 Description ','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Uniclass 2015 Description \",\"Notes\":\"\"}"
 Uniclass_2015_Description_: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Uniclass 2015 Code','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Uniclass 2015 Code\",\"Notes\":\"\"}"
 Uniclass_2015_Code: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Occupancy Unit','Notes':'This is a parameter that is automatically populated to assign a population value to the space'}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Occupancy Unit\",\"Notes\":\"This is a parameter that is automatically populated to assign a population value to the space\"}"
 Occupancy_Unit: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Area Per Person','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Area Per Person\",\"Notes\":\"\"}"
 Area_Per_Person: Float
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Number of People','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Number of People\",\"Notes\":\"\"}"
 Number_of_People: Float
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Hours of Use','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Hours of Use\",\"Notes\":\"\"}"
 Hours_of_Use: Float
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Occupancy Schedule','Notes':'Select from a pre-defined list that relates to an hourly schedule'}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Occupancy Schedule\",\"Notes\":\"Select from a pre-defined list that relates to an hourly schedule\"}"
 Occupancy_Schedule: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Equipment Heat Gain Schedule','Notes':'Select from a pre-defined list that relates to an hourly schedule'}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Equipment Heat Gain Schedule\",\"Notes\":\"Select from a pre-defined list that relates to an hourly schedule\"}"
 Equipment_Heat_Gain_Schedule: String
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Space Required Clear Ceiling Void','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Required Clear Ceiling Void\",\"Notes\":\"\"}"
 Space_Required_Clear_Ceiling_Void (units: LengthUnits=mm) : Float
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Space Required Clear Floor Void','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Required Clear Floor Void\",\"Notes\":\"\"}"
 Space_Required_Clear_Floor_Void (units: LengthUnits=mm) : Float
-"{'Group':'General','Discipline':'All','SPID':'', 'DisplayName':'Space Mechanical Services Zoning Strategy','Notes':''}"
+"{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Mechanical Services Zoning Strategy\",\"Notes\":\"\"}"
 Space_Mechanical_Services_Zoning_Strategy: String
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'External Design Air Temperature in Cooling Mode','Notes':'Dry Bulb Air Temperature'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"External Design Air Temperature in Cooling Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 External_Design_Air_Temperature_in_Cooling_Mode (units: TemperatureUnits=C) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Extreme External Design Air Temperature in Cooling Mode','Notes':'Dry Bulb Air Temperature'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Extreme External Design Air Temperature in Cooling Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Extreme_External_Design_Air_Temperature_in_Cooling_Mode (units: TemperatureUnits=C) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'External Design Air Temperature in Heating Mode','Notes':'Dry Bulb Air Temperature'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"External Design Air Temperature in Heating Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 External_Design_Air_Temperature_in_Heating_Mode (units: TemperatureUnits=C) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Extreme External Design Air Temperature in Heating Mode','Notes':'Dry Bulb Air Temperature'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Extreme External Design Air Temperature in Heating Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Extreme_External_Design_Air_Temperature_in_Heating_Mode (units: TemperatureUnits=C) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Temperature','Notes':'Dry Bulb Air Temperature'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Temperature\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Space_Cooling_Temperature (units: TemperatureUnits=C) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Temperature','Notes':'Dry Bulb Air Temperature'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Temperature\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Space_Heating_Temperature (units: TemperatureUnits=C) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Temperature Tolerance','Notes':'e.g. +/- 2ᵒC'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Temperature Tolerance\",\"Notes\":\"e.g. +/- 2ᵒC\"}"
 Space_Cooling_Temperature_Tolerance: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Temperature Tolerance','Notes':'e.g. +/- 2ᵒC'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Temperature Tolerance\",\"Notes\":\"e.g. +/- 2ᵒC\"}"
 Space_Heating_Temperature_Tolerance: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating and Cooling Strategy','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating and Cooling Strategy\",\"Notes\":\"\"}"
 Space_Heating_and_Cooling_Strategy: String
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Strategy','Notes':'e.g. Underfloor Heating, Radiant Panels, etc.'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Strategy\",\"Notes\":\"e.g. Underfloor Heating, Radiant Panels, etc.\"}"
 Space_Heating_Strategy: String
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Strategy','Notes':'e.g. Chilled Beams, FCU's, Passive, etc.'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Strategy\",\"Notes\":\"e.g. Chilled Beams, FCU\"s, Passive, etc.\"}"
 Space_Cooling_Strategy: String
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Load Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Load Density\",\"Notes\":\"\"}"
 Space_Heating_Load_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Load Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Load Density\",\"Notes\":\"\"}"
 Space_Cooling_Load_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Load','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Load\",\"Notes\":\"\"}"
 Space_Heating_Load (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Load','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Load\",\"Notes\":\"\"}"
 Space_Cooling_Load (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Sensible Cooling Load','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Sensible Cooling Load\",\"Notes\":\"\"}"
 Space_Sensible_Cooling_Load (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Latent Cooling Load','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Latent Cooling Load\",\"Notes\":\"\"}"
 Space_Latent_Cooling_Load (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Heating Contribution','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Heating Contribution\",\"Notes\":\"\"}"
 Space_Supply_Air_Heating_Contribution (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Cooling Contribution','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Cooling Contribution\",\"Notes\":\"\"}"
 Space_Supply_Air_Cooling_Contribution (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Sensible Cooling Contribution','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Sensible Cooling Contribution\",\"Notes\":\"\"}"
 Space_Supply_Air_Sensible_Cooling_Contribution (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Air Flow Rate','Notes':'For use in FCU or re-circulating systems'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Air Flow Rate\",\"Notes\":\"For use in FCU or re-circulating systems\"}"
 Space_Heating_Air_Flow_Rate (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Air Flow Rate','Notes':'For use in FCU or re-circulating systems'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Air Flow Rate\",\"Notes\":\"For use in FCU or re-circulating systems\"}"
 Space_Cooling_Air_Flow_Rate (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Hot Surface Maximum Temperature','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Hot Surface Maximum Temperature\",\"Notes\":\"\"}"
 Space_Hot_Surface_Maximum_Temperature (units: TemperatureUnits=C) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Relative Humidity','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Relative Humidity\",\"Notes\":\"\"}"
 Space_Cooling_Relative_Humidity: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Relative Humidity','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Relative Humidity\",\"Notes\":\"\"}"
 Space_Heating_Relative_Humidity: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Relative Humidity Set Point','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Set Point\",\"Notes\":\"\"}"
 Space_Relative_Humidity_Set_Point: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Relative Humidity Tolerance','Notes':'e.g. +/- 20%'}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Tolerance\",\"Notes\":\"e.g. +/- 20%\"}"
 Space_Relative_Humidity_Tolerance: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Relative Humidity Maximum','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Maximum\",\"Notes\":\"\"}"
 Space_Relative_Humidity_Maximum: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Relative Humidity Minimum','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Minimum\",\"Notes\":\"\"}"
 Space_Relative_Humidity_Minimum: Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Equipment Heat Gain','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Equipment Heat Gain\",\"Notes\":\"\"}"
 Space_Equipment_Heat_Gain (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Equipment Heat Gain Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Equipment Heat Gain Density\",\"Notes\":\"\"}"
 Space_Equipment_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Occupancy Heat Gain','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Occupancy Heat Gain\",\"Notes\":\"\"}"
 Space_Occupancy_Heat_Gain (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Occupancy Heat Gain Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Occupancy Heat Gain Density\",\"Notes\":\"\"}"
 Space_Occupancy_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Lighting Heat Gain','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Heat Gain\",\"Notes\":\"\"}"
 Space_Lighting_Heat_Gain (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Lighting Heat Gain Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Heat Gain Density\",\"Notes\":\"\"}"
 Space_Lighting_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Solar Heat Gain','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Solar Heat Gain\",\"Notes\":\"\"}"
 Space_Solar_Heat_Gain (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Solar Heat Gain Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Solar Heat Gain Density\",\"Notes\":\"\"}"
 Space_Solar_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Infiltration Heat Gain','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Gain\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Gain (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Infiltration Heat Gain Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Gain Density\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Infiltration Heat Loss','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Loss\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Loss (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Infiltration Heat Loss Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Loss Density\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Loss_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Fabric Heat Gain','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Gain\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Gain (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Fabric Heat Gain Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Gain Density\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Fabric Heat Loss','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Loss\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Loss (units: PowerUnits=W) : Float
-"{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Fabric Heat Loss Density','Notes':''}"
+"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Loss Density\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Loss_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Ventilation Strategy','Notes':'e.g. Natural Ventilation, Mixed Mode, Extract Only, etc.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Ventilation Strategy\",\"Notes\":\"e.g. Natural Ventilation, Mixed Mode, Extract Only, etc.\"}"
 Space_Ventilation_Strategy: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Ventilation Control','Notes':'e.g. manual override, CO2 sensor in room, automatic window opening'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Ventilation Control\",\"Notes\":\"e.g. manual override, CO2 sensor in room, automatic window opening\"}"
 Space_Ventilation_Control: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Air Handling Unit Zone','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Air Handling Unit Zone\",\"Notes\":\"\"}"
 Air_Handling_Unit_Zone: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Air Pressurisation','Notes':'Relative to adjoining space (positive, negativeve, neutral)'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Air Pressurisation\",\"Notes\":\"Relative to adjoining space (positive, negativeve, neutral)\"}"
 Space_Air_Pressurisation: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Air Cleanliness','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Air Cleanliness\",\"Notes\":\"\"}"
 Space_Air_Cleanliness: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Air Filtration','Notes':'e.g. F7, G4, etc.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Air Filtration\",\"Notes\":\"e.g. F7, G4, etc.\"}"
 Space_Air_Filtration: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Recirculation Proportion','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Recirculation Proportion\",\"Notes\":\"\"}"
 Space_Supply_Air_Recirculation_Proportion: Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Number of Local Extract Vent Points','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Number of Local Extract Vent Points\",\"Notes\":\"\"}"
 Number_of_Local_Extract_Vent_Points: Int
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Diffuser Type','Notes':'e.g. Linear slot diffuser, Jet nozzle, swirl floor diffuser, etc.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Diffuser Type\",\"Notes\":\"e.g. Linear slot diffuser, Jet nozzle, swirl floor diffuser, etc.\"}"
 Space_Supply_Diffuser_Type: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Extract Grille Type','Notes':'e.g. Bell mouth, square ceiling grille, egg-crate, etc.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Extract Grille Type\",\"Notes\":\"e.g. Bell mouth, square ceiling grille, egg-crate, etc.\"}"
 Space_Extract_Grille_Type: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Fumigation','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fumigation\",\"Notes\":\"\"}"
 Space_Fumigation: Boolean
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Return Air Grille Type','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Return Air Grille Type\",\"Notes\":\"\"}"
 Space_Return_Air_Grille_Type: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Temperature','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Temperature\",\"Notes\":\"\"}"
 Space_Supply_Air_Temperature (units: TemperatureUnits=C) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Changes per Hour','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Changes per Hour\",\"Notes\":\"\"}"
 Space_Supply_Air_Changes_per_Hour (units: AirChangeRateUnits=AC_per_h) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space General Extract Air Changes per Hour','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space General Extract Air Changes per Hour\",\"Notes\":\"\"}"
 Space_General_Extract_Air_Changes_per_Hour (units: AirChangeRateUnits=AC_per_h) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Dirty Extract Air Changes per Hour','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Dirty Extract Air Changes per Hour\",\"Notes\":\"\"}"
 Space_Dirty_Extract_Air_Changes_per_Hour (units: AirChangeRateUnits=AC_per_h) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Kitchen Extract Air Changes per Hour','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Kitchen Extract Air Changes per Hour\",\"Notes\":\"\"}"
 Space_Kitchen_Extract_Air_Changes_per_Hour (units: AirChangeRateUnits=AC_per_h) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Laboratory Extract Air Changes per Hour','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Laboratory Extract Air Changes per Hour\",\"Notes\":\"\"}"
 Space_Laboratory_Extract_Air_Changes_per_Hour (units: AirChangeRateUnits=AC_per_h) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Fume Cupboard Extract Air Changes per Hour','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fume Cupboard Extract Air Changes per Hour\",\"Notes\":\"\"}"
 Space_Fume_Cupboard_Extract_Air_Changes_per_Hour (units: AirChangeRateUnits=AC_per_h) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Smoke Extract Air Changes per Hour','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Smoke Extract Air Changes per Hour\",\"Notes\":\"\"}"
 Space_Smoke_Extract_Air_Changes_per_Hour (units: AirChangeRateUnits=AC_per_h) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Flow Rate per Area','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Flow Rate per Area\",\"Notes\":\"\"}"
 Space_Supply_Air_Flow_Rate_per_Area (units: VolumeFlowRateAreaUnits=L_per_s_per_m2) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space General Extract Air Flow Rate per Area','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space General Extract Air Flow Rate per Area\",\"Notes\":\"\"}"
 Space_General_Extract_Air_Flow_Rate_per_Area (units: VolumeFlowRateAreaUnits=L_per_s_per_m2) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Dirty Extract Air Flow Rate per Area','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Dirty Extract Air Flow Rate per Area\",\"Notes\":\"\"}"
 Space_Dirty_Extract_Air_Flow_Rate_per_Area (units: VolumeFlowRateAreaUnits=L_per_s_per_m2) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Laboratory Extract Air Flow Rate per Area','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Laboratory Extract Air Flow Rate per Area\",\"Notes\":\"\"}"
 Space_Laboratory_Extract_Air_Flow_Rate_per_Area (units: VolumeFlowRateAreaUnits=L_per_s_per_m2) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Flow Rate per Person','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Flow Rate per Person\",\"Notes\":\"\"}"
 Space_Supply_Air_Flow_Rate_per_Person (units: VolumeFlowRatePersonUnits=L_per_s_per_person) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space General Extract Air Flow Rate per Person','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space General Extract Air Flow Rate per Person\",\"Notes\":\"\"}"
 Space_General_Extract_Air_Flow_Rate_per_Person (units: VolumeFlowRatePersonUnits=L_per_s_per_person) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air\",\"Notes\":\"\"}"
 Space_Supply_Air: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Extract Air','Notes':''}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Extract Air\",\"Notes\":\"\"}"
 Space_Extract_Air: String
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Supply Air Flow Rate','Notes':'In Revit shared parameters, but not useful in RDT, as it is an instance parameter.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Flow Rate\",\"Notes\":\"In Revit shared parameters, but not useful in RDT, as it is an instance parameter.\"}"
 Space_Supply_Air_Flow_Rate (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space General Extract Air Flow Rate ','Notes':'In Revit shared parameters, but not useful in RDT, as it is an instance parameter.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space General Extract Air Flow Rate \",\"Notes\":\"In Revit shared parameters, but not useful in RDT, as it is an instance parameter.\"}"
 Space_General_Extract_Air_Flow_Rate_ (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Dirty Extract Air Flow Rate ','Notes':'In Revit shared parameters, but not useful in RDT, as it is an instance parameter.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Dirty Extract Air Flow Rate \",\"Notes\":\"In Revit shared parameters, but not useful in RDT, as it is an instance parameter.\"}"
 Space_Dirty_Extract_Air_Flow_Rate_ (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Kitchen Extract Air Flow Rate','Notes':'In Revit shared parameters, but not useful in RDT, as it is an instance parameter.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Kitchen Extract Air Flow Rate\",\"Notes\":\"In Revit shared parameters, but not useful in RDT, as it is an instance parameter.\"}"
 Space_Kitchen_Extract_Air_Flow_Rate (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Laboratory Extract Air Flow Rate ','Notes':'In Revit shared parameters, but not useful in RDT, as it is an instance parameter.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Laboratory Extract Air Flow Rate \",\"Notes\":\"In Revit shared parameters, but not useful in RDT, as it is an instance parameter.\"}"
 Space_Laboratory_Extract_Air_Flow_Rate_ (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Ventilation','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Fume Cupboard Extract Air Flow Rate ','Notes':'In Revit shared parameters, but not useful in RDT, as it is an instance parameter.'}"
+"{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fume Cupboard Extract Air Flow Rate \",\"Notes\":\"In Revit shared parameters, but not useful in RDT, as it is an instance parameter.\"}"
 Space_Fume_Cupboard_Extract_Air_Flow_Rate_ (units: VolumeFlowRateUnits=l_per_s) : Float
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Water Outlets','Notes':'e.g. Cleaner's Sink, WHB, etc.'}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Water Outlets\",\"Notes\":\"e.g. Cleaner\"s Sink, WHB, etc.\"}"
 Space_Domestic_Water_Outlets: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Hot Water Service','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Hot Water Service\",\"Notes\":\"\"}"
 Space_Domestic_Hot_Water_Service: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Hot Water Delivery Method','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Hot Water Delivery Method\",\"Notes\":\"\"}"
 Space_Domestic_Hot_Water_Delivery_Method: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Hot Water Generation Location','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Hot Water Generation Location\",\"Notes\":\"\"}"
 Space_Domestic_Hot_Water_Generation_Location: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Cold Water Service','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Cold Water Service\",\"Notes\":\"\"}"
 Space_Domestic_Cold_Water_Service: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Cold Water Type','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Cold Water Type\",\"Notes\":\"\"}"
 Space_Domestic_Cold_Water_Type: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Cold Water Fluid Category','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Cold Water Fluid Category\",\"Notes\":\"\"}"
 Space_Domestic_Cold_Water_Fluid_Category: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Cold Water Delivery Pressure','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Cold Water Delivery Pressure\",\"Notes\":\"\"}"
 Space_Domestic_Cold_Water_Delivery_Pressure (units: PressureUnits=bar) : Float
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Number of Fittings','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Number of Fittings\",\"Notes\":\"\"}"
 Number_of_Fittings: Int
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Non Potable Cold Water','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Non Potable Cold Water\",\"Notes\":\"\"}"
 Space_Non_Potable_Cold_Water: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Drinking Fountain','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Drinking Fountain\",\"Notes\":\"\"}"
 Drinking_Fountain: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Drinking Fountain Description','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Drinking Fountain Description\",\"Notes\":\"\"}"
 Drinking_Fountain_Description: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Purified Drinking Water','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Purified Drinking Water\",\"Notes\":\"\"}"
 Space_Purified_Drinking_Water: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Purified Drinking Water Type','Notes':'e.g. Piped or Bottled'}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Purified Drinking Water Type\",\"Notes\":\"e.g. Piped or Bottled\"}"
 Space_Purified_Drinking_Water_Type: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Chilled Drinking Water','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Chilled Drinking Water\",\"Notes\":\"\"}"
 Space_Chilled_Drinking_Water: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Chilled Drinking Water Type','Notes':'e.g. Piped or Bottled'}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Chilled Drinking Water Type\",\"Notes\":\"e.g. Piped or Bottled\"}"
 Space_Chilled_Drinking_Water_Type: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Laboratory Cold Water','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Laboratory Cold Water\",\"Notes\":\"\"}"
 Space_Laboratory_Cold_Water: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Laboratory Hot Water','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Laboratory Hot Water\",\"Notes\":\"\"}"
 Space_Laboratory_Hot_Water: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Laboratory Cooling Water','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Laboratory Cooling Water\",\"Notes\":\"\"}"
 Space_Laboratory_Cooling_Water: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Softened Cold Water','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Softened Cold Water\",\"Notes\":\"\"}"
 Space_Softened_Cold_Water: Boolean
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Purified Water Type','Notes':'e.g. RO, de-ionised etc.'}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Purified Water Type\",\"Notes\":\"e.g. RO, de-ionised etc.\"}"
 Space_Purified_Water_Type: String
-"{'Group':'Domestic Water','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Domestic Hot Water Maximum Temperature','Notes':''}"
+"{\"Group\":\"Domestic Water\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Hot Water Maximum Temperature\",\"Notes\":\"\"}"
 Space_Domestic_Hot_Water_Maximum_Temperature (units: TemperatureUnits=C) : Float
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Piped Gases Strategy','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Piped Gases Strategy\",\"Notes\":\"\"}"
 Space_Piped_Gases_Strategy: String
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Anaesthetic Gas Scavenging System','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Anaesthetic Gas Scavenging System\",\"Notes\":\"\"}"
 Anaesthetic_Gas_Scavenging_System: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas Laboratory Air','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas Laboratory Air\",\"Notes\":\"\"}"
 Piped_Gas_Laboratory_Air: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas Compressed Air','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas Compressed Air\",\"Notes\":\"\"}"
 Piped_Gas_Compressed_Air: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Dental Vacuum','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Dental Vacuum\",\"Notes\":\"\"}"
 Dental_Vacuum: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Laboratory Vacuum','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Laboratory Vacuum\",\"Notes\":\"\"}"
 Laboratory_Vacuum: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Medical Vacuum','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Medical Vacuum\",\"Notes\":\"\"}"
 Medical_Vacuum: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Steam and Condensate','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Steam and Condensate\",\"Notes\":\"\"}"
 Piped_Steam_and_Condensate: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Clean Steam and Condensate','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Clean Steam and Condensate\",\"Notes\":\"\"}"
 Piped_Clean_Steam_and_Condensate: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas Natural Gas','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas Natural Gas\",\"Notes\":\"\"}"
 Piped_Gas_Natural_Gas: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas Ar','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas Ar\",\"Notes\":\"\"}"
 Piped_Gas_Ar: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas CO2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas CO2\",\"Notes\":\"\"}"
 Piped_Gas_CO2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas 5% CO2 95% O2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas 5% CO2 95% O2\",\"Notes\":\"\"}"
 Piped_Gas_5pc_CO2_95pc_O2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas He','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas He\",\"Notes\":\"\"}"
 Piped_Gas_He: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas Heliox','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas Heliox\",\"Notes\":\"\"}"
 Piped_Gas_Heliox: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas H2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas H2\",\"Notes\":\"\"}"
 Piped_Gas_H2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Liquid Nitrogen','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Liquid Nitrogen\",\"Notes\":\"\"}"
 Piped_Liquid_Nitrogen: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Liquid CO2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Liquid CO2\",\"Notes\":\"\"}"
 Piped_Liquid_CO2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas N2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas N2\",\"Notes\":\"\"}"
 Piped_Gas_N2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas O2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas O2\",\"Notes\":\"\"}"
 Piped_Gas_O2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas N2O','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas N2O\",\"Notes\":\"\"}"
 Piped_Gas_N2O: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas Entonox','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas Entonox\",\"Notes\":\"\"}"
 Piped_Gas_Entonox: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas MA4','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas MA4\",\"Notes\":\"\"}"
 Piped_Gas_MA4: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Piped Gas SA7','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Piped Gas SA7\",\"Notes\":\"\"}"
 Piped_Gas_SA7: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas Laboratory Air','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas Laboratory Air\",\"Notes\":\"\"}"
 Bottled_Gas_Laboratory_Air: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas Compressed Air','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas Compressed Air\",\"Notes\":\"\"}"
 Bottled_Gas_Compressed_Air: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas Ar','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas Ar\",\"Notes\":\"\"}"
 Bottled_Gas_Ar: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas CO2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas CO2\",\"Notes\":\"\"}"
 Bottled_Gas_CO2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas 5% CO2 95% O2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas 5% CO2 95% O2\",\"Notes\":\"\"}"
 Bottled_Gas_5pc_CO2_95pc_O2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas He','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas He\",\"Notes\":\"\"}"
 Bottled_Gas_He: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas H2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas H2\",\"Notes\":\"\"}"
 Bottled_Gas_H2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Liquid Nitrogen','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Liquid Nitrogen\",\"Notes\":\"\"}"
 Bottled_Liquid_Nitrogen: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Liquid CO2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Liquid CO2\",\"Notes\":\"\"}"
 Bottled_Liquid_CO2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas N2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas N2\",\"Notes\":\"\"}"
 Bottled_Gas_N2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas O2','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas O2\",\"Notes\":\"\"}"
 Bottled_Gas_O2: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas N2O','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas N2O\",\"Notes\":\"\"}"
 Bottled_Gas_N2O: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas Entonox','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas Entonox\",\"Notes\":\"\"}"
 Bottled_Gas_Entonox: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas MA4','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas MA4\",\"Notes\":\"\"}"
 Bottled_Gas_MA4: Boolean
-"{'Group':'Gas','Discipline':'Mechanical','SPID':'', 'DisplayName':'Bottled Gas SA7','Notes':''}"
+"{\"Group\":\"Gas\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Bottled Gas SA7\",\"Notes\":\"\"}"
 Bottled_Gas_SA7: Boolean
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Electrical Zone','Notes':'e.g. None, 0, 1, 2'}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Electrical Zone\",\"Notes\":\"e.g. None, 0, 1, 2\"}"
 Electrical_Zone: String
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Twin Sockets Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Twin Sockets Essential\",\"Notes\":\"\"}"
 Number_of_230V_Twin_Sockets_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Single Sockets Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Single Sockets Essential\",\"Notes\":\"\"}"
 Number_of_230V_Single_Sockets_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Power and IT Floor Boxes Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Power and IT Floor Boxes Essential\",\"Notes\":\"\"}"
 Number_of_Power_and_IT_Floor_Boxes_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Power and IT Floor Boxes Essential Contents','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Power and IT Floor Boxes Essential Contents\",\"Notes\":\"\"}"
 Power_and_IT_Floor_Boxes_Essential_Contents: String
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Fused Connection Units Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Fused Connection Units Essential\",\"Notes\":\"\"}"
 Number_of_Fused_Connection_Units_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Cleaners Sockets Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Cleaners Sockets Essential\",\"Notes\":\"\"}"
 Number_of_Cleaners_Sockets_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 400V 3 Phase Single Sockets Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 400V 3 Phase Single Sockets Essential\",\"Notes\":\"\"}"
 Number_of_400V_3_Phase_Single_Sockets_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Twin Sockets Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Twin Sockets Non Essential\",\"Notes\":\"\"}"
 Number_of_230V_Twin_Sockets_Non_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Twin Sockets Non Essential Clean','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Twin Sockets Non Essential Clean\",\"Notes\":\"\"}"
 Number_of_230V_Twin_Sockets_Non_Essential_Clean: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Twin Sockets Non Essential USB','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Twin Sockets Non Essential USB\",\"Notes\":\"\"}"
 Number_of_230V_Twin_Sockets_Non_Essential_USB: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Single Sockets Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Single Sockets Non Essential\",\"Notes\":\"\"}"
 Number_of_230V_Single_Sockets_Non_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Single Sockets Non Essential Clean','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Single Sockets Non Essential Clean\",\"Notes\":\"\"}"
 Number_of_230V_Single_Sockets_Non_Essential_Clean: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Switch Disconnector Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Switch Disconnector Non Essential\",\"Notes\":\"\"}"
 Number_of_230V_Switch_Disconnector_Non_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Power and IT Floor Boxes Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Power and IT Floor Boxes Non Essential\",\"Notes\":\"\"}"
 Number_of_Power_and_IT_Floor_Boxes_Non_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Power and IT Floor Boxes Non Essential Contents','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Power and IT Floor Boxes Non Essential Contents\",\"Notes\":\"\"}"
 Power_and_IT_Floor_Boxes_Non_Essential_Contents: String
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Fused Connection Units Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Fused Connection Units Non Essential\",\"Notes\":\"\"}"
 Number_of_Fused_Connection_Units_Non_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Fused Connection Units Non Essential Clean','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Fused Connection Units Non Essential Clean\",\"Notes\":\"\"}"
 Number_of_Fused_Connection_Units_Non_Essential_Clean: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Cleaners Sockets Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Cleaners Sockets Non Essential\",\"Notes\":\"\"}"
 Number_of_Cleaners_Sockets_Non_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 400V 3 Phase Single Sockets Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 400V 3 Phase Single Sockets Non Essential\",\"Notes\":\"\"}"
 Number_of_400V_3_Phase_Single_Sockets_Non_Essential: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Isolators','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Isolators\",\"Notes\":\"\"}"
 Number_of_Isolators: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'110V Outlets Description','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"110V Outlets Description\",\"Notes\":\"\"}"
 c110V_Outlets_Description: String
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'230V Outlets Description','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"230V Outlets Description\",\"Notes\":\"\"}"
 d230V_Outlets_Description: String
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'400V Outlets Description','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"400V Outlets Description\",\"Notes\":\"\"}"
 e400V_Outlets_Description: String
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Special Electrical','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Special Electrical\",\"Notes\":\"\"}"
 Special_Electrical: String
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Power Load Density','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Power Load Density\",\"Notes\":\"\"}"
 Space_Power_Load_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Power Load','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Power Load\",\"Notes\":\"\"}"
 Space_Power_Load (units: PowerUnits=W) : Float
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Twin Sockets UPS','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Twin Sockets UPS\",\"Notes\":\"\"}"
 Number_of_230V_Twin_Sockets_UPS: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 230V Single Sockets UPS','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 230V Single Sockets UPS\",\"Notes\":\"\"}"
 Number_of_230V_Single_Sockets_UPS: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 400V 3 Phase Single Sockets UPS','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 400V 3 Phase Single Sockets UPS\",\"Notes\":\"\"}"
 Number_of_400V_3_Phase_Single_Sockets_UPS: Int
-"{'Group':'Small Power','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of 400V Switch Disconnector Non Essential','Notes':''}"
+"{\"Group\":\"Small Power\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of 400V Switch Disconnector Non Essential\",\"Notes\":\"\"}"
 Number_of_400V_Switch_Disconnector_Non_Essential: Int
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Strategy','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Strategy\",\"Notes\":\"\"}"
 Space_Lighting_Strategy: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Type Reference','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Type Reference\",\"Notes\":\"\"}"
 Space_Lighting_Type_Reference: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Control Strategy','Notes':'e.g. Manual on/off, Scene selection, presence detection, etc.'}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Control Strategy\",\"Notes\":\"e.g. Manual on/off, Scene selection, presence detection, etc.\"}"
 Space_Lighting_Control_Strategy: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Dimming Strategy','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Dimming Strategy\",\"Notes\":\"\"}"
 Space_Lighting_Dimming_Strategy: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Dimming Override','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Dimming Override\",\"Notes\":\"\"}"
 Space_Lighting_Dimming_Override: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Control Protocol','Notes':'e.g. Mains Dim Trainling Edge, Mains Dim Leading Edge, Switched, DALI, DMX'}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Control Protocol\",\"Notes\":\"e.g. Mains Dim Trainling Edge, Mains Dim Leading Edge, Switched, DALI, DMX\"}"
 Space_Lighting_Control_Protocol: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Lighting Schedule','Notes':'Select from a pre-defined list that relates to an hourly schedule'}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Lighting Schedule\",\"Notes\":\"Select from a pre-defined list that relates to an hourly schedule\"}"
 Lighting_Schedule: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lux Level Day','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lux Level Day\",\"Notes\":\"\"}"
 Space_Lux_Level_Day (units: LuxUnits=Lux) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lux Level Night','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lux Level Night\",\"Notes\":\"\"}"
 Space_Lux_Level_Night (units: LuxUnits=Lux) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lux Level Task','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lux Level Task\",\"Notes\":\"\"}"
 Space_Lux_Level_Task (units: LuxUnits=Lux) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Maximum Lux Level','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Maximum Lux Level\",\"Notes\":\"\"}"
 Space_Maximum_Lux_Level (units: LuxUnits=Lux) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Minimum Lux Level','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Minimum Lux Level\",\"Notes\":\"\"}"
 Space_Minimum_Lux_Level (units: LuxUnits=Lux) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Minimum Colour Rendering Index','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Minimum Colour Rendering Index\",\"Notes\":\"\"}"
 Space_Minimum_Colour_Rendering_Index: Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Minimum Colour Rendering Index Description','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Minimum Colour Rendering Index Description\",\"Notes\":\"\"}"
 Space_Minimum_Colour_Rendering_Index_Description: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Colour Temperature in Kelvin','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Colour Temperature in Kelvin\",\"Notes\":\"\"}"
 Space_Lighting_Colour_Temperature_in_Kelvin: Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Ballast Type','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Ballast Type\",\"Notes\":\"\"}"
 Space_Lighting_Ballast_Type: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Task Lighting','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Task Lighting\",\"Notes\":\"\"}"
 Space_Task_Lighting: Boolean
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Task Lighting Calculation Workplane Description','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Task Lighting Calculation Workplane Description\",\"Notes\":\"\"}"
 Space_Task_Lighting_Calculation_Workplane_Description: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Task Lighting Efficacy','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Task Lighting Efficacy\",\"Notes\":\"\"}"
 Space_Task_Lighting_Efficacy: Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Task Lighting Control','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Task Lighting Control\",\"Notes\":\"\"}"
 Space_Task_Lighting_Control: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Emergency Lighting','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Emergency Lighting\",\"Notes\":\"\"}"
 Space_Emergency_Lighting: Boolean
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Emergency Lighting Strategy','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Emergency Lighting Strategy\",\"Notes\":\"\"}"
 Space_Emergency_Lighting_Strategy: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Emergency Lighting Description','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Emergency Lighting Description\",\"Notes\":\"\"}"
 Space_Emergency_Lighting_Description: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Emergency Lighting Lux Level','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Emergency Lighting Lux Level\",\"Notes\":\"\"}"
 Space_Emergency_Lighting_Lux_Level (units: LuxUnits=Lux) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Calculation Workplane Description','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Calculation Workplane Description\",\"Notes\":\"\"}"
 Space_Lighting_Calculation_Workplane_Description: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Other Space Lighting','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Other Space Lighting\",\"Notes\":\"\"}"
 Other_Space_Lighting: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Other Space Lighting Control','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Other Space Lighting Control\",\"Notes\":\"\"}"
 Other_Space_Lighting_Control: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Minimum Lighting Efficacy','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Minimum Lighting Efficacy\",\"Notes\":\"\"}"
 Space_Minimum_Lighting_Efficacy: Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Power Load Density','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Power Load Density\",\"Notes\":\"\"}"
 Space_Lighting_Power_Load_Density: Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Power Load','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Power Load\",\"Notes\":\"\"}"
 Space_Lighting_Power_Load (units: PowerUnits=W) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Task Lighting Power Load','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Task Lighting Power Load\",\"Notes\":\"\"}"
 Space_Task_Lighting_Power_Load (units: PowerUnits=W) : Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Uniformity','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Uniformity\",\"Notes\":\"\"}"
 Space_Lighting_Uniformity: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Lighting Access','Notes':''}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Access\",\"Notes\":\"\"}"
 Space_Lighting_Access: String
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Floor Reflectance','Notes':'Revit defaults'}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Floor Reflectance\",\"Notes\":\"Revit defaults\"}"
 Floor_Reflectance: Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Ceiling Reflectance','Notes':'Revit defaults'}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Ceiling Reflectance\",\"Notes\":\"Revit defaults\"}"
 Ceiling_Reflectance: Float
-"{'Group':'Lighting','Discipline':'Electrical','SPID':'', 'DisplayName':'Wall Reflectance','Notes':'Revit defaults'}"
+"{\"Group\":\"Lighting\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Wall Reflectance\",\"Notes\":\"Revit defaults\"}"
 Wall_Reflectance: Float
-"{'Group':'Fused Connection Units','Discipline':'Electrical','SPID':'', 'DisplayName':'Total Fused Connection Unit Points','Notes':''}"
+"{\"Group\":\"Fused Connection Units\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Total Fused Connection Unit Points\",\"Notes\":\"\"}"
 Total_Fused_Connection_Unit_Points: Int
-"{'Group':'Fused Connection Units','Discipline':'Electrical','SPID':'', 'DisplayName':'Fused Connection Units Description','Notes':''}"
+"{\"Group\":\"Fused Connection Units\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Fused Connection Units Description\",\"Notes\":\"\"}"
 Fused_Connection_Units_Description: String
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Quad RJ45 Data Outlets','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Quad RJ45 Data Outlets\",\"Notes\":\"\"}"
 Number_of_Quad_RJ45_Data_Outlets: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Twin RJ45 Data Outlets','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Twin RJ45 Data Outlets\",\"Notes\":\"\"}"
 Number_of_Twin_RJ45_Data_Outlets: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Single RJ45 Data Outlets','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Single RJ45 Data Outlets\",\"Notes\":\"\"}"
 Number_of_Single_RJ45_Data_Outlets: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Twin RJ45 Data Outlets Access Control','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Twin RJ45 Data Outlets Access Control\",\"Notes\":\"\"}"
 Number_of_Twin_RJ45_Data_Outlets_Access_Control: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Single RJ45 Data Outlets Access Control','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Single RJ45 Data Outlets Access Control\",\"Notes\":\"\"}"
 Number_of_Single_RJ45_Data_Outlets_Access_Control: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Twin RJ45 Data Outlets Surveillance Cameras','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Twin RJ45 Data Outlets Surveillance Cameras\",\"Notes\":\"\"}"
 Number_of_Twin_RJ45_Data_Outlets_Surveillance_Cameras: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Single RJ45 Data Outlets Surveillance Cameras','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Single RJ45 Data Outlets Surveillance Cameras\",\"Notes\":\"\"}"
 Number_of_Single_RJ45_Data_Outlets_Surveillance_Cameras: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Twin RJ45 Data Outlets VOIP','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Twin RJ45 Data Outlets VOIP\",\"Notes\":\"\"}"
 Number_of_Twin_RJ45_Data_Outlets_VOIP: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Single RJ45 Data Outlets VOIP','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Single RJ45 Data Outlets VOIP\",\"Notes\":\"\"}"
 Number_of_Single_RJ45_Data_Outlets_VOIP: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Data Sockets Description','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Data Sockets Description\",\"Notes\":\"\"}"
 Data_Sockets_Description: String
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Network','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Network\",\"Notes\":\"\"}"
 Network: String
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Wireless Provision Description','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Wireless Provision Description\",\"Notes\":\"\"}"
 Wireless_Provision_Description: String
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Telephone Provision Description','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Telephone Provision Description\",\"Notes\":\"\"}"
 Telephone_Provision_Description: String
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of TV Outlets','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of TV Outlets\",\"Notes\":\"\"}"
 Number_of_TV_Outlets: Int
-"{'Group':'Telecoms / Data','Discipline':'Electrical','SPID':'', 'DisplayName':'TV Outlets Description','Notes':''}"
+"{\"Group\":\"Telecoms / Data\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"TV Outlets Description\",\"Notes\":\"\"}"
 TV_Outlets_Description: String
-"{'Group':'Call Systems','Discipline':'Electrical','SPID':'', 'DisplayName':'Nurse Call Staff to Staff','Notes':''}"
+"{\"Group\":\"Call Systems\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Nurse Call Staff to Staff\",\"Notes\":\"\"}"
 Nurse_Call_Staff_to_Staff: Boolean
-"{'Group':'Call Systems','Discipline':'Electrical','SPID':'', 'DisplayName':'Nurse Call Patient to Staff','Notes':''}"
+"{\"Group\":\"Call Systems\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Nurse Call Patient to Staff\",\"Notes\":\"\"}"
 Nurse_Call_Patient_to_Staff: Boolean
-"{'Group':'Call Systems','Discipline':'Electrical','SPID':'', 'DisplayName':'WC Alarm','Notes':''}"
+"{\"Group\":\"Call Systems\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"WC Alarm\",\"Notes\":\"\"}"
 WC_Alarm: Boolean
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Audio Visual Provision','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Audio Visual Provision\",\"Notes\":\"\"}"
 Audio_Visual_Provision: String
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'TV Screen','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"TV Screen\",\"Notes\":\"\"}"
 TV_Screen: Boolean
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Projector','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Projector\",\"Notes\":\"\"}"
 Projector: Boolean
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Audio System','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Audio System\",\"Notes\":\"\"}"
 Audio_System: Boolean
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Hearing Loop','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Hearing Loop\",\"Notes\":\"\"}"
 Hearing_Loop: Boolean
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Audio Visual Space Type','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Audio Visual Space Type\",\"Notes\":\"\"}"
 Audio_Visual_Space_Type: String
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Ceiling Speakers','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Ceiling Speakers\",\"Notes\":\"\"}"
 Number_of_Ceiling_Speakers: Int
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Wall Speakers','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Wall Speakers\",\"Notes\":\"\"}"
 Number_of_Wall_Speakers: Int
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Speaker Outlets','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Speaker Outlets\",\"Notes\":\"\"}"
 Number_of_Speaker_Outlets: Int
-"{'Group':'AV Equipment','Discipline':'Electrical','SPID':'', 'DisplayName':'Number of Subwoofer Outlets','Notes':''}"
+"{\"Group\":\"AV Equipment\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Number of Subwoofer Outlets\",\"Notes\":\"\"}"
 Number_of_Subwoofer_Outlets: Int
-"{'Group':'Public Address','Discipline':'Electrical','SPID':'', 'DisplayName':'Public Address','Notes':''}"
+"{\"Group\":\"Public Address\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Public Address\",\"Notes\":\"\"}"
 Public_Address: Boolean
-"{'Group':'Public Address','Discipline':'Electrical','SPID':'', 'DisplayName':'Public Address Description','Notes':''}"
+"{\"Group\":\"Public Address\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Public Address Description\",\"Notes\":\"\"}"
 Public_Address_Description: String
-"{'Group':'Public Address','Discipline':'Electrical','SPID':'', 'DisplayName':'Voice Alarm','Notes':''}"
+"{\"Group\":\"Public Address\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Voice Alarm\",\"Notes\":\"\"}"
 Voice_Alarm: Boolean
-"{'Group':'Public Address','Discipline':'Electrical','SPID':'', 'DisplayName':'PAVA Paging Zone','Notes':''}"
+"{\"Group\":\"Public Address\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"PAVA Paging Zone\",\"Notes\":\"\"}"
 PAVA_Paging_Zone: String
-"{'Group':'Public Address','Discipline':'Electrical','SPID':'', 'DisplayName':'PAVA Paging Zone Type','Notes':''}"
+"{\"Group\":\"Public Address\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"PAVA Paging Zone Type\",\"Notes\":\"\"}"
 PAVA_Paging_Zone_Type: String
-"{'Group':'Public Address','Discipline':'Electrical','SPID':'', 'DisplayName':'Public Address Speaker Type','Notes':''}"
+"{\"Group\":\"Public Address\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Public Address Speaker Type\",\"Notes\":\"\"}"
 Public_Address_Speaker_Type: String
-"{'Group':'Public Address','Discipline':'Electrical','SPID':'', 'DisplayName':'Audio Visual Volume Control Interface','Notes':''}"
+"{\"Group\":\"Public Address\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Audio Visual Volume Control Interface\",\"Notes\":\"\"}"
 Audio_Visual_Volume_Control_Interface: Boolean
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Security Strategy','Notes':'E.g. Public, Semi-public, Semi-private – circulation, Semi-private – facilities, Private – resident, Private – staff, Private – facilities, Private - BOH facilities, Private - BOH general, Restricted'}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Security Strategy\",\"Notes\":\"E.g. Public, Semi-public, Semi-private – circulation, Semi-private – facilities, Private – resident, Private – staff, Private – facilities, Private - BOH facilities, Private - BOH general, Restricted\"}"
 Space_Security_Strategy: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Intercom','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Intercom\",\"Notes\":\"\"}"
 Intercom: Boolean
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Intercom Description','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Intercom Description\",\"Notes\":\"\"}"
 Intercom_Description: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Space Surveillance Camera Strategy','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Space Surveillance Camera Strategy\",\"Notes\":\"\"}"
 Space_Surveillance_Camera_Strategy: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Surveillance Monitors','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Surveillance Monitors\",\"Notes\":\"\"}"
 Surveillance_Monitors: Boolean
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Intruder Detection','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Intruder Detection\",\"Notes\":\"\"}"
 Intruder_Detection: Boolean
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Intruder Detection Description','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Intruder Detection Description\",\"Notes\":\"\"}"
 Intruder_Detection_Description: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Intruder Detection Control Device Type','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Intruder Detection Control Device Type\",\"Notes\":\"\"}"
 Intruder_Detection_Control_Device_Type: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Access Control Description','Notes':'E.g. touch reader both sides of the door, push to exit button on one side and reader on the other side, etc.'}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Access Control Description\",\"Notes\":\"E.g. touch reader both sides of the door, push to exit button on one side and reader on the other side, etc.\"}"
 Access_Control_Description: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Panic Attack Alarm','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Panic Attack Alarm\",\"Notes\":\"\"}"
 Panic_Attack_Alarm: Boolean
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Panic Attack Alarm Description','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Panic Attack Alarm Description\",\"Notes\":\"\"}"
 Panic_Attack_Alarm_Description: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Special Alarms','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Special Alarms\",\"Notes\":\"\"}"
 Special_Alarms: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Door Entry Alarm Points','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Door Entry Alarm Points\",\"Notes\":\"\"}"
 Door_Entry_Alarm_Points: Boolean
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Door Entry Alarm Points Description','Notes':'e.g. External Doors, Ground Floor, etc.'}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Door Entry Alarm Points Description\",\"Notes\":\"e.g. External Doors, Ground Floor, etc.\"}"
 Door_Entry_Alarm_Points_Description: String
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Surveillance System Audio Visual Interface','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Surveillance System Audio Visual Interface\",\"Notes\":\"\"}"
 Surveillance_System_Audio_Visual_Interface: Boolean
-"{'Group':'Security','Discipline':'Electrical','SPID':'', 'DisplayName':'Surveillance System Intercom Interface','Notes':''}"
+"{\"Group\":\"Security\",\"Discipline\":\"Electrical\",\"SPID\":\"\", \"DisplayName\":\"Surveillance System Intercom Interface\",\"Notes\":\"\"}"
 Surveillance_System_Intercom_Interface: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Space Fire Suppression','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Space Fire Suppression\",\"Notes\":\"\"}"
 Space_Fire_Suppression: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Protection Zone','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Protection Zone\",\"Notes\":\"\"}"
 Fire_Protection_Zone: String
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Extinguishers','Notes':'Type of extinguisher'}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Extinguishers\",\"Notes\":\"Type of extinguisher\"}"
 Fire_Extinguishers: String
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Detection Device','Notes':'e.g. Smoke Detector / Heat Detector / etc.'}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Detection Device\",\"Notes\":\"e.g. Smoke Detector / Heat Detector / etc.\"}"
 Fire_Detection_Device: String
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Suppression Method','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Suppression Method\",\"Notes\":\"\"}"
 Fire_Suppression_Method: String
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Sprinkler Head Type','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Sprinkler Head Type\",\"Notes\":\"\"}"
 Sprinkler_Head_Type: String
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Rising Main Type','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Rising Main Type\",\"Notes\":\"\"}"
 Rising_Main_Type: String
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Sprinkler Protection','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Sprinkler Protection\",\"Notes\":\"\"}"
 Sprinkler_Protection: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Gas Suppression','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Gas Suppression\",\"Notes\":\"\"}"
 Gas_Suppression: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Alarm Visual Alert Device','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Alarm Visual Alert Device\",\"Notes\":\"\"}"
 Fire_Alarm_Visual_Alert_Device: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Alarm Sounder','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Alarm Sounder\",\"Notes\":\"\"}"
 Fire_Alarm_Sounder: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Alarm Beacon','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Alarm Beacon\",\"Notes\":\"\"}"
 Fire_Alarm_Beacon: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Manual Call Point','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Manual Call Point\",\"Notes\":\"\"}"
 Manual_Call_Point: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Fire Alarm Interfaces','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Fire Alarm Interfaces\",\"Notes\":\"\"}"
 Fire_Alarm_Interfaces: String
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Disabled Refuge Alarm','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Disabled Refuge Alarm\",\"Notes\":\"\"}"
 Disabled_Refuge_Alarm: Boolean
-"{'Group':'Fire','Discipline':'Fire','SPID':'', 'DisplayName':'Disabled Refuge Alarm Description','Notes':''}"
+"{\"Group\":\"Fire\",\"Discipline\":\"Fire\",\"SPID\":\"\", \"DisplayName\":\"Disabled Refuge Alarm Description\",\"Notes\":\"\"}"
 Disabled_Refuge_Alarm_Description: String
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Drainage Strategy','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Drainage Strategy\",\"Notes\":\"\"}"
 Space_Drainage_Strategy: String
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Number of WCs','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Number of WCs\",\"Notes\":\"\"}"
 Number_of_WCs: Int
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Number of WHBs','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Number of WHBs\",\"Notes\":\"\"}"
 Number_of_WHBs: Int
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Number of Sinks','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Number of Sinks\",\"Notes\":\"\"}"
 Number_of_Sinks: Int
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Domestic Drainage','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Drainage\",\"Notes\":\"\"}"
 Space_Domestic_Drainage: Boolean
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Domestic Drainage Description','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Domestic Drainage Description\",\"Notes\":\"\"}"
 Space_Domestic_Drainage_Description: String
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Drinking Point Drainage Type','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Drinking Point Drainage Type\",\"Notes\":\"\"}"
 Space_Drinking_Point_Drainage_Type: String
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Condensate Drainage','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Condensate Drainage\",\"Notes\":\"\"}"
 Space_Condensate_Drainage: Boolean
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Solvent Drainage','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Solvent Drainage\",\"Notes\":\"\"}"
 Space_Solvent_Drainage: Boolean
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Solvent Drainage Description','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Solvent Drainage Description\",\"Notes\":\"\"}"
 Space_Solvent_Drainage_Description: String
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Chemical Drainage','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Chemical Drainage\",\"Notes\":\"\"}"
 Space_Chemical_Drainage: Boolean
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Chemical Drainage Description','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Chemical Drainage Description\",\"Notes\":\"\"}"
 Space_Chemical_Drainage_Description: String
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Biological Drainage','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Biological Drainage\",\"Notes\":\"\"}"
 Space_Biological_Drainage: Boolean
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Biological Drainage Description','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Biological Drainage Description\",\"Notes\":\"\"}"
 Space_Biological_Drainage_Description: String
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Radioactive Drainage','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Radioactive Drainage\",\"Notes\":\"\"}"
 Space_Radioactive_Drainage: Boolean
-"{'Group':'Drainage','Discipline':'Public Health','SPID':'', 'DisplayName':'Space Radioactive Drainage Description','Notes':''}"
+"{\"Group\":\"Drainage\",\"Discipline\":\"Public Health\",\"SPID\":\"\", \"DisplayName\":\"Space Radioactive Drainage Description\",\"Notes\":\"\"}"
 Space_Radioactive_Drainage_Description: String
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Space Temperature Sensor','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Space Temperature Sensor\",\"Notes\":\"\"}"
 Space_Temperature_Sensor: Boolean
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Space Air Quality Sensor','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Space Air Quality Sensor\",\"Notes\":\"\"}"
 Space_Air_Quality_Sensor: Boolean
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Space Relative Humidity Sensor','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Sensor\",\"Notes\":\"\"}"
 Space_Relative_Humidity_Sensor: Boolean
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Space Sensor Location','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Space Sensor Location\",\"Notes\":\"\"}"
 Space_Sensor_Location: String
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Space Control Method','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Space Control Method\",\"Notes\":\"\"}"
 Space_Control_Method: String
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Number of Control Zones','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Number of Control Zones\",\"Notes\":\"\"}"
 Number_of_Control_Zones: String
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Space HVAC Control from Local AV Interface','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Space HVAC Control from Local AV Interface\",\"Notes\":\"\"}"
 Space_HVAC_Control_from_Local_AV_Interface: Boolean
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Local Extended Hours Override Controller','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Local Extended Hours Override Controller\",\"Notes\":\"\"}"
 Local_Extended_Hours_Override_Controller: Boolean
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Extended Hours Service Provision','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Extended Hours Service Provision\",\"Notes\":\"\"}"
 Extended_Hours_Service_Provision: String
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'BMS to Lighting Control Interface','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"BMS to Lighting Control Interface\",\"Notes\":\"\"}"
 BMS_to_Lighting_Control_Interface: String
-"{'Group':'Controls','Discipline':'Data Systems','SPID':'', 'DisplayName':'Space CO2 Sensor','Notes':''}"
+"{\"Group\":\"Controls\",\"Discipline\":\"Data Systems\",\"SPID\":\"\", \"DisplayName\":\"Space CO2 Sensor\",\"Notes\":\"\"}"
 Space_CO2_Sensor: Boolean
 
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Eyewash Bottle','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Eyewash Bottle\",\"Notes\":\"\"}"
 Eyewash_Bottle: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Eyewash Plumbed','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Eyewash Plumbed\",\"Notes\":\"\"}"
 Eyewash_Plumbed: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Safety Shower','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Safety Shower\",\"Notes\":\"\"}"
 Safety_Shower: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Drench Hose','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Drench Hose\",\"Notes\":\"\"}"
 Drench_Hose: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Safety Station','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Safety Station\",\"Notes\":\"\"}"
 Safety_Station: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Carbon Monoxide Sensor','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Carbon Monoxide Sensor\",\"Notes\":\"\"}"
 Space_Carbon_Monoxide_Sensor: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Refrigerant Detection','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Refrigerant Detection\",\"Notes\":\"\"}"
 Space_Refrigerant_Detection: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Oxygen Depletion Sensor','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Oxygen Depletion Sensor\",\"Notes\":\"\"}"
 Space_Oxygen_Depletion_Sensor: Boolean
-"{'Group':'Safety','Discipline':'Mechanical','SPID':'', 'DisplayName':'Gas Suppression Knock Off','Notes':''}"
+"{\"Group\":\"Safety\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Gas Suppression Knock Off\",\"Notes\":\"\"}"
 Gas_Suppression_Knock_Off: Boolean
-"{'Group':'Hazards in Room','Discipline':'All','SPID':'', 'DisplayName':'Biological Hazards','Notes':''}"
+"{\"Group\":\"Hazards in Room\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Biological Hazards\",\"Notes\":\"\"}"
 Biological_Hazards: String
-"{'Group':'Hazards in Room','Discipline':'All','SPID':'', 'DisplayName':'Toxic Hazards','Notes':''}"
+"{\"Group\":\"Hazards in Room\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Toxic Hazards\",\"Notes\":\"\"}"
 Toxic_Hazards: String
-"{'Group':'Hazards in Room','Discipline':'All','SPID':'', 'DisplayName':'Radioactive Hazards','Notes':''}"
+"{\"Group\":\"Hazards in Room\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Radioactive Hazards\",\"Notes\":\"\"}"
 Radioactive_Hazards: String
-"{'Group':'Hazards in Room','Discipline':'All','SPID':'', 'DisplayName':'Explosive Hazards','Notes':''}"
+"{\"Group\":\"Hazards in Room\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Explosive Hazards\",\"Notes\":\"\"}"
 Explosive_Hazards: String
-"{'Group':'Hazards in Room','Discipline':'All','SPID':'', 'DisplayName':'Acid Hazards','Notes':''}"
+"{\"Group\":\"Hazards in Room\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Acid Hazards\",\"Notes\":\"\"}"
 Acid_Hazards: String
-"{'Group':'Hazards in Room','Discipline':'All','SPID':'', 'DisplayName':'Chemical Hazards','Notes':''}"
+"{\"Group\":\"Hazards in Room\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Chemical Hazards\",\"Notes\":\"\"}"
 Chemical_Hazards: String
-"{'Group':'Hazards in Room','Discipline':'All','SPID':'', 'DisplayName':'Other Hazards','Notes':''}"
+"{\"Group\":\"Hazards in Room\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Other Hazards\",\"Notes\":\"\"}"
 Other_Hazards: String
-"{'Group':'Other','Discipline':'All','SPID':'', 'DisplayName':'Space Engineering Notes','Notes':''}"
+"{\"Group\":\"Other\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Engineering Notes\",\"Notes\":\"\"}"
 Space_Engineering_Notes: String
 }
