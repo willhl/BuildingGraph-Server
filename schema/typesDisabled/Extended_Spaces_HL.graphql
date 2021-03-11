@@ -56,13 +56,13 @@ type Space {
 
 type Space {
   "Group: Thermal Units: ᵒC Notes: Dry Bulb Air Temperature"
-  Space_Cooling_Temperature  (units: TemperatureUnits=C): DegreeCelsius
+  Space_Cooling_Temperature  (units: TemperatureUnits=C): Float
   "Group: Thermal Units: ᵒC Notes: Dry Bulb Air Temperature"
-  Space_Heating_Temperature  (units: TemperatureUnits=C): DegreeCelsius
+  Space_Heating_Temperature  (units: TemperatureUnits=C): Float
   "Group: Thermal Units: N/A Notes: e.g. +/- 2ᵒC"
-  Space_Cooling_Temperature_Tolerance  (units: TemperatureUnits=C): DegreeCelsius
+  Space_Cooling_Temperature_Tolerance  (units: TemperatureUnits=C): Float
   "Group: Thermal Units: N/A Notes: e.g. +/- 2ᵒC"
-  Space_Heating_Temperature_Tolerance  (units: TemperatureUnits=C): DegreeCelsius
+  Space_Heating_Temperature_Tolerance  (units: TemperatureUnits=C): Float
   "Group: Thermal Units: N/A Notes:"
   Space_Heating_and_Cooling_Strategy: String
   "Group: Thermal Units: N/A Notes: e.g. Underfloor Heating, Radiant Panels, etc."
@@ -129,13 +129,13 @@ type Space {
   Space_Fabric_Heat_Gain_Density: String
   "Group: Thermal Units: W Notes:"
   Space_Fabric_Heat_Loss: String
+  "Group: Thermal Units: W/m² Notes:"
+  Space_Fabric_Heat_Loss_Density: String
 }
 
 
 
 type Space {
-  "Group: Thermal Units: W/m² Notes:"
-  Space_Fabric_Heat_Loss_Density: String
   "Group: Ventilation Secto: Healthcare Units: N/A Notes: e.g. Natural Ventilation, Mixed Mode, Extract Only, etc."
   Space_Ventilation_Strategy: String
   "Group: Ventilation Units: N/A Notes: e.g. manual override, CO2 sensor in room, automatic window opening"
@@ -204,6 +204,9 @@ type Space {
   Space_Laboratory_Extract_Air_Flow_Rate_: String
   "Group: Ventilation Units: L/s Notes:"
   Space_Fume_Cupboard_Extract_Air_Flow_Rate_: String
+}
+
+type Space {
   "Group: Domestic Water Units: N/A Notes: e.g. Cleaner's Sink, WHB, etc."
   Space_Domestic_Water_Outlets: String
   "Group: Domestic Water Units: N/A Notes:"
@@ -248,6 +251,9 @@ type Space {
   Space_Purified_Water_Type: String
   "Group: Domestic Water Units: ᵒC Notes:"
   Space_Domestic_Hot_Water_Maximum_Temperature: String
+}
+
+type Space {
   "Group: Gas Units: N/A Notes:"
   Space_Piped_Gases_Strategy: String
   "Group: Gas Units: N/A Notes:"
@@ -326,6 +332,10 @@ type Space {
   Bottled_Gas_MA4: Boolean
   "Group: Gas Units: N/A Notes:"
   Bottled_Gas_SA7: Boolean
+}
+
+
+ type Space { 
   "Group: Small Power Units: N/A Notes: e.g. None, 0, 1, 2"
   Electrical_Zone: String
   "Group: Small Power Units: N/A Notes:"
@@ -386,6 +396,9 @@ type Space {
   Number_of_400V_3_Phase_Single_Sockets_UPS: Int
   "Group: Small Power Units: N/A Notes:"
   Number_of_400V_Switch_Disconnector_Non_Essential: Int
+ }
+
+type Space { 
   "Group: Lighting Units: N/A Notes:"
   Space_Lighting_Strategy: String
   "Group: Lighting Units: N/A Notes:"
@@ -460,10 +473,16 @@ type Space {
   Ceiling_Reflectance: String
   "Group: Lighting Units: % Notes: Revit defaults"
   Wall_Reflectance: String
+}
+
+type Space { 
   "Group: Fused Connection Units Units: N/A Notes:"
   Total_Fused_Connection_Unit_Points: Int
   "Group: Fused Connection Units Units: N/A Notes:"
   Fused_Connection_Units_Description: String
+}
+
+type Space { 
   "Group: Telecoms / Data Units: N/A Notes:"
   Number_of_Quad_RJ45_Data_Outlets: Int
   "Group: Telecoms / Data Units: N/A Notes:"
@@ -500,6 +519,9 @@ type Space {
   Nurse_Call_Patient_to_Staff: Boolean
   "Group: Call Systems Units: N/A Notes:"
   WC_Alarm: Boolean
+}
+
+type Space { 
   "Group: AV Equipment Units: N/A Notes:"
   Audio_Visual_Provision: String
   "Group: AV Equipment Units: N/A Notes:"
@@ -520,6 +542,9 @@ type Space {
   Number_of_Speaker_Outlets: Int
   "Group: AV Equipment Units: N/A Notes:"
   Number_of_Subwoofer_Outlets: Int
+}
+
+type Space { 
   "Group: Public Address Units: N/A Notes:"
   Public_Address: Boolean
   "Group: Public Address Units: N/A Notes:"
@@ -533,6 +558,9 @@ type Space {
   "Group: Public Address Units: N/A Notes:"
   Public_Address_Speaker_Type: String
   "Group: Public Address Units: N/A Notes:"
+}
+
+type Space { 
   Audio_Visual_Volume_Control_Interface: Boolean
   "Group: Security Units: N/A Notes: E.g. Public, Semi-public, Semi-private – circulation, Semi-private – facilities, Private – resident, Private – staff, Private – facilities, Private - BOH facilities, Private - BOH general, Restricted"
   Space_Security_Strategy: String
@@ -568,6 +596,9 @@ type Space {
   Surveillance_System_Audio_Visual_Interface: Boolean
   "Group: Security Units: N/A Notes:"
   Surveillance_System_Intercom_Interface: Boolean
+}
+
+type Space { 
   "Group: Fire Units: N/A Notes:"
   Space_Fire_Suppression: Boolean
   "Group: Fire Units: N/A Notes:"
@@ -596,6 +627,9 @@ type Space {
   Disabled_Refuge_Alarm: Boolean
   "Group: Fire Units: N/A Notes:"
   Disabled_Refuge_Alarm_Description: String
+}
+
+type Space { 
   "Group: Drainage Units: N/A Notes:"
   Space_Drainage_Strategy: String
   "Group: Drainage Units: N/A Notes:"
@@ -628,6 +662,9 @@ type Space {
   Space_Radioactive_Drainage: Boolean
   "Group: Drainage Units: N/A Notes:"
   Space_Radioactive_Drainage_Description: String
+}
+
+type Space { 
   "Group: Controls Units: N/A Notes:"
   Space_Temperature_Sensor: Boolean
   "Group: Controls Units: N/A Notes:"
@@ -650,6 +687,9 @@ type Space {
   BMS_to_Lighting_Control_Interface: String
   "Group: Controls Units: N/A Notes:"
   Space_CO2_Sensor: Boolean
+}
+
+type Space { 
   "Group: Safety Units: N/A Notes:"
   Eyewash_Bottle: Boolean
   "Group: Safety Units: N/A Notes:"
@@ -668,6 +708,9 @@ type Space {
   Space_Oxygen_Depletion_Sensor: Boolean
   "Group: Safety Units: N/A Notes:"
   Gas_Suppression_Knock_off: Boolean
+}
+
+type Space { 
   "Group: Hazards in Room Units: N/A Notes:"
   Biological_Hazards: String
   "Group: Hazards in Room Units: N/A Notes:"
@@ -682,6 +725,11 @@ type Space {
   Chemical_Hazards: String
   "Group: Hazards in Room Units: N/A Notes:"
   Other_Hazards: String
-  "Group: Other Units: N/A Notes:"
-  Space_Engineering_Notes: String
+}
+
+
+type Space {
+
+
+  
 }

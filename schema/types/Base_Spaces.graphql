@@ -16,20 +16,21 @@ MEP Space base type
 """
 type Space implements AbstractElement {
   Id: ID!
-  "Group: Hidden Units: N/A Notes:"
+  "{'Group':'Other','Discipline':'All','SPID':'','DisplayName':'Is External','Notes':''}"
   IsExternal: Boolean
-  "Group: General Units: N/A Notes:"
+  "{'Group':'General','Discipline':'All','SPID':'','DisplayName':'Number','Notes':''}"
   Number: String!
-  "Group: General Units: N/A Notes:"
+  "{'Group':'General','Discipline':'All','SPID':'','DisplayName':'Name','Notes':''}"
   Name: String!
-  "Group: General Units: N/A Notes:"
-  Area (units: AreaUnits = m2): SquareMeters
-  "Group: General Units: N/A Notes:"
-  Volume (units: VolumeUnits = m3): CubicMeters
-  "Group: General Units: N/A Notes:"
-  Height (units: LengthUnits = m): Meters
-  "Group: General Units: N/A Notes:"
+  "{'Group':'Geometry','Discipline':'All','SPID':'','DisplayName':'Area','Notes':''}"
+  Area (units: AreaUnits = m2): Float
+  "{'Group':'Geometry','Discipline':'All','SPID':'','DisplayName':'Volume','Notes':''}"
+  Volume (units: VolumeUnits = m3): Float
+  "{'Group':'Geometry','Discipline':'All','SPID':'','DisplayName':'Height','Notes':''}"
+  Height (units: LengthUnits = m): Float
+  "{'Group':'Geometry','Discipline':'All','SPID':'','DisplayName':'Center','Notes':''}"
   Center: Point
+
   AllElements: [AbstractElement] @relation(name:"IS_IN_SPACE",direction:IN)
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)

@@ -131,5 +131,34 @@
     },
     "LoadDensityUnits": {
         "W_per_m2": "W/m²;"
+    },
+    "SoundPowerLevelUnits": {
+        "dB":"dB"
+    },
+    "VolumeFlowRateAreaUnits": {
+        "L_per_s_per_m2":"L/s/m²"
+    },
+    "VolumeFlowRatePersonUnits": {
+        "L_per_s_per_person":"L/s/person"
+    },
+    "LightingEfficacyUnits": {
+        "Lumens_per_W":"Lumens/W"
+    },
+    "LuxUnits": {
+        "Lux":"Lux"
+    },
+    "PowerDensityUnits": {
+        "W_per_m2":"W/m²"
+    },
+    "LightingPowerDensityUnits": {
+        "W_per_m2_per_100Lux":"W/m²/100Lux"
+    },
+    "TimeUnits": {
+        "s":"Seconds",
+        "h":"Hours"
+    },
+    "AirChangeRateUnits": {
+        "AC_per_h":"AC/H"
+
     }
 }

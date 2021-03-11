@@ -8,36 +8,42 @@
 #######
 
 
-##extneded types
+##extended types
+
 type Space {
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'NR Rating','Notes':''}"
   NR_Rating: String
-
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 63Hz','Notes':''}"
   RT_at_63Hz : Float
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 125Hz','Notes':''}"
   RT_at_125Hz : Float
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 250Hz','Notes':''}"
   RT_at_250Hz : Float
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 500Hz','Notes':''}"
   RT_at_500Hz : Float
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 1000Hz','Notes':''}"
   RT_at_1000Hz : Float
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 2000Hz','Notes':''}"
   RT_at_2000Hz : Float
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 4000Hz','Notes':''}"
   RT_at_4000Hz : Float
-  "Group: Acoustics Units: NR Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'RT at 8000Hz','Notes':''}"
   RT_at_8000Hz : Float
-
-  "Group: Acoustics Units: N/A Notes:"
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'Space Acoustic Strategy','Notes':''}"
   Space_Acoustic_Strategy: String
-  "Group: Acoustics Units: LAeq,T Notes:"
-  Intrusive_Noise_Limit_in_LAeq_t: String
-  "Group: Acoustics Units: Seconds Notes:"
-  Reverberation_Time_in_Seconds: Float
-  "Group: Acoustics Units: NR Notes:"
-  Engineering_Systems_Noise_Limit_in_NR: String
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'Activity Noise Level','Notes':''}"
+  Activity_Noise_Level: String
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'Noise Sensitivity','Notes':''}"
+  Noise_Sensitivity: String
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'Intrusive Noise Limit in LAeq t','Notes':''}"
+  Intrusive_Noise_Limit_in_LAeq_t (units: SoundPowerLevelUnits=dB): Float
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'Intrusive Noise Limit in LAmax','Notes':''}"
+  Intrusive_Noise_Limit_in_LAmax (units: SoundPowerLevelUnits=dB): Float
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'Reverberation Time in Seconds','Notes':''}"
+  Reverberation_Time_in_Seconds (units: TimeUnits=s): Float
+  "{'Group':'Acoustics','Discipline':'Acoustics','SPID':'','DisplayName':'Engineering Systems Noise Limit','Notes':''}"
+  Engineering_Systems_Noise_Limit (units: SoundPowerLevelUnits=dB): Float
+
 }
 
 type Panel {

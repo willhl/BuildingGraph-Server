@@ -265,3 +265,37 @@ scalar WattsPerSquareMeter
 enum LoadDensityUnits{
   W_per_m2
 }
+
+
+enum SoundPowerLevelUnits {
+  dB
+}
+
+enum VolumeFlowRateAreaUnits {
+  L_per_s_per_m2
+}
+
+enum VolumeFlowRatePersonUnits {
+  L_per_s_per_person
+}
+
+
+enum LightingEfficacyUnits {
+  Lumens_per_W
+}
+
+enum LuxUnits {
+  Lux
+}
+
+enum PowerDensityUnits {
+  W_per_m2
+}
+
+enum LightingPowerDensityUnits {
+  W_per_m2_per_100Lux
+}
+
+enum AirChangeRateUnits {
+  AC_per_h
+}
