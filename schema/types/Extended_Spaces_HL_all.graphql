@@ -55,9 +55,9 @@ Space_Heating_Temperature_Tolerance: Float
 "{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating and Cooling Strategy','Notes':''}"
 Space_Heating_and_Cooling_Strategy: String
 "{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Strategy','Notes':'e.g. Underfloor Heating, Radiant Panels, etc.'}"
-Space_Heating_Strategy: Float
+Space_Heating_Strategy: String
 "{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Strategy','Notes':'e.g. Chilled Beams, FCU's, Passive, etc.'}"
-Space_Cooling_Strategy: Float
+Space_Cooling_Strategy: String
 "{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Heating Load Density','Notes':''}"
 Space_Heating_Load_Density (units: PowerDensityUnits=W_per_m2) : Float
 "{'Group':'Termal','Discipline':'Mechanical','SPID':'', 'DisplayName':'Space Cooling Load Density','Notes':''}"
