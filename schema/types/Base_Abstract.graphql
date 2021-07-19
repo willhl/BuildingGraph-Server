@@ -44,6 +44,10 @@ type ModelElement implements BaseElement {
   UniqueId: String
   Model: Model @relation(name:"IS_IN",direction:OUT)
   AbstractElement: AbstractElement @relation(name:"REALIZED_BY",direction:IN)
+
+
+  ClassificationCode: String
+  Category: String
 }
 
 """

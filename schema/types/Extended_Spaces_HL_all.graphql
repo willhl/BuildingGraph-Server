@@ -36,95 +36,95 @@ Space_Required_Clear_Ceiling_Void (units: LengthUnits=mm) : Float
 Space_Required_Clear_Floor_Void (units: LengthUnits=mm) : Float
 "{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Space Mechanical Services Zoning Strategy\",\"Notes\":\"\"}"
 Space_Mechanical_Services_Zoning_Strategy: String
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"External Design Air Temperature in Cooling Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"External Design Air Temperature in Cooling Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 External_Design_Air_Temperature_in_Cooling_Mode (units: TemperatureUnits=C) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Extreme External Design Air Temperature in Cooling Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Extreme External Design Air Temperature in Cooling Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Extreme_External_Design_Air_Temperature_in_Cooling_Mode (units: TemperatureUnits=C) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"External Design Air Temperature in Heating Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"External Design Air Temperature in Heating Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 External_Design_Air_Temperature_in_Heating_Mode (units: TemperatureUnits=C) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Extreme External Design Air Temperature in Heating Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Extreme External Design Air Temperature in Heating Mode\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Extreme_External_Design_Air_Temperature_in_Heating_Mode (units: TemperatureUnits=C) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Temperature\",\"Notes\":\"Dry Bulb Air Temperature\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Temperature\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Space_Cooling_Temperature (units: TemperatureUnits=C) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Temperature\",\"Notes\":\"Dry Bulb Air Temperature\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Temperature\",\"Notes\":\"Dry Bulb Air Temperature\"}"
 Space_Heating_Temperature (units: TemperatureUnits=C) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Temperature Tolerance\",\"Notes\":\"e.g. +/- 2ᵒC\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Temperature Tolerance\",\"Notes\":\"e.g. +/- 2ᵒC\"}"
 Space_Cooling_Temperature_Tolerance: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Temperature Tolerance\",\"Notes\":\"e.g. +/- 2ᵒC\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Temperature Tolerance\",\"Notes\":\"e.g. +/- 2ᵒC\"}"
 Space_Heating_Temperature_Tolerance: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating and Cooling Strategy\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating and Cooling Strategy\",\"Notes\":\"\"}"
 Space_Heating_and_Cooling_Strategy: String
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Strategy\",\"Notes\":\"e.g. Underfloor Heating, Radiant Panels, etc.\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Strategy\",\"Notes\":\"e.g. Underfloor Heating, Radiant Panels, etc.\"}"
 Space_Heating_Strategy: String
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Strategy\",\"Notes\":\"e.g. Chilled Beams, FCU\"s, Passive, etc.\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Strategy\",\"Notes\":\"e.g. Chilled Beams, FCU\"s, Passive, etc.\"}"
 Space_Cooling_Strategy: String
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Load Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Load Density\",\"Notes\":\"\"}"
 Space_Heating_Load_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Load Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Load Density\",\"Notes\":\"\"}"
 Space_Cooling_Load_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Load\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Load\",\"Notes\":\"\"}"
 Space_Heating_Load (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Load\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Load\",\"Notes\":\"\"}"
 Space_Cooling_Load (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Sensible Cooling Load\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Sensible Cooling Load\",\"Notes\":\"\"}"
 Space_Sensible_Cooling_Load (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Latent Cooling Load\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Latent Cooling Load\",\"Notes\":\"\"}"
 Space_Latent_Cooling_Load (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Heating Contribution\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Heating Contribution\",\"Notes\":\"\"}"
 Space_Supply_Air_Heating_Contribution (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Cooling Contribution\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Cooling Contribution\",\"Notes\":\"\"}"
 Space_Supply_Air_Cooling_Contribution (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Sensible Cooling Contribution\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Supply Air Sensible Cooling Contribution\",\"Notes\":\"\"}"
 Space_Supply_Air_Sensible_Cooling_Contribution (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Air Flow Rate\",\"Notes\":\"For use in FCU or re-circulating systems\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Air Flow Rate\",\"Notes\":\"For use in FCU or re-circulating systems\"}"
 Space_Heating_Air_Flow_Rate (units: VolumeFlowRateUnits=l_per_s) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Air Flow Rate\",\"Notes\":\"For use in FCU or re-circulating systems\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Air Flow Rate\",\"Notes\":\"For use in FCU or re-circulating systems\"}"
 Space_Cooling_Air_Flow_Rate (units: VolumeFlowRateUnits=l_per_s) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Hot Surface Maximum Temperature\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Hot Surface Maximum Temperature\",\"Notes\":\"\"}"
 Space_Hot_Surface_Maximum_Temperature (units: TemperatureUnits=C) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Relative Humidity\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Cooling Relative Humidity\",\"Notes\":\"\"}"
 Space_Cooling_Relative_Humidity: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Relative Humidity\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Heating Relative Humidity\",\"Notes\":\"\"}"
 Space_Heating_Relative_Humidity: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Set Point\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Set Point\",\"Notes\":\"\"}"
 Space_Relative_Humidity_Set_Point: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Tolerance\",\"Notes\":\"e.g. +/- 20%\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Tolerance\",\"Notes\":\"e.g. +/- 20%\"}"
 Space_Relative_Humidity_Tolerance: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Maximum\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Maximum\",\"Notes\":\"\"}"
 Space_Relative_Humidity_Maximum: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Minimum\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Relative Humidity Minimum\",\"Notes\":\"\"}"
 Space_Relative_Humidity_Minimum: Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Equipment Heat Gain\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Equipment Heat Gain\",\"Notes\":\"\"}"
 Space_Equipment_Heat_Gain (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Equipment Heat Gain Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Equipment Heat Gain Density\",\"Notes\":\"\"}"
 Space_Equipment_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Occupancy Heat Gain\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Occupancy Heat Gain\",\"Notes\":\"\"}"
 Space_Occupancy_Heat_Gain (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Occupancy Heat Gain Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Occupancy Heat Gain Density\",\"Notes\":\"\"}"
 Space_Occupancy_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Heat Gain\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Heat Gain\",\"Notes\":\"\"}"
 Space_Lighting_Heat_Gain (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Heat Gain Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Lighting Heat Gain Density\",\"Notes\":\"\"}"
 Space_Lighting_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Solar Heat Gain\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Solar Heat Gain\",\"Notes\":\"\"}"
 Space_Solar_Heat_Gain (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Solar Heat Gain Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Solar Heat Gain Density\",\"Notes\":\"\"}"
 Space_Solar_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Gain\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Gain\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Gain (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Gain Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Gain Density\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Loss\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Loss\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Loss (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Loss Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Infiltration Heat Loss Density\",\"Notes\":\"\"}"
 Space_Infiltration_Heat_Loss_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Gain\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Gain\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Gain (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Gain Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Gain Density\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Gain_Density (units: PowerDensityUnits=W_per_m2) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Loss\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Loss\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Loss (units: PowerUnits=W) : Float
-"{\"Group\":\"Termal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Loss Density\",\"Notes\":\"\"}"
+"{\"Group\":\"Thermal\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Fabric Heat Loss Density\",\"Notes\":\"\"}"
 Space_Fabric_Heat_Loss_Density (units: PowerDensityUnits=W_per_m2) : Float
 "{\"Group\":\"Ventilation\",\"Discipline\":\"Mechanical\",\"SPID\":\"\", \"DisplayName\":\"Space Ventilation Strategy\",\"Notes\":\"e.g. Natural Ventilation, Mixed Mode, Extract Only, etc.\"}"
 Space_Ventilation_Strategy: String

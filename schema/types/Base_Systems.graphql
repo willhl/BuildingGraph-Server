@@ -11,7 +11,7 @@
 
 ### Types ###
 
-type System implements AbstractElement {
+interface System {
   Name: String
   Id: ID!
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)

@@ -23,6 +23,14 @@ type Circuit {
 }
 
 
+type DuctSystem {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  AllElements: [AbstractElement] @relation(name:"ABSTRACTED_BY",direction:OUT)
+}
+
 
 ### Types ###
 
@@ -43,9 +51,118 @@ type SupplyAirSystem implements AbstractElement {
     ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
     ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
 
-    Flow (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
-    Static_Pressure (units: PressureUnits = kPa): KiloPascals
+    Flow (units: VolumeFlowRateUnits = l_per_s): Float
+    Static_Pressure (units: PressureUnits = kPa): Float
 }
+
+
+"""
+MVHR
+[Uniclass 2015 - Product]: Pr_60_65_03_mvhr
+"""
+type NVHRUnit implements AbstractElement & ElectricalLoadElement & MechanicalEquipment {
+
+    Id: ID!
+    Name: String
+
+    ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+    ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+    Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+
+    ElectricalLoad: ElecticalLoad @relation(name:"ELECTRICAL_FLOW",direction:IN)
+
+    HeatingCoilFlow: [AbstractElement] @relation(name:"HEATING_FLOW",direction:IN)
+    HeatingCoilReturn: [AbstractElement] @relation(name:"HEATING_FLOW",direction:OUT)
+
+    FreshAir: FreshAirConnector @relation(name:"AIR_FLOW",direction:IN)
+    ExhaustAir: ExhaustAirConnector @relation(name:"AIR_FLOW",direction:OUT)
+
+    SupplyAir: SupplyAirConnector @relation(name:"AIR_FLOW",direction:OUT)
+    ExtractAir: ExtractAirConnector @relation(name:"AIR_FLOW",direction:IN)
+
+}
+
+
+type FreshAirConnector implements Connector & AirConnector {
+    Id: ID!
+    Name: String
+
+    Flow: (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    PressureDrop: (units: PressureUnits = kPa): KiloPascals
+    
+    AirIn: AbstractElement  @relation(name:"AIR_FLOW",direction:IN)
+    AirOut: AbstractElement  @relation(name:"AIR_FLOW",direction:OUT)
+
+    System: System @relation(name:"ABSTRACTED_BY",direction:OUT)
+
+}
+
+type ExhaustAirConnector implements Connector & AirConnector {
+    Id: ID!
+    Name: String
+
+    Flow: (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    PressureDrop: (units: PressureUnits = kPa): KiloPascals
+    
+    AirIn: AbstractElement  @relation(name:"AIR_FLOW",direction:IN)
+    AirOut: AbstractElement  @relation(name:"AIR_FLOW",direction:OUT)
+
+    System: System @relation(name:"ABSTRACTED_BY",direction:OUT)
+
+}
+
+type SupplyAirConnector implements Connector & AirConnector {
+    Id: ID!
+    Name: String
+
+    Flow: (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    PressureDrop: (units: PressureUnits = kPa): KiloPascals
+    
+    AirIn: AbstractElement  @relation(name:"AIR_FLOW",direction:IN)
+    AirOut: AbstractElement  @relation(name:"AIR_FLOW",direction:OUT)
+
+    System: System @relation(name:"ABSTRACTED_BY",direction:OUT)
+
+}
+
+type ExtractAirConnector implements Connector & AirConnector {
+    Id: ID!
+    Name: String
+
+    Flow: (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    PressureDrop: (units: PressureUnits = kPa): KiloPascals
+
+    AirIn: AbstractElement  @relation(name:"AIR_FLOW",direction:IN)
+    AirOut: AbstractElement  @relation(name:"AIR_FLOW",direction:OUT)
+
+    System: System @relation(name:"ABSTRACTED_BY",direction:OUT)
+
+}
+
+
+interface  Connector {
+    Id: ID!
+    Name: String
+
+    System: System
+}
+
+
+interface  AirConnector {
+    Id: ID!
+    Name: String
+
+    Flow: (units: VolumeFlowRateUnits = l_per_s): LitersPerSecond
+    PressureDrop: (units: PressureUnits = kPa): KiloPascals
+    
+    AirIn: AbstractElement  @relation(name:"AIR_FLOW",direction:IN)
+    AirOut: AbstractElement  @relation(name:"AIR_FLOW",direction:OUT)
+
+    System: System @relation(name:"ABSTRACTED_BY",direction:OUT)
+
+}
+
+
 
 
 """
@@ -152,7 +269,7 @@ type FanCoilUnitType
     FanCoilUnits: [FanCoilUnitType] @relation(name:"IS_OF",direction:IN)
 }
 
-type Terminal {
+type Terminal implements Connector & AirConnector {
     AirFlowsIn: [AbstractElement] @relation(name:"AIR_FLOW_TO",direction:IN)
     AirFlowsOut: [AbstractElement] @relation(name:"AIR_FLOW_TO",direction:OUT)
     AirFlowToSpace: Space @relation(name:"FLOWS_TO_SPACE",direction:IN)
@@ -169,7 +286,46 @@ type Terminal {
 }
 
 type Space {
-    Total_Air_FlowIn: Float  @cypher(statement:"MATCH (this)<-[:FLOWS_TO_SPACE]-(t:Terminal) RETURN sum(t.Air_Flow_Rate)")
-    Total_Air_FlowOut: Float  @cypher(statement:"MATCH (this)-[:FLOWS_TO_SPACE]->(t:Terminal) RETURN sum(t.Air_Flow_Rate)")
-    Number_of_AirTerminals: Int @cypher(statement:"MATCH (this)<-[:IS_IN_SPACE]-(t:Terminal) RETURN count(t)")
+
+
+
+    FlowSummary: [AirSystemSummary] @cypher(statement:"MATCH (ti:Terminal)-[:FLOWS_TO_SPACE]->(this)-[:FLOWS_TO_SPACE]->(t:Terminal) return apoc.create.vNode(['ExtractSystemSummary'], {Id:'temp', Total_Air_FlowIn:sum(t.Air_Flow_Rate), Total_Air_FlowOut:sum(ti.Air_Flow_Rate)}) as SpaceFlowSummary")
+}   
+
+
+type Query {
+    FlowSummaryQuery(spaceNumber: String): [AirSystemSummary] @cypher(statement:"MATCH (ti:Terminal)-[:FLOWS_TO_SPACE]->(s:Space {Number:$spaceNumber})-[:FLOWS_TO_SPACE]->(t:Terminal) return {Total_Air_FlowIn:sum(t.Air_Flow_Rate), Total_Air_FlowOut:sum(ti.Air_Flow_Rate)}")
+
 }
+
+
+
+type ExtractSystem {
+    Id: ID!
+    Name: String
+
+}
+
+
+interface SystemSummary {
+    Id: ID!
+    Name: String
+
+    
+}
+
+"""
+    Create summary types in graph for all summarys
+"""
+type AirSystemSummary implements  SystemSummary {
+    Id: ID!
+    Name: String
+
+
+    Space_Total_Air_FlowIn (spaceId:ID!): Float  @cypher(statement:"MATCH (Space {Id:$spaceId})<-[:FLOWS_TO_SPACE]-(t:Terminal) RETURN sum(t.Air_Flow_Rate)")
+    Space_Total_Air_FlowOut (spaceId:ID!): Float  @cypher(statement:"MATCH (Space {Id:$spaceId})-[:FLOWS_TO_SPACE]->(t:Terminal) RETURN sum(t.Air_Flow_Rate)")
+    Space_Number_of_AirTerminals (spaceId:ID!): Int @cypher(statement:"MATCH (Space {Id:$spaceId})<-[:IS_IN_SPACE]-(t:Terminal) RETURN count(t)")
+
+    Systems: [ExtractSystem] @cypher(statement:"MATCH (Space {Id:$spaceId})<-[:IS_IN_SPACE]-(t:Terminal) RETURN count(t)")
+}
+

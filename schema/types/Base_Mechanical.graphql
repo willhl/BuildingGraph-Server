@@ -21,7 +21,18 @@ type Terminal implements AbstractElement {
   Systems: [System] @relation(name:"ABSTRACTED_BY",direction:OUT)
 }
 
-type Equipment implements AbstractElement {
+
+interface MechanicalEquipment {
+  Name: String
+  Id: ID!
+  ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
+  ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
+  Space: Space @relation(name:"IS_IN_SPACE",direction:OUT)
+  Systems: [System] @relation(name:"ABSTRACTED_BY",direction:OUT)
+}
+
+
+type Equipment implements AbstractElement & MechanicalEquipment {
   Name: String
   Id: ID!
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)

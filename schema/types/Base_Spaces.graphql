@@ -22,7 +22,7 @@ type Space implements AbstractElement {
   Number: String!
   "{\"Group\":\"General\",\"Discipline\":\"All\",\"SPID\":\"\",\"DisplayName\":\"Name\",\"Notes\":\"\"}"
   Name: String!
-  "{\"Group\":\"Geometry\",\"Discipline\":\"All\",\"SPID\":\"\",\"DisplayName\":\"Area\",\"Notes\":\"\"}"
+  "{\"Group\":\"Geometry\",\"Discipline\":\"All\",\"SPID\":\"\",\"DisplayName\":\"Area\",\"Notes\":\", \"DecimalPlaces\":2  \"}"
   Area (units: AreaUnits = m2): Float
   "{\"Group\":\"Geometry\",\"Discipline\":\"All\",\"SPID\":\"\",\"DisplayName\":\"Volume\",\"Notes\":\"\"}"
   Volume (units: VolumeUnits = m3): Float
@@ -35,7 +35,12 @@ type Space implements AbstractElement {
   ElementType: ElementType @relation(name:"IS_OF",direction:OUT)
   ModelElements: [ModelElement] @relation(name:"REALIZED_BY",direction:OUT)
 
+
 }
+
+
+
+
 
 
 ### Mutations ###
