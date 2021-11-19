@@ -1,0 +1,34 @@
+
+scalar JsonParam
+
+
+type ScalarTest {
+    Id: ID!
+    Name: String
+    JsonParam1: JsonParam
+    JObject1: JObject
+    Searchable: String @search
+    Area_mm (units: AreaUnits=mm2): Float
+    Area_m (units: AreaUnits=m2): Float
+    LoadDensity (units: LoadDensityUnits=W_per_m2): Float
+}
+
+
+type Space {
+
+"{\"Group\":\"Extended_Field\",\"Discipline\":\"All\",\"SPID\":\"\", \"DisplayName\":\"Extended_Field\",\"Notes\":\"\"}"
+Extended_Field: JObject
+Extended_Field2: JustValueType @cypher(statement: "MATCH (s:this) return apoc.json.path(s.Extended_Field,'$')")
+
+}
+
+type Query {
+
+    SumSpaceExtended_Field: Float @cypher(statement: "MATCH (n:Space) return sum(apoc.json.path(n.Extended_Field,'value'))")
+
+}
+
+type JustValueType {
+    Value: Float
+
+}

@@ -1,0 +1,22 @@
+
+#######
+##
+##     -- Project Directroy --
+##
+##     Types which define the project directory
+##
+#######
+
+
+### Types ###
+type ProjectRegistration {
+  Name: String
+  Id: ID!
+
+  Project_Code: String
+  GeoLocation: Point
+  
+  OriginAPI: String
+  OriginProjectId: ID
+
+}

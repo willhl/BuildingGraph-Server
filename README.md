@@ -108,3 +108,7 @@ When the server starts all the .graphql files are augmented together into a sing
 For details on how to edit the schema, see the GRANDstack docs:
 [https://grandstack.io/docs/graphql-schema-generation-augmentation.html](https://grandstack.io/docs/graphql-schema-generation-augmentation.html)
 
+## Plugins inclulded
+
+https://github.com/neo4j/graph-data-science
+https://github.com/neo4j-contrib/neo4j-apoc-procedures
