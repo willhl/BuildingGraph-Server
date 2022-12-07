@@ -26,7 +26,7 @@
     "csv-parse": "^4.10.1",
     "dotenv": "^7.0.0",
     "graphql-tag": "^2.10.1",
-    "graphql-tools": "^6.0.12",
+    "graphql-tools": "^6.2.6",
     "merge-graphql-schemas": "^1.7.8",
     "neo4j-driver": "^4.0.2",
     "neo4j-graphql-js": "^2.14.2",
